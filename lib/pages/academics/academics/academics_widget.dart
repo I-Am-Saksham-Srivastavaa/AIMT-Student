@@ -153,11 +153,10 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                       16.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Expanded(
-                                        flex: 4,
+                                        flex: 3,
                                         child: Text(
                                           'Exam Name',
                                           style: FlutterFlowTheme.of(context)

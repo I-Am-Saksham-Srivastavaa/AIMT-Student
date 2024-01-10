@@ -119,25 +119,6 @@ class _SupportWidgetState extends State<SupportWidget>
         ),
       ],
     ),
-    'containerOnPageLoadAnimation6': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: const Offset(0.0, 110.0),
-          end: const Offset(0.0, 0.0),
-        ),
-      ],
-    ),
   };
 
   @override
@@ -469,7 +450,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'How do I download Code?',
+                                    'How do I downloadAssignment?',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
@@ -483,7 +464,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
-                                      'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
+                                      'Navigate to Assignment Tab on Dashboard, Click on the ≡ symbol , hit Download',
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -553,60 +534,6 @@ class _SupportWidgetState extends State<SupportWidget>
                             ),
                           ).animateOnPageLoad(
                               animationsMap['containerOnPageLoadAnimation5']!),
-                        ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 8.0, 0.0, 0.0),
-                          child: Container(
-                            width: double.infinity,
-                            constraints: const BoxConstraints(
-                              maxWidth: 500.0,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12.0),
-                              border: Border.all(
-                                color: const Color(0xFFE5E7EB),
-                                width: 2.0,
-                              ),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(12.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'How do I download Code?',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyLarge
-                                        .override(
-                                          fontFamily: 'Plus Jakarta Sans',
-                                          color: const Color(0xFF15161E),
-                                          fontSize: 16.0,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 4.0, 0.0, 0.0),
-                                    child: Text(
-                                      'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
-                                      style: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: const Color(0xFF606A85),
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ).animateOnPageLoad(
-                              animationsMap['containerOnPageLoadAnimation6']!),
                         ),
                       ],
                     ),

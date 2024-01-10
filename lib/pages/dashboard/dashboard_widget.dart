@@ -156,7 +156,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Text(
-                                        'Below is a company overview',
+                                        'Everything you need is here.',
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(

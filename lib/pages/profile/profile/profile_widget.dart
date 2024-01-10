@@ -378,28 +378,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                                   .of(context)
                                                               .bodyLarge,
                                                         ),
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      4.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            'TXN123456789',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .labelSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primary,
-                                                                ),
-                                                          ),
-                                                        ),
                                                       ],
                                                     ),
                                                   ),
@@ -483,30 +461,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               ),
                                               Text(
                                                 'PUNB0599800',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 8.0, 0.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                'Transaction ID',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium,
-                                              ),
-                                              Text(
-                                                'TXN123456789',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium,

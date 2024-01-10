@@ -182,6 +182,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                           flex: 1,
                                           child: Text(
                                             'Subject Type',
+                                            textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium
                                                 .override(
@@ -201,19 +202,24 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                       ))
                                         Expanded(
                                           flex: 2,
-                                          child: Text(
-                                            'Status',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryText,
-                                                  fontSize: 14.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                                          child: Align(
+                                            alignment:
+                                                const AlignmentDirectional(0.0, 0.0),
+                                            child: Text(
+                                              'Status',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Plus Jakarta Sans',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryText,
+                                                    fontSize: 14.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
                                           ),
                                         ),
                                       Text(
@@ -381,6 +387,8 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                               flex: 2,
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   Container(
                                                     height: 32.0,

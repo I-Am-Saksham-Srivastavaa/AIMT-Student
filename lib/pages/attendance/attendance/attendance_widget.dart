@@ -148,12 +148,12 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         flex: 4,
                                         child: Text(
-                                          'Order Number',
+                                          'Subject Code',
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
                                               .override(
@@ -173,9 +173,8 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                         tabletLandscape: false,
                                       ))
                                         Expanded(
-                                          flex: 1,
                                           child: Text(
-                                            'Weight',
+                                            'Present Days/\nTotal Days',
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium
                                                 .override(
@@ -280,11 +279,11 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                                     text: TextSpan(
                                                       children: [
                                                         const TextSpan(
-                                                          text: 'Order #: ',
+                                                          text: 'BAS303: ',
                                                           style: TextStyle(),
                                                         ),
                                                         TextSpan(
-                                                          text: '429242424',
+                                                          text: 'Maths IV',
                                                           style: TextStyle(
                                                             color: FlutterFlowTheme
                                                                     .of(context)
@@ -306,7 +305,7 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      'Mon. July 3rd',
+                                                      'Dr.Puneet Shukla/Mr.Amar Singh',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -328,43 +327,11 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  Container(
-                                                    height: 32.0,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .primaryBackground,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12.0),
-                                                      border: Border.all(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate,
-                                                        width: 2.0,
-                                                      ),
-                                                    ),
-                                                    child: Align(
-                                                      alignment:
-                                                          const AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    7.0,
-                                                                    0.0,
-                                                                    7.0,
-                                                                    0.0),
-                                                        child: Text(
-                                                          '2.5 lbs',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .labelMedium,
-                                                        ),
-                                                      ),
-                                                    ),
+                                                  Text(
+                                                    '85/100',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium,
                                                   ),
                                                 ],
                                               ),
@@ -377,6 +344,8 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                               flex: 2,
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.start,
                                                 children: [
                                                   Container(
                                                     height: 32.0,
@@ -409,7 +378,7 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                                                     12.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Shipped',
+                                                          'Average',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -434,7 +403,7 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                                   CrossAxisAlignment.end,
                                               children: [
                                                 Text(
-                                                  '\$1.50',
+                                                  '85%',
                                                   textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -494,11 +463,12 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                                     text: TextSpan(
                                                       children: [
                                                         const TextSpan(
-                                                          text: 'Order #: ',
+                                                          text: 'BVE301:',
                                                           style: TextStyle(),
                                                         ),
                                                         TextSpan(
-                                                          text: '429242424',
+                                                          text:
+                                                              'Universal Human values',
                                                           style: TextStyle(
                                                             color: FlutterFlowTheme
                                                                     .of(context)
@@ -520,7 +490,7 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      'Mon. July 3rd',
+                                                      'Mr.Susheel Kumar',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -542,257 +512,11 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  Container(
-                                                    height: 32.0,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .primaryBackground,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12.0),
-                                                      border: Border.all(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate,
-                                                        width: 2.0,
-                                                      ),
-                                                    ),
-                                                    child: Align(
-                                                      alignment:
-                                                          const AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    7.0,
-                                                                    0.0,
-                                                                    7.0,
-                                                                    0.0),
-                                                        child: Text(
-                                                          '2.5 lbs',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .labelMedium,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                          ))
-                                            Expanded(
-                                              flex: 2,
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Container(
-                                                    height: 32.0,
-                                                    decoration: BoxDecoration(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .accent1,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12.0),
-                                                      border: Border.all(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                        width: 2.0,
-                                                      ),
-                                                    ),
-                                                    child: Align(
-                                                      alignment:
-                                                          const AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    12.0,
-                                                                    0.0,
-                                                                    12.0,
-                                                                    0.0),
-                                                        child: Text(
-                                                          'Shipped',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
-                                                              ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          Expanded(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.end,
-                                              children: [
-                                                Text(
-                                                  '\$11.42',
-                                                  textAlign: TextAlign.end,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .headlineSmall,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      16.0, 0.0, 16.0, 0.0),
-                                  child: Container(
-                                    width: double.infinity,
-                                    constraints: const BoxConstraints(
-                                      maxWidth: 570.0,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      border: Border.all(
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
-                                        width: 2.0,
-                                      ),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 12.0, 16.0, 12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Expanded(
-                                            flex: 4,
-                                            child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 0.0, 12.0, 0.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  RichText(
-                                                    textScaleFactor:
-                                                        MediaQuery.of(context)
-                                                            .textScaleFactor,
-                                                    text: TextSpan(
-                                                      children: [
-                                                        const TextSpan(
-                                                          text: 'Order #: ',
-                                                          style: TextStyle(),
-                                                        ),
-                                                        TextSpan(
-                                                          text: '429242424',
-                                                          style: TextStyle(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                          ),
-                                                        )
-                                                      ],
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyLarge,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 4.0,
-                                                                0.0, 0.0),
-                                                    child: Text(
-                                                      'Mon. July 3rd',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .labelMedium,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            tabletLandscape: false,
-                                          ))
-                                            Expanded(
-                                              flex: 1,
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Container(
-                                                    height: 32.0,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .primaryBackground,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12.0),
-                                                      border: Border.all(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate,
-                                                        width: 2.0,
-                                                      ),
-                                                    ),
-                                                    child: Align(
-                                                      alignment:
-                                                          const AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    7.0,
-                                                                    0.0,
-                                                                    7.0,
-                                                                    0.0),
-                                                        child: Text(
-                                                          '2.5 lbs',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .labelMedium,
-                                                        ),
-                                                      ),
-                                                    ),
+                                                  Text(
+                                                    '60/100',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium,
                                                   ),
                                                 ],
                                               ),
@@ -837,7 +561,7 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                                                     12.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Accepted',
+                                                          'Insufficient',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -862,221 +586,7 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                                   CrossAxisAlignment.end,
                                               children: [
                                                 Text(
-                                                  '\$56.89',
-                                                  textAlign: TextAlign.end,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .headlineSmall,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      16.0, 0.0, 16.0, 0.0),
-                                  child: Container(
-                                    width: double.infinity,
-                                    constraints: const BoxConstraints(
-                                      maxWidth: 570.0,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      border: Border.all(
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
-                                        width: 2.0,
-                                      ),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 12.0, 16.0, 12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Expanded(
-                                            flex: 4,
-                                            child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 0.0, 12.0, 0.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  RichText(
-                                                    textScaleFactor:
-                                                        MediaQuery.of(context)
-                                                            .textScaleFactor,
-                                                    text: TextSpan(
-                                                      children: [
-                                                        const TextSpan(
-                                                          text: 'Order #: ',
-                                                          style: TextStyle(),
-                                                        ),
-                                                        TextSpan(
-                                                          text: '429242424',
-                                                          style: TextStyle(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                          ),
-                                                        )
-                                                      ],
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyLarge,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 4.0,
-                                                                0.0, 0.0),
-                                                    child: Text(
-                                                      'Mon. July 3rd',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .labelMedium,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                            tabletLandscape: false,
-                                          ))
-                                            Expanded(
-                                              flex: 1,
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Container(
-                                                    height: 32.0,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .primaryBackground,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12.0),
-                                                      border: Border.all(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate,
-                                                        width: 2.0,
-                                                      ),
-                                                    ),
-                                                    child: Align(
-                                                      alignment:
-                                                          const AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    7.0,
-                                                                    0.0,
-                                                                    7.0,
-                                                                    0.0),
-                                                        child: Text(
-                                                          '2.5 lbs',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .labelMedium,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                          ))
-                                            Expanded(
-                                              flex: 2,
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Container(
-                                                    height: 32.0,
-                                                    decoration: BoxDecoration(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .accent3,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12.0),
-                                                      border: Border.all(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .tertiary,
-                                                        width: 2.0,
-                                                      ),
-                                                    ),
-                                                    child: Align(
-                                                      alignment:
-                                                          const AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    12.0,
-                                                                    0.0,
-                                                                    12.0,
-                                                                    0.0),
-                                                        child: Text(
-                                                          'Accepted',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .tertiary,
-                                                              ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          Expanded(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.end,
-                                              children: [
-                                                Text(
-                                                  '\$15.12',
+                                                  '60%',
                                                   textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(
                                                           context)
