@@ -3,17 +3,14 @@ import '/components/navbar_widget.dart';
 import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'semester_model.dart';
 export 'semester_model.dart';
 
 class SemesterWidget extends StatefulWidget {
-  const SemesterWidget({Key? key}) : super(key: key);
+  const SemesterWidget({super.key});
 
   @override
   _SemesterWidgetState createState() => _SemesterWidgetState();
@@ -64,7 +61,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
           child: wrapWithModel(
             model: _model.drawerModel,
             updateCallback: () => setState(() {}),
-            child: DrawerWidget(),
+            child: const DrawerWidget(),
           ),
         ),
         body: Row(
@@ -73,20 +70,20 @@ class _SemesterWidgetState extends State<SemesterWidget> {
             wrapWithModel(
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
-              child: SideNavWidget(
+              child: const SideNavWidget(
                 selectedNav: 4,
               ),
             ),
             Expanded(
               flex: 8,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: 1170.0,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
                       if (responsiveVisibility(
@@ -98,7 +95,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                         wrapWithModel(
                           model: _model.navbarModel,
                           updateCallback: () => setState(() {}),
-                          child: NavbarWidget(),
+                          child: const NavbarWidget(),
                         ),
                       SingleChildScrollView(
                         child: Column(
@@ -113,10 +110,10 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                               Container(
                                 width: double.infinity,
                                 height: 24.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 0.0, 0.0),
                               child: Text(
                                 'Academics',
@@ -125,7 +122,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 4.0, 0.0, 0.0),
                               child: Text(
                                 'Below is Your Academic Record (Semester Wise)',
@@ -134,11 +131,11 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: Container(
                                 width: double.infinity,
-                                constraints: BoxConstraints(
+                                constraints: const BoxConstraints(
                                   maxWidth: double.infinity,
                                 ),
                                 decoration: BoxDecoration(
@@ -152,7 +149,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -231,7 +228,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                               ),
                             ),
                             ListView(
-                              padding: EdgeInsets.fromLTRB(
+                              padding: const EdgeInsets.fromLTRB(
                                 0,
                                 12.0,
                                 0,
@@ -242,11 +239,11 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                               scrollDirection: Axis.vertical,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: Container(
                                     width: double.infinity,
-                                    constraints: BoxConstraints(
+                                    constraints: const BoxConstraints(
                                       maxWidth: 570.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -260,7 +257,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 12.0, 16.0, 12.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -270,7 +267,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                           Expanded(
                                             flex: 4,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Column(
@@ -286,7 +283,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                                             .textScaleFactor,
                                                     text: TextSpan(
                                                       children: [
-                                                        TextSpan(
+                                                        const TextSpan(
                                                           text: 'BAS303: ',
                                                           style: TextStyle(),
                                                         ),
@@ -309,7 +306,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -354,11 +351,11 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                                     ),
                                                     child: Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     7.0,
                                                                     0.0,
@@ -405,11 +402,11 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                                     ),
                                                     child: Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     12.0,
                                                                     0.0,
@@ -456,11 +453,11 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: Container(
                                     width: double.infinity,
-                                    constraints: BoxConstraints(
+                                    constraints: const BoxConstraints(
                                       maxWidth: 570.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -474,7 +471,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 12.0, 16.0, 12.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -484,7 +481,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                           Expanded(
                                             flex: 4,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Column(
@@ -500,7 +497,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                                             .textScaleFactor,
                                                     text: TextSpan(
                                                       children: [
-                                                        TextSpan(
+                                                        const TextSpan(
                                                           text: 'BVE301:',
                                                           style: TextStyle(),
                                                         ),
@@ -524,7 +521,7 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -569,11 +566,11 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                                     ),
                                                     child: Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     7.0,
                                                                     0.0,
@@ -620,11 +617,11 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                                     ),
                                                     child: Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     12.0,
                                                                     0.0,
@@ -670,9 +667,9 @@ class _SemesterWidgetState extends State<SemesterWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 12.0)),
+                              ].divide(const SizedBox(height: 12.0)),
                             ),
-                          ].addToEnd(SizedBox(height: 64.0)),
+                          ].addToEnd(const SizedBox(height: 64.0)),
                         ),
                       ),
                     ],

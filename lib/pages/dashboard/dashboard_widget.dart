@@ -5,20 +5,16 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'dashboard_model.dart';
 export 'dashboard_model.dart';
 
 class DashboardWidget extends StatefulWidget {
-  const DashboardWidget({Key? key}) : super(key: key);
+  const DashboardWidget({super.key});
 
   @override
   _DashboardWidgetState createState() => _DashboardWidgetState();
@@ -45,15 +41,15 @@ class _DashboardWidgetState extends State<DashboardWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(-50.0, 0.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(-50.0, 0.0),
+          end: const Offset(0.0, 0.0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.7, 0.7),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.7, 0.7),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -106,7 +102,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
           child: wrapWithModel(
             model: _model.drawerModel,
             updateCallback: () => setState(() {}),
-            child: DrawerWidget(),
+            child: const DrawerWidget(),
           ),
         ),
         body: Row(
@@ -116,25 +112,25 @@ class _DashboardWidgetState extends State<DashboardWidget>
             wrapWithModel(
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
-              child: SideNavWidget(
+              child: const SideNavWidget(
                 selectedNav: 1,
               ),
             ),
             Expanded(
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: 1370.0,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -151,13 +147,13 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                           .headlineMedium
                                           .override(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF15161E),
+                                            color: const Color(0xFF15161E),
                                             fontSize: 24.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Text(
                                         'Below is a company overview',
@@ -165,7 +161,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                             .labelMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -175,7 +171,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -192,30 +188,25 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         width: 50.0,
                                         height: 50.0,
                                         decoration: BoxDecoration(
-                                          color: Color(0x4D9489F5),
-                                          borderRadius: BorderRadius.only(
+                                          color: const Color(0x4D9489F5),
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(10.0),
                                             bottomRight: Radius.circular(10.0),
                                             topLeft: Radius.circular(10.0),
                                             topRight: Radius.circular(10.0),
                                           ),
                                           border: Border.all(
-                                            color: Color(0xFF6F61EF),
+                                            color: const Color(0xFF6F61EF),
                                             width: 2.0,
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(2.0),
+                                          padding: const EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
-                                            child: CachedNetworkImage(
-                                              fadeInDuration:
-                                                  Duration(milliseconds: 500),
-                                              fadeOutDuration:
-                                                  Duration(milliseconds: 500),
-                                              imageUrl:
-                                                  'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+                                            child: Image.asset(
+                                              'assets/images/SakshamSrivastavaPhotograph.jpg',
                                               width: 44.0,
                                               height: 44.0,
                                               fit: BoxFit.cover,
@@ -229,7 +220,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                       phone: false,
                                     ))
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -237,27 +228,27 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'Andrew D.',
+                                              'Saksham Srivastva',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyLarge
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF15161E),
+                                                    color: const Color(0xFF15161E),
                                                     fontSize: 16.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
                                             ),
                                             Text(
-                                              'admin@gmail.com',
+                                              '2203630100136',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF606A85),
+                                                    color: const Color(0xFF606A85),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
@@ -272,9 +263,9 @@ class _DashboardWidgetState extends State<DashboardWidget>
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 4.0),
                             child: SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
@@ -282,11 +273,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Container(
                                       height: 100.0,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 270.0,
                                       ),
                                       decoration: BoxDecoration(
@@ -294,17 +285,17 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                         border: Border.all(
-                                          color: Color(0xFFE5E7EB),
+                                          color: const Color(0xFFE5E7EB),
                                           width: 1.0,
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Padding(
+                                            const Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 16.0, 0.0),
@@ -331,7 +322,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -344,7 +335,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       Expanded(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       4.0,
@@ -358,7 +349,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'Outfit',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF15161E),
                                                                   fontSize:
                                                                       36.0,
@@ -380,11 +371,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Container(
                                       height: 100.0,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 270.0,
                                       ),
                                       decoration: BoxDecoration(
@@ -392,17 +383,17 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                         border: Border.all(
-                                          color: Color(0xFFE5E7EB),
+                                          color: const Color(0xFFE5E7EB),
                                           width: 1.0,
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Padding(
+                                            const Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 16.0, 0.0),
@@ -429,7 +420,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -441,7 +432,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     4.0,
@@ -455,7 +446,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF15161E),
                                                                 fontSize: 36.0,
                                                                 fontWeight:
@@ -475,11 +466,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Container(
                                       height: 100.0,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 270.0,
                                       ),
                                       decoration: BoxDecoration(
@@ -487,17 +478,17 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                         border: Border.all(
-                                          color: Color(0xFFE5E7EB),
+                                          color: const Color(0xFFE5E7EB),
                                           width: 1.0,
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Padding(
+                                            const Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 16.0, 0.0),
@@ -524,7 +515,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -536,7 +527,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     4.0,
@@ -550,7 +541,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF15161E),
                                                                 fontSize: 36.0,
                                                                 fontWeight:
@@ -570,11 +561,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Container(
                                       height: 100.0,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 270.0,
                                       ),
                                       decoration: BoxDecoration(
@@ -582,17 +573,17 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                         border: Border.all(
-                                          color: Color(0xFFE5E7EB),
+                                          color: const Color(0xFFE5E7EB),
                                           width: 1.0,
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Padding(
+                                            const Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 16.0, 0.0),
@@ -619,7 +610,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -631,7 +622,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     4.0,
@@ -645,7 +636,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF15161E),
                                                                 fontSize: 36.0,
                                                                 fontWeight:
@@ -665,15 +656,15 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                     ),
                                   ),
                                 ]
-                                    .divide(SizedBox(width: 16.0))
-                                    .addToStart(SizedBox(width: 16.0))
-                                    .addToEnd(SizedBox(width: 16.0)),
+                                    .divide(const SizedBox(width: 16.0))
+                                    .addToStart(const SizedBox(width: 16.0))
+                                    .addToEnd(const SizedBox(width: 16.0)),
                               ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -682,9 +673,9 @@ class _DashboardWidgetState extends State<DashboardWidget>
                               Expanded(
                                 flex: 10,
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 8.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -719,13 +710,13 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                             border: Border.all(
-                                              color: Color(0xFFE5E7EB),
+                                              color: const Color(0xFFE5E7EB),
                                               width: 1.0,
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 0.0, 8.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -733,7 +724,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   CrossAxisAlignment.stretch,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsets.all(12.0),
+                                                  padding: const EdgeInsets.all(12.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -743,7 +734,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -757,7 +748,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF15161E),
                                                                 fontSize: 24.0,
                                                                 fontWeight:
@@ -768,7 +759,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -797,7 +788,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF606A85),
                                                                         fontSize:
                                                                             14.0,
@@ -816,7 +807,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       .override(
                                                                         fontFamily:
                                                                             'Outfit',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF15161E),
                                                                         fontSize:
                                                                             36.0,
@@ -824,7 +815,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             FontWeight.w600,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 4.0)),
                                                             ),
                                                             FFButtonWidget(
@@ -837,20 +828,20 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 36.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         0.0,
                                                                         16.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF6F61EF),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -868,7 +859,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -877,16 +868,16 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                     BorderRadius
                                                                         .circular(
                                                                             12.0),
-                                                                hoverColor: Color(
+                                                                hoverColor: const Color(
                                                                     0x4D9489F5),
                                                                 hoverBorderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Color(
                                                                       0xFF6F61EF),
                                                                   width: 1.0,
                                                                 ),
                                                                 hoverTextColor:
-                                                                    Color(
+                                                                    const Color(
                                                                         0xFF15161E),
                                                                 hoverElevation:
                                                                     0.0,
@@ -895,7 +886,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           ],
                                                         ),
                                                       ),
-                                                      Divider(
+                                                      const Divider(
                                                         height: 2.0,
                                                         thickness: 1.0,
                                                         color:
@@ -903,7 +894,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     12.0,
@@ -937,7 +928,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF606A85),
+                                                                              const Color(0xFF606A85),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -951,7 +942,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                     text:
                                                                         TextSpan(
                                                                       children: [
-                                                                        TextSpan(
+                                                                        const TextSpan(
                                                                           text:
                                                                               '₹230000 /',
                                                                           style:
@@ -964,7 +955,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               .labelLarge
                                                                               .override(
                                                                                 fontFamily: 'Plus Jakarta Sans',
-                                                                                color: Color(0xFF606A85),
+                                                                                color: const Color(0xFF606A85),
                                                                                 fontSize: 16.0,
                                                                                 fontWeight: FontWeight.w500,
                                                                               ),
@@ -977,7 +968,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             fontFamily:
                                                                                 'Outfit',
                                                                             color:
-                                                                                Color(0xFF15161E),
+                                                                                const Color(0xFF15161E),
                                                                             fontSize:
                                                                                 36.0,
                                                                             fontWeight:
@@ -986,7 +977,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             8.0,
@@ -1003,13 +994,13 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       animateFromLastPercent:
                                                                           true,
                                                                       progressColor:
-                                                                          Color(
+                                                                          const Color(
                                                                               0xFF6F61EF),
                                                                       backgroundColor:
-                                                                          Color(
+                                                                          const Color(
                                                                               0x4D9489F5),
                                                                       barRadius:
-                                                                          Radius.circular(
+                                                                          const Radius.circular(
                                                                               16.0),
                                                                       padding:
                                                                           EdgeInsets
@@ -1017,7 +1008,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             8.0,
@@ -1031,18 +1022,18 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       text:
                                                                           TextSpan(
                                                                         children: [
-                                                                          TextSpan(
+                                                                          const TextSpan(
                                                                             text:
-                                                                                'Forecasted income is: ',
+                                                                                'Due Date is :',
                                                                             style:
                                                                                 TextStyle(),
                                                                           ),
                                                                           TextSpan(
                                                                             text:
-                                                                                '\$3,502',
+                                                                                '31/01/2024',
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
-                                                                                  color: Color(0xFF15161E),
+                                                                                  color: const Color(0xFF15161E),
                                                                                   fontSize: 14.0,
                                                                                   fontWeight: FontWeight.bold,
                                                                                 ),
@@ -1052,14 +1043,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             .labelMedium
                                                                             .override(
                                                                               fontFamily: 'Plus Jakarta Sans',
-                                                                              color: Color(0xFF606A85),
+                                                                              color: const Color(0xFF606A85),
                                                                               fontSize: 14.0,
                                                                               fontWeight: FontWeight.w500,
                                                                             ),
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         4.0)),
                                                               ),
@@ -1073,14 +1064,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 36.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         0.0,
                                                                         16.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1094,7 +1085,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF15161E),
                                                                       fontSize:
                                                                           14.0,
@@ -1104,7 +1095,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Color(
                                                                       0xFFE5E7EB),
                                                                   width: 2.0,
@@ -1113,16 +1104,16 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                     BorderRadius
                                                                         .circular(
                                                                             12.0),
-                                                                hoverColor: Color(
+                                                                hoverColor: const Color(
                                                                     0xFFE5E7EB),
                                                                 hoverBorderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Color(
                                                                       0xFFE5E7EB),
                                                                   width: 2.0,
                                                                 ),
                                                                 hoverTextColor:
-                                                                    Color(
+                                                                    const Color(
                                                                         0xFF15161E),
                                                                 hoverElevation:
                                                                     3.0,
@@ -1131,7 +1122,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           ],
                                                         ),
                                                       ),
-                                                      Divider(
+                                                      const Divider(
                                                         height: 2.0,
                                                         thickness: 1.0,
                                                         color:
@@ -1139,21 +1130,21 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     12.0,
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Top Friends',
+                                                          'Associated Faculty',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelMedium
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF606A85),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -1167,11 +1158,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 4.0),
                                                     child:
@@ -1184,7 +1175,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1200,14 +1191,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   height: 50.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0x4C39D2C0),
                                                                     shape: BoxShape
                                                                         .circle,
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF39D2C0),
                                                                       width:
                                                                           2.0,
@@ -1216,7 +1207,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             2.0),
                                                                     child:
                                                                         ClipRRect(
@@ -1225,7 +1216,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               40.0),
                                                                       child: Image
                                                                           .network(
-                                                                        'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+                                                                        'https://aimt.edu.in/wp-content/uploads/2022/10/Executive-Directors-Profile-300x199.jpg',
                                                                         width:
                                                                             60.0,
                                                                         height:
@@ -1237,14 +1228,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           8.0,
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Rudy Fernandez',
+                                                                    'Sh. Ambika Misra',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -1252,7 +1243,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF15161E),
+                                                                              const Color(0xFF15161E),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -1261,14 +1252,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   ),
                                                                 ),
                                                                 Text(
-                                                                  'Manager',
+                                                                  'Executive Director',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelSmall
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF606A85),
                                                                         fontSize:
                                                                             12.0,
@@ -1276,13 +1267,13 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 4.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1298,14 +1289,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   height: 50.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0x4C39D2C0),
                                                                     shape: BoxShape
                                                                         .circle,
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF39D2C0),
                                                                       width:
                                                                           2.0,
@@ -1314,7 +1305,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             2.0),
                                                                     child:
                                                                         ClipRRect(
@@ -1323,7 +1314,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               40.0),
                                                                       child: Image
                                                                           .network(
-                                                                        'https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGUlMjB1c2VyfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60',
+                                                                        'https://aimt.edu.in/wp-content/uploads/2022/10/syedd.jpg',
                                                                         width:
                                                                             60.0,
                                                                         height:
@@ -1335,14 +1326,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           8.0,
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Abigail Herrara',
+                                                                    'Dr. Syed Qamar Abbas',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -1350,7 +1341,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF15161E),
+                                                                              const Color(0xFF15161E),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -1359,14 +1350,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   ),
                                                                 ),
                                                                 Text(
-                                                                  'Designer',
+                                                                  'Director General',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelSmall
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF606A85),
                                                                         fontSize:
                                                                             12.0,
@@ -1374,13 +1365,13 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 4.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1396,14 +1387,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   height: 50.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0x4C39D2C0),
                                                                     shape: BoxShape
                                                                         .circle,
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF39D2C0),
                                                                       width:
                                                                           2.0,
@@ -1412,7 +1403,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             2.0),
                                                                     child:
                                                                         ClipRRect(
@@ -1421,7 +1412,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               40.0),
                                                                       child: Image
                                                                           .network(
-                                                                        'https://images.unsplash.com/photo-1505033575518-a36ea2ef75ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMHVzZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60',
+                                                                        'https://aimt.edu.in/wp-content/uploads/2022/12/dwivedi.png',
                                                                         width:
                                                                             60.0,
                                                                         height:
@@ -1433,14 +1424,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           8.0,
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Liz Ambridge',
+                                                                    'Dr. Ashutosh Dwivedi',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -1448,7 +1439,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF15161E),
+                                                                              const Color(0xFF15161E),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -1457,14 +1448,17 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   ),
                                                                 ),
                                                                 Text(
-                                                                  'Manager',
+                                                                  'Director Academic and\nAdministration',
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelSmall
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF606A85),
                                                                         fontSize:
                                                                             12.0,
@@ -1472,13 +1466,13 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 4.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1494,14 +1488,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   height: 50.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0x4C39D2C0),
                                                                     shape: BoxShape
                                                                         .circle,
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF39D2C0),
                                                                       width:
                                                                           2.0,
@@ -1510,7 +1504,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             2.0),
                                                                     child:
                                                                         ClipRRect(
@@ -1519,7 +1513,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                               40.0),
                                                                       child: Image
                                                                           .network(
-                                                                        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw0fHx1c2VyfGVufDB8fHx8MTY5MTY0Mzg1OXww&ixlib=rb-4.0.3&q=80&w=400',
+                                                                        'https://aimt.edu.in/wp-content/uploads/2022/12/shweta-mishra.png',
                                                                         width:
                                                                             60.0,
                                                                         height:
@@ -1531,14 +1525,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           8.0,
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Liz Rogers',
+                                                                    'Dr. Shweta Mishra',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -1546,7 +1540,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF15161E),
+                                                                              const Color(0xFF15161E),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -1555,14 +1549,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   ),
                                                                 ),
                                                                 Text(
-                                                                  'Front End Dev',
+                                                                  'Additional Director',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelSmall
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF606A85),
                                                                         fontSize:
                                                                             12.0,
@@ -1570,18 +1564,18 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 4.0)),
                                                             ),
                                                           ),
                                                         ]
-                                                            .divide(SizedBox(
+                                                            .divide(const SizedBox(
                                                                 width: 12.0))
                                                             .addToStart(
-                                                                SizedBox(
+                                                                const SizedBox(
                                                                     width:
                                                                         16.0))
-                                                            .addToEnd(SizedBox(
+                                                            .addToEnd(const SizedBox(
                                                                 width: 16.0)),
                                                       ),
                                                     ),
@@ -1620,13 +1614,13 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                             border: Border.all(
-                                              color: Color(0xFFE5E7EB),
+                                              color: const Color(0xFFE5E7EB),
                                               width: 1.0,
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 16.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1650,7 +1644,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                             .override(
                                                               fontFamily:
                                                                   'Plus Jakarta Sans',
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF606A85),
                                                               fontSize: 14.0,
                                                               fontWeight:
@@ -1664,7 +1658,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         4.0,
@@ -1678,7 +1672,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   .override(
                                                                     fontFamily:
                                                                         'Outfit',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFF15161E),
                                                                     fontSize:
                                                                         36.0,
@@ -1705,9 +1699,9 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                     animateFromLastPercent:
                                                         true,
                                                     progressColor:
-                                                        Color(0xFF6F61EF),
+                                                        const Color(0xFF6F61EF),
                                                     backgroundColor:
-                                                        Color(0x4D9489F5),
+                                                        const Color(0x4D9489F5),
                                                     center: Text(
                                                       '55%',
                                                       style: FlutterFlowTheme
@@ -1716,7 +1710,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           .override(
                                                             fontFamily:
                                                                 'Outfit',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 24.0,
                                                             fontWeight:
@@ -1729,14 +1723,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(height: 16.0)),
+                                      ].divide(const SizedBox(height: 16.0)),
                                     ),
                                   ),
                                 ),
                               ),
                             ]
-                                .divide(SizedBox(width: 16.0))
-                                .addToStart(SizedBox(width: 16.0)),
+                                .divide(const SizedBox(width: 16.0))
+                                .addToStart(const SizedBox(width: 16.0)),
                           ),
                         ),
                         Row(
@@ -1745,7 +1739,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 8.0, 0.0),
                                 child: Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -1757,19 +1751,19 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                   ),
                                   child: Container(
                                     width: double.infinity,
-                                    constraints: BoxConstraints(
+                                    constraints: const BoxConstraints(
                                       maxWidth: 970.0,
                                     ),
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(8.0),
                                       border: Border.all(
-                                        color: Color(0xFFE5E7EB),
+                                        color: const Color(0xFFE5E7EB),
                                         width: 1.0,
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsets.all(16.0),
+                                      padding: const EdgeInsets.all(16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
@@ -1777,7 +1771,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
                                               'Notifications',
@@ -1786,7 +1780,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   .headlineSmall
                                                   .override(
                                                     fontFamily: 'Outfit',
-                                                    color: Color(0xFF15161E),
+                                                    color: const Color(0xFF15161E),
                                                     fontSize: 22.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -1794,24 +1788,24 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 12.0, 0.0),
                                             child: Text(
-                                              'Recent completed tasks from your team.',
+                                              'Recent Notification of your Interest',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF606A85),
+                                                    color: const Color(0xFF606A85),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                             ),
                                           ),
                                           ListView(
-                                            padding: EdgeInsets.fromLTRB(
+                                            padding: const EdgeInsets.fromLTRB(
                                               0,
                                               16.0,
                                               0,
@@ -1822,10 +1816,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                             children: [
                                               Container(
                                                 width: double.infinity,
-                                                constraints: BoxConstraints(
+                                                constraints: const BoxConstraints(
                                                   maxWidth: 570.0,
                                                 ),
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Colors.white,
                                                   boxShadow: [
                                                     BoxShadow(
@@ -1836,7 +1830,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   ],
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 8.0, 8.0),
                                                   child: Row(
@@ -1852,18 +1846,18 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              Color(0x4D9489F5),
+                                                              const Color(0x4D9489F5),
                                                           shape:
                                                               BoxShape.circle,
                                                           border: Border.all(
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF6F61EF),
                                                             width: 1.0,
                                                           ),
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   2.0),
                                                           child: ClipRRect(
                                                             borderRadius:
@@ -1872,7 +1866,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         40.0),
                                                             child:
                                                                 Image.network(
-                                                              'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+                                                              '',
                                                               width: 60.0,
                                                               height: 60.0,
                                                               fit: BoxFit.cover,
@@ -1883,7 +1877,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       Expanded(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -1906,7 +1900,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         .spaceBetween,
                                                                 children: [
                                                                   Text(
-                                                                    'Rudy Fernandez',
+                                                                    'Mr. Shivam Dwivedi ',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -1914,7 +1908,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF15161E),
+                                                                              const Color(0xFF15161E),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -1930,7 +1924,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF606A85),
+                                                                              const Color(0xFF606A85),
                                                                           fontSize:
                                                                               12.0,
                                                                           fontWeight:
@@ -1941,7 +1935,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             4.0,
@@ -1955,20 +1949,20 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   text:
                                                                       TextSpan(
                                                                     children: [
-                                                                      TextSpan(
+                                                                      const TextSpan(
                                                                         text:
-                                                                            'Completed ',
+                                                                            'Has taken Leave for ',
                                                                         style:
                                                                             TextStyle(),
                                                                       ),
                                                                       TextSpan(
                                                                         text:
-                                                                            'Marketing Plan',
+                                                                            '01/01/2004',
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .labelMedium
                                                                             .override(
                                                                               fontFamily: 'Plus Jakarta Sans',
-                                                                              color: Color(0xFF6F61EF),
+                                                                              color: const Color(0xFF6F61EF),
                                                                               fontSize: 14.0,
                                                                               fontWeight: FontWeight.bold,
                                                                             ),
@@ -1981,7 +1975,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF606A85),
+                                                                              const Color(0xFF606A85),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -2000,10 +1994,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                               ),
                                               Container(
                                                 width: double.infinity,
-                                                constraints: BoxConstraints(
+                                                constraints: const BoxConstraints(
                                                   maxWidth: 570.0,
                                                 ),
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Colors.white,
                                                   boxShadow: [
                                                     BoxShadow(
@@ -2014,7 +2008,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   ],
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 8.0, 8.0),
                                                   child: Row(
@@ -2030,18 +2024,18 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              Color(0x4D9489F5),
+                                                              const Color(0x4D9489F5),
                                                           shape:
                                                               BoxShape.circle,
                                                           border: Border.all(
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF6F61EF),
                                                             width: 1.0,
                                                           ),
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   2.0),
                                                           child: ClipRRect(
                                                             borderRadius:
@@ -2050,7 +2044,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         40.0),
                                                             child:
                                                                 Image.network(
-                                                              'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+                                                              '',
                                                               width: 60.0,
                                                               height: 60.0,
                                                               fit: BoxFit.cover,
@@ -2061,7 +2055,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       Expanded(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -2089,12 +2083,12 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                             .max,
                                                                     children: [
                                                                       Text(
-                                                                        'Rudy Fernandez',
+                                                                        'Mr. Shivam Dwivedi',
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
                                                                               fontFamily: 'Plus Jakarta Sans',
-                                                                              color: Color(0xFF15161E),
+                                                                              color: const Color(0xFF15161E),
                                                                               fontSize: 14.0,
                                                                               fontWeight: FontWeight.bold,
                                                                             ),
@@ -2110,7 +2104,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF606A85),
+                                                                              const Color(0xFF606A85),
                                                                           fontSize:
                                                                               12.0,
                                                                           fontWeight:
@@ -2121,7 +2115,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             4.0,
@@ -2135,20 +2129,20 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   text:
                                                                       TextSpan(
                                                                     children: [
-                                                                      TextSpan(
+                                                                      const TextSpan(
                                                                         text:
-                                                                            'Started ',
+                                                                            'has uploaded ',
                                                                         style:
                                                                             TextStyle(),
                                                                       ),
                                                                       TextSpan(
                                                                         text:
-                                                                            'Marketing Plan',
+                                                                            'Assignment Paper 3',
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .labelMedium
                                                                             .override(
                                                                               fontFamily: 'Plus Jakarta Sans',
-                                                                              color: Color(0xFF6F61EF),
+                                                                              color: const Color(0xFF6F61EF),
                                                                               fontSize: 14.0,
                                                                               fontWeight: FontWeight.bold,
                                                                             ),
@@ -2161,7 +2155,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF606A85),
+                                                                              const Color(0xFF606A85),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -2180,10 +2174,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                               ),
                                               Container(
                                                 width: double.infinity,
-                                                constraints: BoxConstraints(
+                                                constraints: const BoxConstraints(
                                                   maxWidth: 570.0,
                                                 ),
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Colors.white,
                                                   boxShadow: [
                                                     BoxShadow(
@@ -2194,7 +2188,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   ],
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 8.0, 8.0),
                                                   child: Row(
@@ -2210,18 +2204,18 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              Color(0x4D9489F5),
+                                                              const Color(0x4D9489F5),
                                                           shape:
                                                               BoxShape.circle,
                                                           border: Border.all(
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF6F61EF),
                                                             width: 1.0,
                                                           ),
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   2.0),
                                                           child: ClipRRect(
                                                             borderRadius:
@@ -2230,7 +2224,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         40.0),
                                                             child:
                                                                 Image.network(
-                                                              'https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGUlMjB1c2VyfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60',
+                                                              '',
                                                               width: 60.0,
                                                               height: 60.0,
                                                               fit: BoxFit.cover,
@@ -2241,7 +2235,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       Expanded(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -2264,7 +2258,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         .spaceBetween,
                                                                 children: [
                                                                   Text(
-                                                                    'Abigail Rojas',
+                                                                    'Ms. Arti SIngh',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -2272,7 +2266,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF15161E),
+                                                                              const Color(0xFF15161E),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -2288,7 +2282,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF606A85),
+                                                                              const Color(0xFF606A85),
                                                                           fontSize:
                                                                               12.0,
                                                                           fontWeight:
@@ -2299,7 +2293,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             4.0,
@@ -2313,33 +2307,33 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                   text:
                                                                       TextSpan(
                                                                     children: [
-                                                                      TextSpan(
+                                                                      const TextSpan(
                                                                         text:
-                                                                            'Assigned  ',
+                                                                            'has graded ',
                                                                         style:
                                                                             TextStyle(),
                                                                       ),
                                                                       TextSpan(
                                                                         text:
-                                                                            'Rudy Fernandez ',
+                                                                            'Iind Sessional ',
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .labelMedium
                                                                             .override(
                                                                               fontFamily: 'Plus Jakarta Sans',
-                                                                              color: Color(0xFF39D2C0),
+                                                                              color: const Color(0xFF39D2C0),
                                                                               fontSize: 14.0,
                                                                               fontWeight: FontWeight.bold,
                                                                             ),
                                                                       ),
-                                                                      TextSpan(
+                                                                      const TextSpan(
                                                                         text:
-                                                                            'to ',
+                                                                            'Marks for ',
                                                                         style:
                                                                             TextStyle(),
                                                                       ),
-                                                                      TextSpan(
+                                                                      const TextSpan(
                                                                         text:
-                                                                            'Marketing Plan',
+                                                                            'DSTL',
                                                                         style:
                                                                             TextStyle(
                                                                           color:
@@ -2356,7 +2350,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF606A85),
+                                                                              const Color(0xFF606A85),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -2373,363 +2367,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   ),
                                                 ),
                                               ),
-                                              Container(
-                                                width: double.infinity,
-                                                constraints: BoxConstraints(
-                                                  maxWidth: 570.0,
-                                                ),
-                                                decoration: BoxDecoration(
-                                                  color: Colors.white,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      blurRadius: 0.0,
-                                                      color: Color(0xFFE5E7EB),
-                                                      offset: Offset(0.0, 1.0),
-                                                    )
-                                                  ],
-                                                ),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 4.0, 8.0, 8.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Container(
-                                                        width: 36.0,
-                                                        height: 36.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0x4D9489F5),
-                                                          shape:
-                                                              BoxShape.circle,
-                                                          border: Border.all(
-                                                            color: Color(
-                                                                0xFF6F61EF),
-                                                            width: 1.0,
-                                                          ),
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsets.all(
-                                                                  2.0),
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        40.0),
-                                                            child:
-                                                                Image.network(
-                                                              'https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGUlMjB1c2VyfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60',
-                                                              width: 60.0,
-                                                              height: 60.0,
-                                                              fit: BoxFit.cover,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      8.0,
-                                                                      0.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .spaceBetween,
-                                                                children: [
-                                                                  Text(
-                                                                    'Abigail Rojas',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF15161E),
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          fontWeight:
-                                                                              FontWeight.bold,
-                                                                        ),
-                                                                  ),
-                                                                  Text(
-                                                                    '24m ago',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .labelSmall
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF606A85),
-                                                                          fontSize:
-                                                                              12.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                              Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            4.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                child: RichText(
-                                                                  textScaleFactor:
-                                                                      MediaQuery.of(
-                                                                              context)
-                                                                          .textScaleFactor,
-                                                                  text:
-                                                                      TextSpan(
-                                                                    children: [
-                                                                      TextSpan(
-                                                                        text:
-                                                                            'Created a project: ',
-                                                                        style:
-                                                                            TextStyle(),
-                                                                      ),
-                                                                      TextSpan(
-                                                                        text:
-                                                                            'Marketing Plan',
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .labelMedium
-                                                                            .override(
-                                                                              fontFamily: 'Plus Jakarta Sans',
-                                                                              color: Color(0xFF6F61EF),
-                                                                              fontSize: 14.0,
-                                                                              fontWeight: FontWeight.bold,
-                                                                            ),
-                                                                      )
-                                                                    ],
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .labelMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF606A85),
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              Container(
-                                                width: double.infinity,
-                                                constraints: BoxConstraints(
-                                                  maxWidth: 570.0,
-                                                ),
-                                                decoration: BoxDecoration(
-                                                  color: Colors.white,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      blurRadius: 0.0,
-                                                      color: Color(0xFFE5E7EB),
-                                                      offset: Offset(0.0, 1.0),
-                                                    )
-                                                  ],
-                                                ),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 4.0, 8.0, 8.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Container(
-                                                        width: 36.0,
-                                                        height: 36.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0x4D9489F5),
-                                                          shape:
-                                                              BoxShape.circle,
-                                                          border: Border.all(
-                                                            color: Color(
-                                                                0xFF6F61EF),
-                                                            width: 1.0,
-                                                          ),
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsets.all(
-                                                                  2.0),
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        40.0),
-                                                            child:
-                                                                Image.network(
-                                                              'https://images.unsplash.com/photo-1505033575518-a36ea2ef75ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMHVzZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60',
-                                                              width: 60.0,
-                                                              height: 60.0,
-                                                              fit: BoxFit.cover,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      8.0,
-                                                                      0.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .spaceBetween,
-                                                                children: [
-                                                                  Text(
-                                                                    'Liz Ambridge',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF15161E),
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          fontWeight:
-                                                                              FontWeight.bold,
-                                                                        ),
-                                                                  ),
-                                                                  Text(
-                                                                    '46m ago',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .labelSmall
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF606A85),
-                                                                          fontSize:
-                                                                              12.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                              Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            4.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                child: RichText(
-                                                                  textScaleFactor:
-                                                                      MediaQuery.of(
-                                                                              context)
-                                                                          .textScaleFactor,
-                                                                  text:
-                                                                      TextSpan(
-                                                                    children: [
-                                                                      TextSpan(
-                                                                        text:
-                                                                            'Sent a plan update for ',
-                                                                        style:
-                                                                            TextStyle(),
-                                                                      ),
-                                                                      TextSpan(
-                                                                        text:
-                                                                            'Marketing Plan',
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .labelMedium
-                                                                            .override(
-                                                                              fontFamily: 'Plus Jakarta Sans',
-                                                                              color: Color(0xFF6F61EF),
-                                                                              fontSize: 14.0,
-                                                                              fontWeight: FontWeight.bold,
-                                                                            ),
-                                                                      )
-                                                                    ],
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .labelMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF606A85),
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                            ].divide(SizedBox(height: 8.0)),
+                                            ].divide(const SizedBox(height: 8.0)),
                                           ),
                                         ],
                                       ),
@@ -2739,27 +2377,27 @@ class _DashboardWidgetState extends State<DashboardWidget>
                               ),
                             ),
                           ]
-                              .divide(SizedBox(width: 16.0))
-                              .addToStart(SizedBox(width: 16.0)),
+                              .divide(const SizedBox(width: 16.0))
+                              .addToStart(const SizedBox(width: 16.0)),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
                           child: Container(
                             width: double.infinity,
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                               maxWidth: 1370.0,
                             ),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(8.0),
                               border: Border.all(
-                                color: Color(0xFFE5E7EB),
+                                color: const Color(0xFFE5E7EB),
                                 width: 1.0,
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(16.0),
+                              padding: const EdgeInsets.all(16.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -2776,18 +2414,18 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                               CrossAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
-                                                'Card Header',
+                                                'Assignments',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineMedium
                                                         .override(
                                                           fontFamily: 'Outfit',
                                                           color:
-                                                              Color(0xFF15161E),
+                                                              const Color(0xFF15161E),
                                                           fontSize: 24.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -2795,11 +2433,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 4.0, 12.0, 0.0),
                                               child: Text(
-                                                'Create tables and ui elements that work below.',
+                                                'Download And Upload your Due Assignments',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
@@ -2807,7 +2445,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -2821,8 +2459,8 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         onPressed: () {
                                           print('Button pressed ...');
                                         },
-                                        text: 'Add New',
-                                        icon: Icon(
+                                        text: 'Upload',
+                                        icon: const Icon(
                                           Icons.add_rounded,
                                           color: Colors.white,
                                           size: 15.0,
@@ -2830,12 +2468,12 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         options: FFButtonOptions(
                                           height: 40.0,
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 0.0),
                                           iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: Color(0xFF6F61EF),
+                                          color: const Color(0xFF6F61EF),
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
@@ -2847,7 +2485,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                           elevation: 2.0,
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -2858,12 +2496,12 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                     ],
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 16.0, 0.0, 0.0),
                                     child: Container(
                                       width: double.infinity,
                                       height: 40.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0xFFF1F4F8),
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(0.0),
@@ -2873,7 +2511,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -2894,7 +2532,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            Color(0xFF606A85),
+                                                            const Color(0xFF606A85),
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -2904,7 +2542,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                             Expanded(
                                               flex: 4,
                                               child: Text(
-                                                'Assigned User',
+                                                'Subject',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall
@@ -2912,7 +2550,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -2926,7 +2564,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                               Expanded(
                                                 flex: 2,
                                                 child: Text(
-                                                  'Contract Amount',
+                                                  'Due Date',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -2934,7 +2572,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            Color(0xFF606A85),
+                                                            const Color(0xFF606A85),
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -2952,7 +2590,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -2971,7 +2609,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -2989,11 +2627,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                     scrollDirection: Axis.vertical,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 1.0),
                                         child: Container(
                                           width: 100.0,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Colors.white,
                                             boxShadow: [
                                               BoxShadow(
@@ -3005,7 +2643,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 16.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -3018,14 +2656,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      'Design Work',
+                                                      'Assignment',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -3037,7 +2675,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   flex: 4,
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 8.0,
                                                                 12.0, 8.0),
                                                     child: Row(
@@ -3046,7 +2684,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -3059,7 +2697,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         40.0),
                                                             child:
                                                                 Image.network(
-                                                              'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                                              '',
                                                               width: 32.0,
                                                               height: 32.0,
                                                               fit: BoxFit.cover,
@@ -3069,7 +2707,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         Expanded(
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         4.0,
                                                                         0.0,
@@ -3087,14 +2725,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Randy Peterson',
+                                                                  'Mr. Shivam Dixit',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF15161E),
                                                                         fontSize:
                                                                             14.0,
@@ -3103,14 +2741,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           4.0,
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Business Name',
+                                                                    'Python Programming',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodySmall
@@ -3118,7 +2756,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF6F61EF),
+                                                                              const Color(0xFF6F61EF),
                                                                           fontSize:
                                                                               12.0,
                                                                           fontWeight:
@@ -3141,14 +2779,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      '\$2,100',
+                                                      '01/02/2024',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .titleLarge
                                                           .override(
                                                             fontFamily:
                                                                 'Outfit',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 22.0,
                                                             fontWeight:
@@ -3167,36 +2805,36 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              Color(0x4C39D2C0),
+                                                              const Color(0x4C39D2C0),
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
                                                                       40.0),
                                                           border: Border.all(
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF39D2C0),
                                                           ),
                                                         ),
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       12.0,
                                                                       0.0,
                                                                       12.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Paid',
+                                                            'Due',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF15161E),
                                                                   fontSize:
                                                                       14.0,
@@ -3224,7 +2862,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         borderRadius: 30.0,
                                                         borderWidth: 1.0,
                                                         buttonSize: 44.0,
-                                                        icon: Icon(
+                                                        icon: const Icon(
                                                           Icons.more_vert,
                                                           color:
                                                               Color(0xFF606A85),
@@ -3244,11 +2882,11 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 1.0),
                                         child: Container(
                                           width: 100.0,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Colors.white,
                                             boxShadow: [
                                               BoxShadow(
@@ -3260,7 +2898,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 16.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -3280,7 +2918,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -3292,7 +2930,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   flex: 4,
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 8.0,
                                                                 12.0, 8.0),
                                                     child: Row(
@@ -3301,7 +2939,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -3314,7 +2952,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                         40.0),
                                                             child:
                                                                 Image.network(
-                                                              'https://images.unsplash.com/photo-1474176857210-7287d38d27c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+                                                              '',
                                                               width: 32.0,
                                                               height: 32.0,
                                                               fit: BoxFit.cover,
@@ -3324,7 +2962,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         Expanded(
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         4.0,
                                                                         0.0,
@@ -3342,14 +2980,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Randy Peterson',
+                                                                  'Ms. Arti Singh',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF15161E),
                                                                         fontSize:
                                                                             14.0,
@@ -3358,14 +2996,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                       ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           4.0,
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Business Name',
+                                                                    'Discrete Structure And Theory of Logic',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodySmall
@@ -3373,7 +3011,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF6F61EF),
+                                                                              const Color(0xFF6F61EF),
                                                                           fontSize:
                                                                               12.0,
                                                                           fontWeight:
@@ -3396,14 +3034,14 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      '\$2,100',
+                                                      '01/01/2024',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .titleLarge
                                                           .override(
                                                             fontFamily:
                                                                 'Outfit',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 22.0,
                                                             fontWeight:
@@ -3422,36 +3060,32 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              Color(0x4C39D2C0),
+                                                              const Color(0xFFF1F4F8),
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
                                                                       40.0),
-                                                          border: Border.all(
-                                                            color: Color(
-                                                                0xFF39D2C0),
-                                                          ),
                                                         ),
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       12.0,
                                                                       0.0,
                                                                       12.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Paid',
+                                                            'Submitted',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF15161E),
                                                                   fontSize:
                                                                       14.0,
@@ -3479,1270 +3113,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                         borderRadius: 30.0,
                                                         borderWidth: 1.0,
                                                         buttonSize: 44.0,
-                                                        icon: Icon(
-                                                          Icons.more_vert,
-                                                          color:
-                                                              Color(0xFF606A85),
-                                                          size: 20.0,
-                                                        ),
-                                                        onPressed: () {
-                                                          print(
-                                                              'IconButton pressed ...');
-                                                        },
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 1.0),
-                                        child: Container(
-                                          width: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                blurRadius: 0.0,
-                                                color: Color(0xFFF1F4F8),
-                                                offset: Offset(0.0, 1.0),
-                                              )
-                                            ],
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                  tablet: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      'Design Work',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 14.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 8.0,
-                                                                12.0, 8.0),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      8.0,
-                                                                      0.0),
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        40.0),
-                                                            child:
-                                                                Image.network(
-                                                              'https://images.unsplash.com/photo-1474176857210-7287d38d27c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-                                                              width: 32.0,
-                                                              height: 32.0,
-                                                              fit: BoxFit.cover,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        4.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  'Randy Peterson',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Plus Jakarta Sans',
-                                                                        color: Color(
-                                                                            0xFF15161E),
-                                                                        fontSize:
-                                                                            14.0,
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    'Business Name',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodySmall
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF6F61EF),
-                                                                          fontSize:
-                                                                              12.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ),
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      '\$2,100',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 22.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 2,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Container(
-                                                        height: 32.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0x4C39D2C0),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      40.0),
-                                                          border: Border.all(
-                                                            color: Color(
-                                                                0xFF39D2C0),
-                                                          ),
-                                                        ),
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      12.0,
-                                                                      0.0,
-                                                                      12.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            'Paid',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  color: Color(
-                                                                      0xFF15161E),
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w500,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  flex: 1,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    children: [
-                                                      FlutterFlowIconButton(
-                                                        borderColor:
-                                                            Colors.transparent,
-                                                        borderRadius: 30.0,
-                                                        borderWidth: 1.0,
-                                                        buttonSize: 44.0,
-                                                        icon: Icon(
-                                                          Icons.more_vert,
-                                                          color:
-                                                              Color(0xFF606A85),
-                                                          size: 20.0,
-                                                        ),
-                                                        onPressed: () {
-                                                          print(
-                                                              'IconButton pressed ...');
-                                                        },
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 1.0),
-                                        child: Container(
-                                          width: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                blurRadius: 0.0,
-                                                color: Color(0xFFF1F4F8),
-                                                offset: Offset(0.0, 1.0),
-                                              )
-                                            ],
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                  tablet: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      'Design Work',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 14.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 8.0,
-                                                                12.0, 8.0),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      8.0,
-                                                                      0.0),
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        40.0),
-                                                            child:
-                                                                Image.network(
-                                                              'https://images.unsplash.com/photo-1474176857210-7287d38d27c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-                                                              width: 32.0,
-                                                              height: 32.0,
-                                                              fit: BoxFit.cover,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        4.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  'Randy Peterson',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Plus Jakarta Sans',
-                                                                        color: Color(
-                                                                            0xFF15161E),
-                                                                        fontSize:
-                                                                            14.0,
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    'Business Name',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodySmall
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF6F61EF),
-                                                                          fontSize:
-                                                                              12.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ),
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      '\$2,100',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 22.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 2,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Container(
-                                                        height: 32.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0x4C39D2C0),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      40.0),
-                                                          border: Border.all(
-                                                            color: Color(
-                                                                0xFF39D2C0),
-                                                          ),
-                                                        ),
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      12.0,
-                                                                      0.0,
-                                                                      12.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            'Paid',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  color: Color(
-                                                                      0xFF15161E),
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w500,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  flex: 1,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    children: [
-                                                      FlutterFlowIconButton(
-                                                        borderColor:
-                                                            Colors.transparent,
-                                                        borderRadius: 30.0,
-                                                        borderWidth: 1.0,
-                                                        buttonSize: 44.0,
-                                                        icon: Icon(
-                                                          Icons.more_vert,
-                                                          color:
-                                                              Color(0xFF606A85),
-                                                          size: 20.0,
-                                                        ),
-                                                        onPressed: () {
-                                                          print(
-                                                              'IconButton pressed ...');
-                                                        },
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 1.0),
-                                        child: Container(
-                                          width: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                blurRadius: 0.0,
-                                                color: Color(0xFFF1F4F8),
-                                                offset: Offset(0.0, 1.0),
-                                              )
-                                            ],
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                  tablet: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      'Design Work',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 14.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 8.0,
-                                                                12.0, 8.0),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      8.0,
-                                                                      0.0),
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        40.0),
-                                                            child:
-                                                                Image.network(
-                                                              'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
-                                                              width: 32.0,
-                                                              height: 32.0,
-                                                              fit: BoxFit.cover,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        4.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  'Randy Peterson',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Plus Jakarta Sans',
-                                                                        color: Color(
-                                                                            0xFF15161E),
-                                                                        fontSize:
-                                                                            14.0,
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    'Business Name',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodySmall
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF6F61EF),
-                                                                          fontSize:
-                                                                              12.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ),
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      '\$2,100',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 22.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 2,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Container(
-                                                        height: 32.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0xFFF1F4F8),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      40.0),
-                                                        ),
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      12.0,
-                                                                      0.0,
-                                                                      12.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            'Pending',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  color: Color(
-                                                                      0xFF15161E),
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w500,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  flex: 1,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    children: [
-                                                      FlutterFlowIconButton(
-                                                        borderColor:
-                                                            Colors.transparent,
-                                                        borderRadius: 30.0,
-                                                        borderWidth: 1.0,
-                                                        buttonSize: 44.0,
-                                                        icon: Icon(
-                                                          Icons.more_vert,
-                                                          color:
-                                                              Color(0xFF606A85),
-                                                          size: 20.0,
-                                                        ),
-                                                        onPressed: () {
-                                                          print(
-                                                              'IconButton pressed ...');
-                                                        },
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 1.0),
-                                        child: Container(
-                                          width: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                blurRadius: 0.0,
-                                                color: Color(0xFFF1F4F8),
-                                                offset: Offset(0.0, 1.0),
-                                              )
-                                            ],
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                  tablet: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      'Design Work',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 14.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 8.0,
-                                                                12.0, 8.0),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      8.0,
-                                                                      0.0),
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        40.0),
-                                                            child:
-                                                                Image.network(
-                                                              'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
-                                                              width: 32.0,
-                                                              height: 32.0,
-                                                              fit: BoxFit.cover,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        4.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  'Randy Peterson',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Plus Jakarta Sans',
-                                                                        color: Color(
-                                                                            0xFF15161E),
-                                                                        fontSize:
-                                                                            14.0,
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    'Business Name',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodySmall
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF6F61EF),
-                                                                          fontSize:
-                                                                              12.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ),
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      '\$2,100',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 22.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 2,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Container(
-                                                        height: 32.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0xFFF1F4F8),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      40.0),
-                                                        ),
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      12.0,
-                                                                      0.0,
-                                                                      12.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            'Pending',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  color: Color(
-                                                                      0xFF15161E),
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w500,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  flex: 1,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    children: [
-                                                      FlutterFlowIconButton(
-                                                        borderColor:
-                                                            Colors.transparent,
-                                                        borderRadius: 30.0,
-                                                        borderWidth: 1.0,
-                                                        buttonSize: 44.0,
-                                                        icon: Icon(
-                                                          Icons.more_vert,
-                                                          color:
-                                                              Color(0xFF606A85),
-                                                          size: 20.0,
-                                                        ),
-                                                        onPressed: () {
-                                                          print(
-                                                              'IconButton pressed ...');
-                                                        },
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 1.0),
-                                        child: Container(
-                                          width: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                blurRadius: 0.0,
-                                                color: Color(0xFFF1F4F8),
-                                                offset: Offset(0.0, 1.0),
-                                              )
-                                            ],
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                  tablet: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      'Design Work',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 14.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 8.0,
-                                                                12.0, 8.0),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      8.0,
-                                                                      0.0),
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        40.0),
-                                                            child:
-                                                                Image.network(
-                                                              'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
-                                                              width: 32.0,
-                                                              height: 32.0,
-                                                              fit: BoxFit.cover,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        4.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  'Randy Peterson',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Plus Jakarta Sans',
-                                                                        color: Color(
-                                                                            0xFF15161E),
-                                                                        fontSize:
-                                                                            14.0,
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    'Business Name',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodySmall
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color:
-                                                                              Color(0xFF6F61EF),
-                                                                          fontSize:
-                                                                              12.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ),
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                ))
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      '\$2,100',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 22.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                Expanded(
-                                                  flex: 2,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Container(
-                                                        height: 32.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0xFFF1F4F8),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      40.0),
-                                                        ),
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      12.0,
-                                                                      0.0,
-                                                                      12.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            'Pending',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  color: Color(
-                                                                      0xFF15161E),
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w500,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  flex: 1,
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    children: [
-                                                      FlutterFlowIconButton(
-                                                        borderColor:
-                                                            Colors.transparent,
-                                                        borderRadius: 30.0,
-                                                        borderWidth: 1.0,
-                                                        buttonSize: 44.0,
-                                                        icon: Icon(
+                                                        icon: const Icon(
                                                           Icons.more_vert,
                                                           color:
                                                               Color(0xFF606A85),
@@ -4768,7 +3139,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                             ),
                           ),
                         ),
-                      ].addToEnd(SizedBox(height: 24.0)),
+                      ].addToEnd(const SizedBox(height: 24.0)),
                     ),
                   ),
                 ),

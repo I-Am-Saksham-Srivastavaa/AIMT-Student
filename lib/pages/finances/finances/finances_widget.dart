@@ -4,17 +4,15 @@ import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'finances_model.dart';
 export 'finances_model.dart';
 
 class FinancesWidget extends StatefulWidget {
-  const FinancesWidget({Key? key}) : super(key: key);
+  const FinancesWidget({super.key});
 
   @override
   _FinancesWidgetState createState() => _FinancesWidgetState();
@@ -65,7 +63,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
           child: wrapWithModel(
             model: _model.drawerModel,
             updateCallback: () => setState(() {}),
-            child: DrawerWidget(),
+            child: const DrawerWidget(),
           ),
         ),
         body: Row(
@@ -74,20 +72,20 @@ class _FinancesWidgetState extends State<FinancesWidget> {
             wrapWithModel(
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
-              child: SideNavWidget(
+              child: const SideNavWidget(
                 selectedNav: 4,
               ),
             ),
             Expanded(
               flex: 8,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: 1170.0,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
                       SingleChildScrollView(
@@ -103,10 +101,10 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                               Container(
                                 width: double.infinity,
                                 height: 24.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 0.0, 16.0),
                               child: Text(
                                 'Financial Record',
@@ -115,7 +113,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 4.0, 0.0, 4.0),
                               child: Text(
                                 'Below is your Financial overview.',
@@ -145,12 +143,12 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(8.0),
                                 border: Border.all(
-                                  color: Color(0xFFE5E7EB),
+                                  color: const Color(0xFFE5E7EB),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 8.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -158,7 +156,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                       CrossAxisAlignment.stretch,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsets.all(12.0),
+                                      padding: const EdgeInsets.all(12.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
@@ -166,7 +164,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 8.0),
                                             child: Text(
                                               'Account Overview',
@@ -175,7 +173,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                   .headlineMedium
                                                   .override(
                                                     fontFamily: 'Outfit',
-                                                    color: Color(0xFF15161E),
+                                                    color: const Color(0xFF15161E),
                                                     fontSize: 24.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
@@ -183,7 +181,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 12.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -205,7 +203,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF606A85),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -221,7 +219,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Outfit',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 36.0,
                                                             fontWeight:
@@ -229,7 +227,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 4.0)),
+                                                      const SizedBox(height: 4.0)),
                                                 ),
                                                 FFButtonWidget(
                                                   onPressed: () {
@@ -239,14 +237,14 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                   options: FFButtonOptions(
                                                     height: 36.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
-                                                    color: Color(0xFF6F61EF),
+                                                    color: const Color(0xFF6F61EF),
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .bodyMedium
@@ -259,7 +257,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                               FontWeight.w500,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -267,27 +265,27 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                         BorderRadius.circular(
                                                             12.0),
                                                     hoverColor:
-                                                        Color(0x4D9489F5),
-                                                    hoverBorderSide: BorderSide(
+                                                        const Color(0x4D9489F5),
+                                                    hoverBorderSide: const BorderSide(
                                                       color: Color(0xFF6F61EF),
                                                       width: 1.0,
                                                     ),
                                                     hoverTextColor:
-                                                        Color(0xFF15161E),
+                                                        const Color(0xFF15161E),
                                                     hoverElevation: 0.0,
                                                   ),
                                                 ),
                                               ],
                                             ),
                                           ),
-                                          Divider(
+                                          const Divider(
                                             height: 2.0,
                                             thickness: 1.0,
                                             color: Color(0xFFE5E7EB),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 12.0, 0.0, 12.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -313,7 +311,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                             .override(
                                                               fontFamily:
                                                                   'Plus Jakarta Sans',
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF606A85),
                                                               fontSize: 14.0,
                                                               fontWeight:
@@ -328,7 +326,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                                 .textScaleFactor,
                                                         text: TextSpan(
                                                           children: [
-                                                            TextSpan(
+                                                            const TextSpan(
                                                               text: '₹230000 /',
                                                               style:
                                                                   TextStyle(),
@@ -341,7 +339,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                                   .override(
                                                                     fontFamily:
                                                                         'Plus Jakarta Sans',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFF606A85),
                                                                     fontSize:
                                                                         16.0,
@@ -357,7 +355,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF15161E),
                                                                 fontSize: 36.0,
                                                                 fontWeight:
@@ -368,7 +366,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     8.0,
@@ -382,11 +380,11 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           animateFromLastPercent:
                                                               true,
                                                           progressColor:
-                                                              Color(0xFF6F61EF),
+                                                              const Color(0xFF6F61EF),
                                                           backgroundColor:
-                                                              Color(0x4D9489F5),
+                                                              const Color(0x4D9489F5),
                                                           barRadius:
-                                                              Radius.circular(
+                                                              const Radius.circular(
                                                                   16.0),
                                                           padding:
                                                               EdgeInsets.zero,
@@ -394,7 +392,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     8.0,
@@ -407,7 +405,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                                   .textScaleFactor,
                                                           text: TextSpan(
                                                             children: [
-                                                              TextSpan(
+                                                              const TextSpan(
                                                                 text:
                                                                     'Forecasted income is: ',
                                                                 style:
@@ -421,7 +419,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF15161E),
                                                                       fontSize:
                                                                           14.0,
@@ -437,7 +435,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF606A85),
                                                                   fontSize:
                                                                       14.0,
@@ -449,7 +447,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 4.0)),
+                                                        const SizedBox(height: 4.0)),
                                                   ),
                                                 ),
                                                 FFButtonWidget(
@@ -460,11 +458,11 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                   options: FFButtonOptions(
                                                     height: 36.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: Colors.white,
@@ -475,13 +473,13 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF15161E),
+                                                              const Color(0xFF15161E),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
                                                     elevation: 0.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Color(0xFFE5E7EB),
                                                       width: 2.0,
                                                     ),
@@ -489,27 +487,27 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                         BorderRadius.circular(
                                                             12.0),
                                                     hoverColor:
-                                                        Color(0xFFE5E7EB),
-                                                    hoverBorderSide: BorderSide(
+                                                        const Color(0xFFE5E7EB),
+                                                    hoverBorderSide: const BorderSide(
                                                       color: Color(0xFFE5E7EB),
                                                       width: 2.0,
                                                     ),
                                                     hoverTextColor:
-                                                        Color(0xFF15161E),
+                                                        const Color(0xFF15161E),
                                                     hoverElevation: 3.0,
                                                   ),
                                                 ),
                                               ],
                                             ),
                                           ),
-                                          Divider(
+                                          const Divider(
                                             height: 2.0,
                                             thickness: 1.0,
                                             color: Color(0xFFE5E7EB),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 12.0, 0.0, 0.0),
                                             child: Text(
                                               'Top Friends',
@@ -519,7 +517,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF606A85),
+                                                    color: const Color(0xFF606A85),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
@@ -530,9 +528,9 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          AlignmentDirectional(-1.0, 0.0),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 4.0),
                                         child: SingleChildScrollView(
                                           scrollDirection: Axis.horizontal,
@@ -540,7 +538,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 12.0),
                                                 child: Column(
@@ -552,17 +550,17 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            Color(0x4C39D2C0),
+                                                            const Color(0x4C39D2C0),
                                                         shape: BoxShape.circle,
                                                         border: Border.all(
                                                           color:
-                                                              Color(0xFF39D2C0),
+                                                              const Color(0xFF39D2C0),
                                                           width: 2.0,
                                                         ),
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsets.all(2.0),
+                                                            const EdgeInsets.all(2.0),
                                                         child: ClipRRect(
                                                           borderRadius:
                                                               BorderRadius
@@ -579,7 +577,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   8.0,
@@ -593,7 +591,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                             .override(
                                                               fontFamily:
                                                                   'Plus Jakarta Sans',
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF15161E),
                                                               fontSize: 14.0,
                                                               fontWeight:
@@ -610,7 +608,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF606A85),
                                                             fontSize: 12.0,
                                                             fontWeight:
@@ -618,11 +616,11 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 4.0)),
+                                                      const SizedBox(height: 4.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 12.0),
                                                 child: Column(
@@ -634,17 +632,17 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            Color(0x4C39D2C0),
+                                                            const Color(0x4C39D2C0),
                                                         shape: BoxShape.circle,
                                                         border: Border.all(
                                                           color:
-                                                              Color(0xFF39D2C0),
+                                                              const Color(0xFF39D2C0),
                                                           width: 2.0,
                                                         ),
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsets.all(2.0),
+                                                            const EdgeInsets.all(2.0),
                                                         child: ClipRRect(
                                                           borderRadius:
                                                               BorderRadius
@@ -661,7 +659,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   8.0,
@@ -675,7 +673,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                             .override(
                                                               fontFamily:
                                                                   'Plus Jakarta Sans',
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF15161E),
                                                               fontSize: 14.0,
                                                               fontWeight:
@@ -692,7 +690,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF606A85),
                                                             fontSize: 12.0,
                                                             fontWeight:
@@ -700,11 +698,11 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 4.0)),
+                                                      const SizedBox(height: 4.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 12.0),
                                                 child: Column(
@@ -716,17 +714,17 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            Color(0x4C39D2C0),
+                                                            const Color(0x4C39D2C0),
                                                         shape: BoxShape.circle,
                                                         border: Border.all(
                                                           color:
-                                                              Color(0xFF39D2C0),
+                                                              const Color(0xFF39D2C0),
                                                           width: 2.0,
                                                         ),
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsets.all(2.0),
+                                                            const EdgeInsets.all(2.0),
                                                         child: ClipRRect(
                                                           borderRadius:
                                                               BorderRadius
@@ -743,7 +741,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   8.0,
@@ -757,7 +755,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                             .override(
                                                               fontFamily:
                                                                   'Plus Jakarta Sans',
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF15161E),
                                                               fontSize: 14.0,
                                                               fontWeight:
@@ -774,7 +772,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF606A85),
                                                             fontSize: 12.0,
                                                             fontWeight:
@@ -782,11 +780,11 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 4.0)),
+                                                      const SizedBox(height: 4.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 12.0),
                                                 child: Column(
@@ -798,17 +796,17 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            Color(0x4C39D2C0),
+                                                            const Color(0x4C39D2C0),
                                                         shape: BoxShape.circle,
                                                         border: Border.all(
                                                           color:
-                                                              Color(0xFF39D2C0),
+                                                              const Color(0xFF39D2C0),
                                                           width: 2.0,
                                                         ),
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsets.all(2.0),
+                                                            const EdgeInsets.all(2.0),
                                                         child: ClipRRect(
                                                           borderRadius:
                                                               BorderRadius
@@ -825,7 +823,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   8.0,
@@ -839,7 +837,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                             .override(
                                                               fontFamily:
                                                                   'Plus Jakarta Sans',
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF15161E),
                                                               fontSize: 14.0,
                                                               fontWeight:
@@ -856,7 +854,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF606A85),
                                                             fontSize: 12.0,
                                                             fontWeight:
@@ -864,15 +862,15 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                           ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 4.0)),
+                                                      const SizedBox(height: 4.0)),
                                                 ),
                                               ),
                                             ]
-                                                .divide(SizedBox(width: 12.0))
+                                                .divide(const SizedBox(width: 12.0))
                                                 .addToStart(
-                                                    SizedBox(width: 16.0))
+                                                    const SizedBox(width: 16.0))
                                                 .addToEnd(
-                                                    SizedBox(width: 16.0)),
+                                                    const SizedBox(width: 16.0)),
                                           ),
                                         ),
                                       ),
@@ -882,7 +880,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 4.0, 0.0, 0.0),
                               child: Text(
                                 'Below are your most recent Transcations',
@@ -891,11 +889,11 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: Container(
                                 width: double.infinity,
-                                constraints: BoxConstraints(
+                                constraints: const BoxConstraints(
                                   maxWidth: double.infinity,
                                 ),
                                 decoration: BoxDecoration(
@@ -909,7 +907,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -967,7 +965,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                               ),
                             ),
                             ListView(
-                              padding: EdgeInsets.fromLTRB(
+                              padding: const EdgeInsets.fromLTRB(
                                 0,
                                 12.0,
                                 0,
@@ -978,7 +976,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                               scrollDirection: Axis.vertical,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -990,7 +988,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                     },
                                     child: Container(
                                       width: double.infinity,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 570.0,
                                       ),
                                       decoration: BoxDecoration(
@@ -1005,7 +1003,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 12.0, 16.0, 12.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1015,7 +1013,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                             Expanded(
                                               flex: 4,
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Column(
@@ -1032,7 +1030,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                               .textScaleFactor,
                                                       text: TextSpan(
                                                         children: [
-                                                          TextSpan(
+                                                          const TextSpan(
                                                             text: 'TXN ID: ',
                                                             style: TextStyle(),
                                                           ),
@@ -1057,7 +1055,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,
@@ -1118,11 +1116,11 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: Container(
                                     width: double.infinity,
-                                    constraints: BoxConstraints(
+                                    constraints: const BoxConstraints(
                                       maxWidth: 570.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -1136,7 +1134,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 12.0, 16.0, 12.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -1146,7 +1144,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                           Expanded(
                                             flex: 4,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Column(
@@ -1162,7 +1160,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                             .textScaleFactor,
                                                     text: TextSpan(
                                                       children: [
-                                                        TextSpan(
+                                                        const TextSpan(
                                                           text: 'TXN ID: ',
                                                           style: TextStyle(),
                                                         ),
@@ -1185,7 +1183,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -1239,15 +1237,15 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 12.0)),
+                              ].divide(const SizedBox(height: 12.0)),
                             ),
-                          ].addToEnd(SizedBox(height: 64.0)),
+                          ].addToEnd(const SizedBox(height: 64.0)),
                         ),
                       ),
                       wrapWithModel(
                         model: _model.navbarModel,
                         updateCallback: () => setState(() {}),
-                        child: NavbarWidget(),
+                        child: const NavbarWidget(),
                       ),
                     ],
                   ),

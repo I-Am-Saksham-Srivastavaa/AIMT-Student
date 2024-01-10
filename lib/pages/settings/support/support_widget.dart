@@ -4,16 +4,14 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'support_model.dart';
 export 'support_model.dart';
 
 class SupportWidget extends StatefulWidget {
-  const SupportWidget({Key? key}) : super(key: key);
+  const SupportWidget({super.key});
 
   @override
   _SupportWidgetState createState() => _SupportWidgetState();
@@ -40,8 +38,8 @@ class _SupportWidgetState extends State<SupportWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 110.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 110.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -59,8 +57,8 @@ class _SupportWidgetState extends State<SupportWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 110.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 110.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -78,8 +76,8 @@ class _SupportWidgetState extends State<SupportWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 110.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 110.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -97,8 +95,8 @@ class _SupportWidgetState extends State<SupportWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 110.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 110.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -116,8 +114,8 @@ class _SupportWidgetState extends State<SupportWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 110.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 110.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -135,8 +133,8 @@ class _SupportWidgetState extends State<SupportWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 110.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 110.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -198,7 +196,7 @@ class _SupportWidgetState extends State<SupportWidget>
                   borderRadius: 30.0,
                   borderWidth: 1.0,
                   buttonSize: 60.0,
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back_rounded,
                     color: Color(0xFF15161E),
                     size: 30.0,
@@ -211,12 +209,12 @@ class _SupportWidgetState extends State<SupportWidget>
                   'Get support',
                   style: FlutterFlowTheme.of(context).titleLarge.override(
                         fontFamily: 'Outfit',
-                        color: Color(0xFF15161E),
+                        color: const Color(0xFF15161E),
                         fontSize: 22.0,
                         fontWeight: FontWeight.w500,
                       ),
                 ),
-                actions: [],
+                actions: const [],
                 centerTitle: false,
                 elevation: 0.0,
               )
@@ -229,7 +227,7 @@ class _SupportWidgetState extends State<SupportWidget>
               Expanded(
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -240,13 +238,13 @@ class _SupportWidgetState extends State<SupportWidget>
                           style:
                               FlutterFlowTheme.of(context).labelLarge.override(
                                     fontFamily: 'Outfit',
-                                    color: Color(0xFF606A85),
+                                    color: const Color(0xFF606A85),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 4.0, 0.0, 0.0),
                           child: Text(
                             'How can we help you?',
@@ -254,7 +252,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                 .headlineMedium
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF15161E),
+                                  color: const Color(0xFF15161E),
                                   fontSize: 24.0,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -265,23 +263,23 @@ class _SupportWidgetState extends State<SupportWidget>
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 16.0, 0.0, 0.0),
                                 child: Container(
                                   width: 120.0,
-                                  constraints: BoxConstraints(
+                                  constraints: const BoxConstraints(
                                     maxWidth: 500.0,
                                   ),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(12.0),
                                     border: Border.all(
-                                      color: Color(0xFFE5E7EB),
+                                      color: const Color(0xFFE5E7EB),
                                       width: 2.0,
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(8.0),
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -289,14 +287,14 @@ class _SupportWidgetState extends State<SupportWidget>
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Icon(
+                                        const Icon(
                                           Icons.local_phone,
                                           color: Color(0xFF6F61EF),
                                           size: 36.0,
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.0, 0.0, 0.0),
                                           child: Text(
                                             'Call Us',
@@ -306,7 +304,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF15161E),
+                                                  color: const Color(0xFF15161E),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
@@ -321,23 +319,23 @@ class _SupportWidgetState extends State<SupportWidget>
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 16.0, 0.0, 0.0),
                                 child: Container(
                                   width: 120.0,
-                                  constraints: BoxConstraints(
+                                  constraints: const BoxConstraints(
                                     maxWidth: 500.0,
                                   ),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(12.0),
                                     border: Border.all(
-                                      color: Color(0xFFE5E7EB),
+                                      color: const Color(0xFFE5E7EB),
                                       width: 2.0,
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(8.0),
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -345,14 +343,14 @@ class _SupportWidgetState extends State<SupportWidget>
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Icon(
+                                        const Icon(
                                           Icons.email_outlined,
                                           color: Color(0xFF6F61EF),
                                           size: 36.0,
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.0, 0.0, 0.0),
                                           child: Text(
                                             'Email Us',
@@ -362,7 +360,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF15161E),
+                                                  color: const Color(0xFF15161E),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
@@ -377,23 +375,23 @@ class _SupportWidgetState extends State<SupportWidget>
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 16.0, 0.0, 0.0),
                                 child: Container(
                                   width: 120.0,
-                                  constraints: BoxConstraints(
+                                  constraints: const BoxConstraints(
                                     maxWidth: 500.0,
                                   ),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(12.0),
                                     border: Border.all(
-                                      color: Color(0xFFE5E7EB),
+                                      color: const Color(0xFFE5E7EB),
                                       width: 2.0,
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(8.0),
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -401,14 +399,14 @@ class _SupportWidgetState extends State<SupportWidget>
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Icon(
+                                        const Icon(
                                           Icons.search_rounded,
                                           color: Color(0xFF6F61EF),
                                           size: 36.0,
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.0, 0.0, 0.0),
                                           child: Text(
                                             'Search FAQs',
@@ -418,7 +416,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF15161E),
+                                                  color: const Color(0xFF15161E),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
@@ -431,10 +429,10 @@ class _SupportWidgetState extends State<SupportWidget>
                                     'containerOnPageLoadAnimation3']!),
                               ),
                             ),
-                          ].divide(SizedBox(width: 12.0)),
+                          ].divide(const SizedBox(width: 12.0)),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 12.0, 0.0, 4.0),
                           child: Text(
                             'Review FAQ\'s below',
@@ -442,30 +440,30 @@ class _SupportWidgetState extends State<SupportWidget>
                                 .labelLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF606A85),
+                                  color: const Color(0xFF606A85),
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.w500,
                                 ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Container(
                             width: double.infinity,
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                               maxWidth: 500.0,
                             ),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(12.0),
                               border: Border.all(
-                                color: Color(0xFFE5E7EB),
+                                color: const Color(0xFFE5E7EB),
                                 width: 2.0,
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(12.0),
+                              padding: const EdgeInsets.all(12.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -476,13 +474,13 @@ class _SupportWidgetState extends State<SupportWidget>
                                         .bodyLarge
                                         .override(
                                           fontFamily: 'Plus Jakarta Sans',
-                                          color: Color(0xFF15161E),
+                                          color: const Color(0xFF15161E),
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.w600,
                                         ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
                                       'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
@@ -490,7 +488,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF606A85),
+                                            color: const Color(0xFF606A85),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -503,23 +501,23 @@ class _SupportWidgetState extends State<SupportWidget>
                               animationsMap['containerOnPageLoadAnimation4']!),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Container(
                             width: double.infinity,
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                               maxWidth: 500.0,
                             ),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(12.0),
                               border: Border.all(
-                                color: Color(0xFFE5E7EB),
+                                color: const Color(0xFFE5E7EB),
                                 width: 2.0,
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(12.0),
+                              padding: const EdgeInsets.all(12.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -530,13 +528,13 @@ class _SupportWidgetState extends State<SupportWidget>
                                         .bodyLarge
                                         .override(
                                           fontFamily: 'Plus Jakarta Sans',
-                                          color: Color(0xFF15161E),
+                                          color: const Color(0xFF15161E),
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.w600,
                                         ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
                                       'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
@@ -544,7 +542,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF606A85),
+                                            color: const Color(0xFF606A85),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -557,23 +555,23 @@ class _SupportWidgetState extends State<SupportWidget>
                               animationsMap['containerOnPageLoadAnimation5']!),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Container(
                             width: double.infinity,
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                               maxWidth: 500.0,
                             ),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(12.0),
                               border: Border.all(
-                                color: Color(0xFFE5E7EB),
+                                color: const Color(0xFFE5E7EB),
                                 width: 2.0,
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(12.0),
+                              padding: const EdgeInsets.all(12.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -584,13 +582,13 @@ class _SupportWidgetState extends State<SupportWidget>
                                         .bodyLarge
                                         .override(
                                           fontFamily: 'Plus Jakarta Sans',
-                                          color: Color(0xFF15161E),
+                                          color: const Color(0xFF15161E),
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.w600,
                                         ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
                                       'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
@@ -598,7 +596,7 @@ class _SupportWidgetState extends State<SupportWidget>
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF606A85),
+                                            color: const Color(0xFF606A85),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -616,31 +614,31 @@ class _SupportWidgetState extends State<SupportWidget>
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () {
                     print('Button pressed ...');
                   },
                   text: 'Create Ticket',
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.receipt_long,
                     size: 15.0,
                   ),
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 48.0,
-                    padding: EdgeInsets.all(0.0),
+                    padding: const EdgeInsets.all(0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: Colors.white,
                     textStyle: FlutterFlowTheme.of(context).bodyLarge.override(
                           fontFamily: 'Plus Jakarta Sans',
-                          color: Color(0xFF15161E),
+                          color: const Color(0xFF15161E),
                           fontSize: 16.0,
                           fontWeight: FontWeight.w600,
                         ),
                     elevation: 3.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Color(0xFFE5E7EB),
                       width: 1.0,
                     ),
@@ -649,23 +647,23 @@ class _SupportWidgetState extends State<SupportWidget>
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 12.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 12.0),
                 child: FFButtonWidget(
                   onPressed: () {
                     print('Button pressed ...');
                   },
                   text: 'Chat Now',
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.support_agent_rounded,
                     size: 15.0,
                   ),
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 48.0,
-                    padding: EdgeInsets.all(0.0),
+                    padding: const EdgeInsets.all(0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: Color(0xFF6F61EF),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: const Color(0xFF6F61EF),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Plus Jakarta Sans',
                           color: Colors.white,
@@ -673,7 +671,7 @@ class _SupportWidgetState extends State<SupportWidget>
                           fontWeight: FontWeight.w500,
                         ),
                     elevation: 3.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 1.0,
                     ),

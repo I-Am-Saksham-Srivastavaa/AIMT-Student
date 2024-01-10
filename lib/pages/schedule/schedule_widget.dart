@@ -5,16 +5,14 @@ import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'schedule_model.dart';
 export 'schedule_model.dart';
 
 class ScheduleWidget extends StatefulWidget {
-  const ScheduleWidget({Key? key}) : super(key: key);
+  const ScheduleWidget({super.key});
 
   @override
   _ScheduleWidgetState createState() => _ScheduleWidgetState();
@@ -71,7 +69,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
           child: wrapWithModel(
             model: _model.drawerModel,
             updateCallback: () => setState(() {}),
-            child: DrawerWidget(),
+            child: const DrawerWidget(),
           ),
         ),
         body: Row(
@@ -82,19 +80,19 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
             wrapWithModel(
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
-              child: SideNavWidget(
+              child: const SideNavWidget(
                 selectedNav: 0,
               ),
             ),
             Expanded(
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: double.infinity,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
                       Column(
@@ -102,7 +100,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 0.0, 0.0),
                             child: Text(
                               'Academics',
@@ -111,7 +109,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 0.0, 0.0),
                             child: Text(
                               'Below is Your Academic Record',
@@ -123,7 +121,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                             child: Column(
                               children: [
                                 Align(
-                                  alignment: Alignment(0.0, 0),
+                                  alignment: const Alignment(0.0, 0),
                                   child: FlutterFlowButtonTabBar(
                                     useToggleButtonStyle: true,
                                     isScrollable: true,
@@ -135,22 +133,22 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.normal,
                                         ),
-                                    unselectedLabelStyle: TextStyle(),
-                                    labelColor: Color(0xFF14181B),
-                                    unselectedLabelColor: Color(0xFF57636C),
+                                    unselectedLabelStyle: const TextStyle(),
+                                    labelColor: const Color(0xFF14181B),
+                                    unselectedLabelColor: const Color(0xFF57636C),
                                     backgroundColor: Colors.white,
                                     unselectedBackgroundColor:
-                                        Color(0xFFE0E3E7),
-                                    borderColor: Color(0xFFE0E3E7),
+                                        const Color(0xFFE0E3E7),
+                                    borderColor: const Color(0xFFE0E3E7),
                                     borderWidth: 2.0,
                                     borderRadius: 12.0,
                                     elevation: 0.0,
                                     labelPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
+                                        const EdgeInsetsDirectional.fromSTEB(
                                             20.0, 0.0, 20.0, 0.0),
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
-                                    tabs: [
+                                    tabs: const [
                                       Tab(
                                         text: 'Month',
                                       ),
@@ -159,6 +157,9 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                       ),
                                     ],
                                     controller: _model.tabBarController,
+                                    onTap: (i) async {
+                                      [() async {}, () async {}][i]();
+                                    },
                                   ),
                                 ),
                                 Expanded(
@@ -168,7 +169,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                       Container(
                                         width: 100.0,
                                         height: 100.0,
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           color: Color(0xFFF1F4F8),
                                         ),
                                         child: Column(
@@ -178,7 +179,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                           children: [
                                             Container(
                                               width: double.infinity,
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                 color: Colors.white,
                                                 boxShadow: [
                                                   BoxShadow(
@@ -189,11 +190,11 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                 ],
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: FlutterFlowCalendar(
-                                                  color: Color(0xFF4B39EF),
-                                                  iconColor: Color(0xFF57636C),
+                                                  color: const Color(0xFF4B39EF),
+                                                  iconColor: const Color(0xFF57636C),
                                                   weekFormat: false,
                                                   weekStartsMonday: true,
                                                   initialDate:
@@ -210,7 +211,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                       .override(
                                                         fontFamily: 'Outfit',
                                                         color:
-                                                            Color(0xFF14181B),
+                                                            const Color(0xFF14181B),
                                                         fontSize: 22.0,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -222,7 +223,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF57636C),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -236,7 +237,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            Color(0xFF14181B),
+                                                            const Color(0xFF14181B),
                                                         fontSize: 14.0,
                                                         fontWeight:
                                                             FontWeight.normal,
@@ -260,13 +261,16 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF57636C),
                                                             fontSize: 14.0,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .normal,
                                                           ),
+                                                  locale: FFLocalizations.of(
+                                                          context)
+                                                      .languageCode,
                                                 ),
                                               ),
                                             ),
@@ -276,7 +280,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 12.0, 0.0, 0.0),
                                                   child: Text(
@@ -288,7 +292,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF57636C),
+                                                              const Color(0xFF57636C),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -296,7 +300,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 12.0, 0.0, 0.0),
                                                   child: ListView(
@@ -308,7 +312,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     0.0,
@@ -319,7 +323,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           decoration:
                                                               BoxDecoration(
                                                             color: Colors.white,
-                                                            boxShadow: [
+                                                            boxShadow: const [
                                                               BoxShadow(
                                                                 blurRadius: 3.0,
                                                                 color: Color(
@@ -335,7 +339,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsets.all(
+                                                                const EdgeInsets.all(
                                                                     8.0),
                                                             child: Row(
                                                               mainAxisSize:
@@ -357,7 +361,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                           .start,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           4.0,
                                                                           0.0,
                                                                           0.0,
@@ -369,14 +373,14 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             .headlineSmall
                                                                             .override(
                                                                               fontFamily: 'Outfit',
-                                                                              color: Color(0xFF14181B),
+                                                                              color: const Color(0xFF14181B),
                                                                               fontSize: 24.0,
                                                                               fontWeight: FontWeight.w500,
                                                                             ),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           4.0,
                                                                           0.0,
@@ -387,7 +391,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             MainAxisSize.max,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -395,18 +399,18 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             child:
                                                                                 Card(
                                                                               clipBehavior: Clip.antiAliasWithSaveLayer,
-                                                                              color: Color(0x4DEE8B60),
+                                                                              color: const Color(0x4DEE8B60),
                                                                               elevation: 0.0,
                                                                               shape: RoundedRectangleBorder(
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
                                                                                 child: Text(
                                                                                   '2:20pm',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Plus Jakarta Sans',
-                                                                                        color: Color(0xFFEE8B60),
+                                                                                        color: const Color(0xFFEE8B60),
                                                                                         fontSize: 14.0,
                                                                                         fontWeight: FontWeight.normal,
                                                                                       ),
@@ -418,7 +422,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             'Wed, 03/08/2022',
                                                                             style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
-                                                                                  color: Color(0xFF14181B),
+                                                                                  color: const Color(0xFF14181B),
                                                                                   fontSize: 12.0,
                                                                                   fontWeight: FontWeight.normal,
                                                                                 ),
@@ -433,7 +437,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                   height: 50.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFFF1F4F8),
                                                                     borderRadius:
                                                                         BorderRadius.circular(
@@ -443,17 +447,17 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFE0E3E7),
                                                                       width:
                                                                           1.0,
                                                                     ),
                                                                   ),
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
-                                                                  child: Icon(
+                                                                  child: const Icon(
                                                                     Icons
                                                                         .add_photo_alternate_outlined,
                                                                     color: Color(
@@ -470,7 +474,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 12.0, 0.0, 0.0),
                                                   child: Text(
@@ -482,7 +486,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF57636C),
+                                                              const Color(0xFF57636C),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -490,7 +494,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 12.0, 0.0, 24.0),
                                                   child: ListView(
@@ -502,7 +506,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     0.0,
@@ -513,7 +517,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           decoration:
                                                               BoxDecoration(
                                                             color: Colors.white,
-                                                            boxShadow: [
+                                                            boxShadow: const [
                                                               BoxShadow(
                                                                 blurRadius: 3.0,
                                                                 color: Color(
@@ -529,7 +533,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsets.all(
+                                                                const EdgeInsets.all(
                                                                     8.0),
                                                             child: Row(
                                                               mainAxisSize:
@@ -551,7 +555,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                           .start,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           4.0,
                                                                           0.0,
                                                                           0.0,
@@ -563,7 +567,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             .headlineSmall
                                                                             .override(
                                                                               fontFamily: 'Outfit',
-                                                                              color: Color(0xFF14181B),
+                                                                              color: const Color(0xFF14181B),
                                                                               fontSize: 24.0,
                                                                               fontWeight: FontWeight.w500,
                                                                             ),
@@ -575,7 +579,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                               .max,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               8.0,
@@ -585,7 +589,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             clipBehavior:
                                                                                 Clip.antiAliasWithSaveLayer,
                                                                             color:
-                                                                                Color(0x4C4B39EF),
+                                                                                const Color(0x4C4B39EF),
                                                                             elevation:
                                                                                 0.0,
                                                                             shape:
@@ -594,12 +598,12 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
                                                                               child: Text(
                                                                                 '2:20pm',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Plus Jakarta Sans',
-                                                                                      color: Color(0xFF4B39EF),
+                                                                                      color: const Color(0xFF4B39EF),
                                                                                       fontSize: 14.0,
                                                                                       fontWeight: FontWeight.normal,
                                                                                     ),
@@ -608,7 +612,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               4.0,
                                                                               0.0,
                                                                               0.0,
@@ -618,7 +622,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             'Wed, 03/08/2022',
                                                                             style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
-                                                                                  color: Color(0xFF14181B),
+                                                                                  color: const Color(0xFF14181B),
                                                                                   fontSize: 12.0,
                                                                                   fontWeight: FontWeight.normal,
                                                                                 ),
@@ -633,7 +637,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                   height: 50.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFFF1F4F8),
                                                                     borderRadius:
                                                                         BorderRadius.circular(
@@ -643,17 +647,17 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFE0E3E7),
                                                                       width:
                                                                           1.0,
                                                                     ),
                                                                   ),
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
-                                                                  child: Icon(
+                                                                  child: const Icon(
                                                                     Icons
                                                                         .add_photo_alternate_outlined,
                                                                     color: Color(
@@ -677,7 +681,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                       Container(
                                         width: 100.0,
                                         height: 100.0,
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           color: Color(0xFFF1F4F8),
                                         ),
                                         child: SingleChildScrollView(
@@ -688,7 +692,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                             children: [
                                               Container(
                                                 width: double.infinity,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Colors.white,
                                                   boxShadow: [
                                                     BoxShadow(
@@ -699,8 +703,8 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                   ],
                                                 ),
                                                 child: FlutterFlowCalendar(
-                                                  color: Color(0xFF4B39EF),
-                                                  iconColor: Color(0xFF57636C),
+                                                  color: const Color(0xFF4B39EF),
+                                                  iconColor: const Color(0xFF57636C),
                                                   weekFormat: true,
                                                   weekStartsMonday: true,
                                                   onChange: (DateTimeRange?
@@ -715,7 +719,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                       .override(
                                                         fontFamily: 'Outfit',
                                                         color:
-                                                            Color(0xFF14181B),
+                                                            const Color(0xFF14181B),
                                                         fontSize: 22.0,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -727,7 +731,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF57636C),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -741,7 +745,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            Color(0xFF14181B),
+                                                            const Color(0xFF14181B),
                                                         fontSize: 14.0,
                                                         fontWeight:
                                                             FontWeight.normal,
@@ -765,13 +769,16 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF57636C),
                                                             fontSize: 14.0,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .normal,
                                                           ),
+                                                  locale: FFLocalizations.of(
+                                                          context)
+                                                      .languageCode,
                                                 ),
                                               ),
                                               Column(
@@ -781,7 +788,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(16.0,
                                                                 12.0, 0.0, 0.0),
                                                     child: Text(
@@ -793,7 +800,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF57636C),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -804,7 +811,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 0.0),
                                                     child: ListView(
@@ -816,7 +823,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       0.0,
@@ -828,7 +835,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                 BoxDecoration(
                                                               color:
                                                                   Colors.white,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       3.0,
@@ -847,7 +854,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(8.0),
                                                               child: Row(
                                                                 mainAxisSize:
@@ -869,7 +876,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             .start,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             4.0,
                                                                             0.0,
                                                                             0.0,
@@ -881,14 +888,14 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                               .headlineSmall
                                                                               .override(
                                                                                 fontFamily: 'Outfit',
-                                                                                color: Color(0xFF14181B),
+                                                                                color: const Color(0xFF14181B),
                                                                                 fontSize: 24.0,
                                                                                 fontWeight: FontWeight.w500,
                                                                               ),
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             4.0,
                                                                             0.0,
@@ -899,21 +906,21 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                               child: Card(
                                                                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                                                                color: Color(0x4DEE8B60),
+                                                                                color: const Color(0x4DEE8B60),
                                                                                 elevation: 0.0,
                                                                                 shape: RoundedRectangleBorder(
                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                 ),
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
                                                                                   child: Text(
                                                                                     '2:20pm',
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
-                                                                                          color: Color(0xFFEE8B60),
+                                                                                          color: const Color(0xFFEE8B60),
                                                                                           fontSize: 14.0,
                                                                                           fontWeight: FontWeight.normal,
                                                                                         ),
@@ -925,7 +932,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                               'Wed, 03/08/2022',
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
-                                                                                    color: Color(0xFF14181B),
+                                                                                    color: const Color(0xFF14181B),
                                                                                     fontSize: 12.0,
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
@@ -941,7 +948,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                         50.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFF1F4F8),
                                                                       borderRadius:
                                                                           BorderRadius.circular(
@@ -951,17 +958,17 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                       border:
                                                                           Border
                                                                               .all(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFFE0E3E7),
                                                                         width:
                                                                             1.0,
                                                                       ),
                                                                     ),
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
-                                                                    child: Icon(
+                                                                    child: const Icon(
                                                                       Icons
                                                                           .add_photo_alternate_outlined,
                                                                       color: Color(
@@ -980,7 +987,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(16.0,
                                                                 12.0, 0.0, 0.0),
                                                     child: Text(
@@ -992,7 +999,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF57636C),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -1003,7 +1010,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 24.0),
                                                     child: ListView(
@@ -1015,7 +1022,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       0.0,
@@ -1027,7 +1034,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                 BoxDecoration(
                                                               color:
                                                                   Colors.white,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       3.0,
@@ -1046,7 +1053,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(8.0),
                                                               child: Row(
                                                                 mainAxisSize:
@@ -1068,7 +1075,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             .start,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             4.0,
                                                                             0.0,
                                                                             0.0,
@@ -1080,7 +1087,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                               .headlineSmall
                                                                               .override(
                                                                                 fontFamily: 'Outfit',
-                                                                                color: Color(0xFF14181B),
+                                                                                color: const Color(0xFF14181B),
                                                                                 fontSize: 24.0,
                                                                                 fontWeight: FontWeight.w500,
                                                                               ),
@@ -1091,7 +1098,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             MainAxisSize.max,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -1099,18 +1106,18 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             child:
                                                                                 Card(
                                                                               clipBehavior: Clip.antiAliasWithSaveLayer,
-                                                                              color: Color(0x4C4B39EF),
+                                                                              color: const Color(0x4C4B39EF),
                                                                               elevation: 0.0,
                                                                               shape: RoundedRectangleBorder(
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
                                                                                 child: Text(
                                                                                   '2:20pm',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Plus Jakarta Sans',
-                                                                                        color: Color(0xFF4B39EF),
+                                                                                        color: const Color(0xFF4B39EF),
                                                                                         fontSize: 14.0,
                                                                                         fontWeight: FontWeight.normal,
                                                                                       ),
@@ -1119,7 +1126,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 4.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -1129,7 +1136,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                               'Wed, 03/08/2022',
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
-                                                                                    color: Color(0xFF14181B),
+                                                                                    color: const Color(0xFF14181B),
                                                                                     fontSize: 12.0,
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
@@ -1145,7 +1152,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                         50.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFF1F4F8),
                                                                       borderRadius:
                                                                           BorderRadius.circular(
@@ -1155,17 +1162,17 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                       border:
                                                                           Border
                                                                               .all(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFFE0E3E7),
                                                                         width:
                                                                             1.0,
                                                                       ),
                                                                     ),
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
-                                                                    child: Icon(
+                                                                    child: const Icon(
                                                                       Icons
                                                                           .add_photo_alternate_outlined,
                                                                       color: Color(
@@ -1199,7 +1206,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                       wrapWithModel(
                         model: _model.navbarModel,
                         updateCallback: () => setState(() {}),
-                        child: NavbarWidget(),
+                        child: const NavbarWidget(),
                       ),
                     ],
                   ),

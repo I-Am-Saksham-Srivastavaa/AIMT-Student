@@ -4,13 +4,12 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'main_profile_copy_model.dart';
 export 'main_profile_copy_model.dart';
 
 class MainProfileCopyWidget extends StatefulWidget {
-  const MainProfileCopyWidget({Key? key}) : super(key: key);
+  const MainProfileCopyWidget({super.key});
 
   @override
   _MainProfileCopyWidgetState createState() => _MainProfileCopyWidgetState();
@@ -66,39 +65,39 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
               wrapWithModel(
                 model: _model.sideNavModel,
                 updateCallback: () => setState(() {}),
-                child: SideNavWidget(
+                child: const SideNavWidget(
                   selectedNav: 0,
                 ),
               ),
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 1170.0,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Container(
                               width: double.infinity,
-                              constraints: BoxConstraints(
+                              constraints: const BoxConstraints(
                                 maxWidth: 1170.0,
                               ),
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 0.0, 0.0),
                                     child: Text(
                                       'Order #49224222',
@@ -106,14 +105,14 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                           .headlineSmall
                                           .override(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF15161E),
+                                            color: const Color(0xFF15161E),
                                             fontSize: 22.0,
                                             fontWeight: FontWeight.bold,
                                           ),
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 4.0, 0.0, 0.0),
                                     child: Text(
                                       'Below are the details of your order.',
@@ -121,7 +120,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: Color(0xFF606A85),
+                                            color: const Color(0xFF606A85),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -131,18 +130,18 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, -1.0),
+                              alignment: const AlignmentDirectional(0.0, -1.0),
                               child: Padding(
-                                padding: EdgeInsets.all(16.0),
+                                padding: const EdgeInsets.all(16.0),
                                 child: Container(
                                   width: double.infinity,
-                                  constraints: BoxConstraints(
+                                  constraints: const BoxConstraints(
                                     maxWidth: 1170.0,
                                   ),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(12.0),
                                     border: Border.all(
-                                      color: Color(0xFFE5E7EB),
+                                      color: const Color(0xFFE5E7EB),
                                     ),
                                   ),
                                   child: Row(
@@ -154,7 +153,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                         flex: 8,
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 16.0, 0.0, 16.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -169,14 +168,14 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                         .override(
                                                           fontFamily: 'Outfit',
                                                           color:
-                                                              Color(0xFF15161E),
+                                                              const Color(0xFF15161E),
                                                           fontSize: 24.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Row(
@@ -194,7 +193,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF606A85),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -209,7 +208,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -220,7 +219,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Row(
@@ -239,7 +238,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF606A85),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -255,7 +254,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -266,7 +265,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Row(
@@ -285,7 +284,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF606A85),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -301,7 +300,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -312,7 +311,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Row(
@@ -331,7 +330,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF606A85),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -347,7 +346,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -358,7 +357,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Row(
@@ -377,7 +376,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF606A85),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -393,7 +392,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -403,7 +402,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                   ],
                                                 ),
                                               ),
-                                              Padding(
+                                              const Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 16.0, 0.0, 16.0),
@@ -413,7 +412,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 12.0),
                                                 child: Text(
@@ -425,7 +424,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            Color(0xFF15161E),
+                                                            const Color(0xFF15161E),
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.w600,
@@ -433,7 +432,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Row(
@@ -452,7 +451,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF606A85),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -468,7 +467,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -479,7 +478,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Row(
@@ -498,7 +497,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF606A85),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -514,7 +513,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 14.0,
                                                             fontWeight:
@@ -525,7 +524,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Row(
@@ -543,7 +542,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF606A85),
                                                             fontSize: 16.0,
                                                             fontWeight:
@@ -558,7 +557,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Outfit',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF15161E),
                                                             fontSize: 22.0,
                                                             fontWeight:
@@ -568,7 +567,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                   ],
                                                 ),
                                               ),
-                                              Padding(
+                                              const Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 16.0, 0.0, 16.0),
@@ -586,14 +585,14 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Text(
@@ -605,7 +604,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            Color(0xFF15161E),
+                                                            const Color(0xFF15161E),
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.w600,
@@ -620,7 +619,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 desktop: false,
                                               ))
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 16.0, 0.0, 0.0),
                                                   child: Column(
@@ -632,7 +631,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     4.0,
@@ -646,7 +645,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF606A85),
                                                                 fontSize: 14.0,
                                                                 fontWeight:
@@ -657,7 +656,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -674,14 +673,14 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                     .circular(
                                                                         12.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFFE5E7EB),
                                                               width: 2.0,
                                                             ),
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -697,7 +696,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               12.0),
                                                                   child: Row(
@@ -719,13 +718,13 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                           border:
                                                                               Border.all(
                                                                             color:
-                                                                                Color(0xFFE5E7EB),
+                                                                                const Color(0xFFE5E7EB),
                                                                           ),
                                                                         ),
                                                                         child:
                                                                             Padding(
                                                                           padding:
-                                                                              EdgeInsets.all(2.0),
+                                                                              const EdgeInsets.all(2.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -741,7 +740,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             0.0,
                                                                             0.0,
@@ -759,18 +758,18 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                               'Haily Brown',
                                                                               style: FlutterFlowTheme.of(context).bodyLarge.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
-                                                                                    color: Color(0xFF15161E),
+                                                                                    color: const Color(0xFF15161E),
                                                                                     fontSize: 16.0,
                                                                                     fontWeight: FontWeight.w600,
                                                                                   ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 '@brownisthenewblack',
                                                                                 style: FlutterFlowTheme.of(context).labelSmall.override(
                                                                                       fontFamily: 'Plus Jakarta Sans',
-                                                                                      color: Color(0xFF6F61EF),
+                                                                                      color: const Color(0xFF6F61EF),
                                                                                       fontSize: 12.0,
                                                                                       fontWeight: FontWeight.w500,
                                                                                     ),
@@ -783,7 +782,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
@@ -798,7 +797,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF606A85),
+                                                                              const Color(0xFF606A85),
                                                                           fontSize:
                                                                               12.0,
                                                                           fontWeight:
@@ -807,7 +806,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           8.0,
@@ -822,7 +821,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              Color(0xFF15161E),
+                                                                              const Color(0xFF15161E),
                                                                           fontSize:
                                                                               14.0,
                                                                           fontWeight:
@@ -845,7 +844,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           12.0,
@@ -862,13 +861,13 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                 options:
                                                                     FFButtonOptions(
                                                                   height: 48.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -882,7 +881,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF15161E),
                                                                         fontSize:
                                                                             16.0,
@@ -892,7 +891,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                   elevation:
                                                                       0.0,
                                                                   borderSide:
-                                                                      BorderSide(
+                                                                      const BorderSide(
                                                                     color: Color(
                                                                         0xFFE5E7EB),
                                                                     width: 2.0,
@@ -908,7 +907,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           12.0,
@@ -924,19 +923,19 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                 options:
                                                                     FFButtonOptions(
                                                                   height: 48.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF6F61EF),
                                                                   textStyle: FlutterFlowTheme.of(
                                                                           context)
@@ -961,7 +960,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 16.0)),
                                                       ),
                                                     ],
@@ -982,7 +981,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                           flex: 5,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 16.0, 16.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -990,7 +989,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 12.0),
                                                   child: Text(
@@ -1002,7 +1001,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -1010,7 +1009,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 12.0),
                                                   child: Container(
@@ -1022,13 +1021,13 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                               12.0),
                                                       border: Border.all(
                                                         color:
-                                                            Color(0xFFE5E7EB),
+                                                            const Color(0xFFE5E7EB),
                                                         width: 2.0,
                                                       ),
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1043,7 +1042,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsets.all(
+                                                                const EdgeInsets.all(
                                                                     12.0),
                                                             child: Row(
                                                               mainAxisSize:
@@ -1063,14 +1062,14 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFE5E7EB),
                                                                     ),
                                                                   ),
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             2.0),
                                                                     child:
                                                                         ClipRRect(
@@ -1091,7 +1090,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           12.0,
                                                                           0.0,
@@ -1114,13 +1113,13 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                             .bodyLarge
                                                                             .override(
                                                                               fontFamily: 'Plus Jakarta Sans',
-                                                                              color: Color(0xFF15161E),
+                                                                              color: const Color(0xFF15161E),
                                                                               fontSize: 16.0,
                                                                               fontWeight: FontWeight.w600,
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             4.0,
                                                                             0.0,
@@ -1132,7 +1131,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                               .labelSmall
                                                                               .override(
                                                                                 fontFamily: 'Plus Jakarta Sans',
-                                                                                color: Color(0xFF6F61EF),
+                                                                                color: const Color(0xFF6F61EF),
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.w500,
                                                                               ),
@@ -1146,7 +1145,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         0.0,
@@ -1160,7 +1159,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                   .override(
                                                                     fontFamily:
                                                                         'Plus Jakarta Sans',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFF606A85),
                                                                     fontSize:
                                                                         12.0,
@@ -1172,7 +1171,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         8.0,
@@ -1186,7 +1185,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                   .override(
                                                                     fontFamily:
                                                                         'Plus Jakarta Sans',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFF15161E),
                                                                     fontSize:
                                                                         14.0,
@@ -1203,11 +1202,11 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 0.0),
                                                     child: FFButtonWidget(
@@ -1220,21 +1219,21 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                         width: double.infinity,
                                                         height: 48.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         color:
-                                                            Color(0xFF6F61EF),
+                                                            const Color(0xFF6F61EF),
                                                         textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1260,11 +1259,11 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 0.0),
                                                     child: FFButtonWidget(
@@ -1277,14 +1276,14 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                         width: double.infinity,
                                                         height: 48.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1298,7 +1297,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF15161E),
                                                                   fontSize:
                                                                       16.0,
@@ -1307,7 +1306,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                                                           .w600,
                                                                 ),
                                                         elevation: 0.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color:
                                                               Color(0xFFE5E7EB),
                                                           width: 2.0,
@@ -1323,7 +1322,7 @@ class _MainProfileCopyWidgetState extends State<MainProfileCopyWidget> {
                                             ),
                                           ),
                                         ),
-                                    ].divide(SizedBox(width: 16.0)),
+                                    ].divide(const SizedBox(width: 16.0)),
                                   ),
                                 ),
                               ),

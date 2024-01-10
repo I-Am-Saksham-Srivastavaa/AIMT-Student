@@ -3,18 +3,15 @@ import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'gallery_model.dart';
 export 'gallery_model.dart';
 
 class GalleryWidget extends StatefulWidget {
-  const GalleryWidget({Key? key}) : super(key: key);
+  const GalleryWidget({super.key});
 
   @override
   _GalleryWidgetState createState() => _GalleryWidgetState();
@@ -66,26 +63,26 @@ class _GalleryWidgetState extends State<GalleryWidget> {
             wrapWithModel(
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
-              child: SideNavWidget(
+              child: const SideNavWidget(
                 selectedNav: 3,
               ),
             ),
             Expanded(
               flex: 8,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: double.infinity,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
                       wrapWithModel(
                         model: _model.navbarModel,
                         updateCallback: () => setState(() {}),
-                        child: NavbarWidget(),
+                        child: const NavbarWidget(),
                       ),
                       SingleChildScrollView(
                         child: Column(
@@ -94,7 +91,7 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 0.0, 0.0),
                               child: Text(
                                 'Gallery',
@@ -103,7 +100,7 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 4.0, 0.0, 0.0),
                               child: Text(
                                 'Here are the glimpses of us over the years',
@@ -112,9 +109,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 8.0, 0.0, 8.0),
-                              child: Container(
+                              child: SizedBox(
                                 width: 360.0,
                                 height: 200.0,
                                 child: CarouselSlider(
@@ -187,9 +184,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                     scrollDirection: Axis.horizontal,
                                     autoPlay: true,
                                     autoPlayAnimationDuration:
-                                        Duration(milliseconds: 800),
+                                        const Duration(milliseconds: 800),
                                     autoPlayInterval:
-                                        Duration(milliseconds: (800 + 4000)),
+                                        const Duration(milliseconds: (800 + 4000)),
                                     autoPlayCurve: Curves.linear,
                                     pauseAutoPlayInFiniteScroll: true,
                                     onPageChanged: (index, _) =>
@@ -199,7 +196,7 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 8.0, 0.0, 8.0),
                               child: Text(
                                 'Recent',
@@ -208,14 +205,14 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   4.0, 0.0, 4.0, 0.0),
                               child: Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: GridView(
                                   padding: EdgeInsets.zero,
                                   gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                      const SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 3,
                                     crossAxisSpacing: 10.0,
                                     mainAxisSpacing: 10.0,
@@ -347,7 +344,7 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 8.0, 0.0, 8.0),
                               child: Text(
                                 'Older',
@@ -356,11 +353,11 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                               ),
                             ),
                             Container(
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: GridView(
                                 padding: EdgeInsets.zero,
                                 gridDelegate:
-                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 3,
                                   crossAxisSpacing: 10.0,
                                   mainAxisSpacing: 10.0,
@@ -397,7 +394,7 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                 ],
                               ),
                             ),
-                          ].addToEnd(SizedBox(height: 64.0)),
+                          ].addToEnd(const SizedBox(height: 64.0)),
                         ),
                       ),
                     ],

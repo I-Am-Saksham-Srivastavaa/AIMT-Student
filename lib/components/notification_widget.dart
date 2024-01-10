@@ -1,15 +1,12 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'notification_model.dart';
 export 'notification_model.dart';
 
 class NotificationWidget extends StatefulWidget {
-  const NotificationWidget({Key? key}) : super(key: key);
+  const NotificationWidget({super.key});
 
   @override
   _NotificationWidgetState createState() => _NotificationWidgetState();
@@ -52,49 +49,49 @@ class _NotificationWidgetState extends State<NotificationWidget> {
       ),
       child: Container(
         width: double.infinity,
-        constraints: BoxConstraints(
+        constraints: const BoxConstraints(
           maxWidth: 970.0,
         ),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8.0),
           border: Border.all(
-            color: Color(0xFFE5E7EB),
+            color: const Color(0xFFE5E7EB),
             width: 1.0,
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                 child: Text(
                   'Activity',
                   style: FlutterFlowTheme.of(context).headlineSmall.override(
                         fontFamily: 'Outfit',
-                        color: Color(0xFF15161E),
+                        color: const Color(0xFF15161E),
                         fontSize: 22.0,
                         fontWeight: FontWeight.w600,
                       ),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 12.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 12.0, 0.0),
                 child: Text(
                   'Recent completed tasks from your team.',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily: 'Plus Jakarta Sans',
-                        color: Color(0xFF606A85),
+                        color: const Color(0xFF606A85),
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
                       ),
                 ),
               ),
               ListView(
-                padding: EdgeInsets.fromLTRB(
+                padding: const EdgeInsets.fromLTRB(
                   0,
                   16.0,
                   0,
@@ -105,10 +102,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                 children: [
                   Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 570.0,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -120,7 +117,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -129,15 +126,15 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                             width: 36.0,
                             height: 36.0,
                             decoration: BoxDecoration(
-                              color: Color(0x4D9489F5),
+                              color: const Color(0x4D9489F5),
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Color(0xFF6F61EF),
+                                color: const Color(0xFF6F61EF),
                                 width: 1.0,
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(40.0),
                                 child: Image.network(
@@ -151,7 +148,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -168,7 +165,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF15161E),
+                                              color: const Color(0xFF15161E),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -179,7 +176,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelSmall
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -187,14 +184,14 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: RichText(
                                       textScaleFactor: MediaQuery.of(context)
                                           .textScaleFactor,
                                       text: TextSpan(
                                         children: [
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'Completed ',
                                             style: TextStyle(),
                                           ),
@@ -205,7 +202,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF6F61EF),
+                                                  color: const Color(0xFF6F61EF),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -215,7 +212,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -232,10 +229,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                   ),
                   Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 570.0,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -247,7 +244,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -256,15 +253,15 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                             width: 36.0,
                             height: 36.0,
                             decoration: BoxDecoration(
-                              color: Color(0x4D9489F5),
+                              color: const Color(0x4D9489F5),
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Color(0xFF6F61EF),
+                                color: const Color(0xFF6F61EF),
                                 width: 1.0,
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(40.0),
                                 child: Image.network(
@@ -278,7 +275,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -299,7 +296,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF15161E),
+                                                  color: const Color(0xFF15161E),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -312,7 +309,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelSmall
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -320,14 +317,14 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: RichText(
                                       textScaleFactor: MediaQuery.of(context)
                                           .textScaleFactor,
                                       text: TextSpan(
                                         children: [
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'Started ',
                                             style: TextStyle(),
                                           ),
@@ -338,7 +335,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF6F61EF),
+                                                  color: const Color(0xFF6F61EF),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -348,7 +345,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -365,10 +362,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                   ),
                   Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 570.0,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -380,7 +377,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -389,15 +386,15 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                             width: 36.0,
                             height: 36.0,
                             decoration: BoxDecoration(
-                              color: Color(0x4D9489F5),
+                              color: const Color(0x4D9489F5),
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Color(0xFF6F61EF),
+                                color: const Color(0xFF6F61EF),
                                 width: 1.0,
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(40.0),
                                 child: Image.network(
@@ -411,7 +408,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -428,7 +425,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF15161E),
+                                              color: const Color(0xFF15161E),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -439,7 +436,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelSmall
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -447,14 +444,14 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: RichText(
                                       textScaleFactor: MediaQuery.of(context)
                                           .textScaleFactor,
                                       text: TextSpan(
                                         children: [
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'Assigned  ',
                                             style: TextStyle(),
                                           ),
@@ -465,16 +462,16 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF39D2C0),
+                                                  color: const Color(0xFF39D2C0),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                           ),
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'to ',
                                             style: TextStyle(),
                                           ),
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'Marketing Plan',
                                             style: TextStyle(
                                               color: Color(0xFF6F61EF),
@@ -486,7 +483,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -503,10 +500,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                   ),
                   Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 570.0,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -518,7 +515,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -527,15 +524,15 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                             width: 36.0,
                             height: 36.0,
                             decoration: BoxDecoration(
-                              color: Color(0x4D9489F5),
+                              color: const Color(0x4D9489F5),
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Color(0xFF6F61EF),
+                                color: const Color(0xFF6F61EF),
                                 width: 1.0,
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(40.0),
                                 child: Image.network(
@@ -549,7 +546,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -566,7 +563,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF15161E),
+                                              color: const Color(0xFF15161E),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -577,7 +574,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelSmall
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -585,14 +582,14 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: RichText(
                                       textScaleFactor: MediaQuery.of(context)
                                           .textScaleFactor,
                                       text: TextSpan(
                                         children: [
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'Created a project: ',
                                             style: TextStyle(),
                                           ),
@@ -603,7 +600,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF6F61EF),
+                                                  color: const Color(0xFF6F61EF),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -613,7 +610,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -630,10 +627,10 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                   ),
                   Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 570.0,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -645,7 +642,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 8.0, 8.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -654,15 +651,15 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                             width: 36.0,
                             height: 36.0,
                             decoration: BoxDecoration(
-                              color: Color(0x4D9489F5),
+                              color: const Color(0x4D9489F5),
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Color(0xFF6F61EF),
+                                color: const Color(0xFF6F61EF),
                                 width: 1.0,
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(40.0),
                                 child: Image.network(
@@ -676,7 +673,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -693,7 +690,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF15161E),
+                                              color: const Color(0xFF15161E),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -704,7 +701,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelSmall
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -712,14 +709,14 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: RichText(
                                       textScaleFactor: MediaQuery.of(context)
                                           .textScaleFactor,
                                       text: TextSpan(
                                         children: [
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'Sent a plan update for ',
                                             style: TextStyle(),
                                           ),
@@ -730,7 +727,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF6F61EF),
+                                                  color: const Color(0xFF6F61EF),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -740,7 +737,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                                             .labelMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF606A85),
+                                              color: const Color(0xFF606A85),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -755,7 +752,7 @@ class _NotificationWidgetState extends State<NotificationWidget> {
                       ),
                     ),
                   ),
-                ].divide(SizedBox(height: 8.0)),
+                ].divide(const SizedBox(height: 8.0)),
               ),
             ],
           ),

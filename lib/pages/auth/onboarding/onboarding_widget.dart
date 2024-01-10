@@ -5,18 +5,15 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 import 'onboarding_model.dart';
 export 'onboarding_model.dart';
 
 class OnboardingWidget extends StatefulWidget {
-  const OnboardingWidget({Key? key}) : super(key: key);
+  const OnboardingWidget({super.key});
 
   @override
   _OnboardingWidgetState createState() => _OnboardingWidgetState();
@@ -38,15 +35,15 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
           curve: Curves.easeOut,
           delay: 0.ms,
           duration: 3200.ms,
-          begin: Offset(0.0, -80.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, -80.0),
+          end: const Offset(0.0, 0.0),
         ),
         MoveEffect(
           curve: Curves.easeInOut,
           delay: 3200.ms,
           duration: 3200.ms,
-          begin: Offset(0.0, 0.0),
-          end: Offset(0.0, -80.0),
+          begin: const Offset(0.0, 0.0),
+          end: const Offset(0.0, -80.0),
         ),
       ],
     ),
@@ -65,15 +62,15 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 300.ms,
-          begin: Offset(0.0, 20.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 20.0),
+          end: const Offset(0.0, 0.0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 300.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -92,15 +89,15 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 300.ms,
-          begin: Offset(0.0, 20.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 20.0),
+          end: const Offset(0.0, 0.0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 300.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -119,15 +116,15 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 300.ms,
-          begin: Offset(0.0, 20.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 20.0),
+          end: const Offset(0.0, 0.0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 300.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -146,15 +143,15 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 300.ms,
-          begin: Offset(0.0, 20.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 20.0),
+          end: const Offset(0.0, 0.0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 300.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -173,15 +170,15 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 300.ms,
-          begin: Offset(0.0, 20.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 20.0),
+          end: const Offset(0.0, 0.0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 300.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -200,15 +197,15 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 300.ms,
-          begin: Offset(0.0, 20.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 20.0),
+          end: const Offset(0.0, 0.0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 300.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -250,7 +247,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
         key: scaffoldKey,
         backgroundColor: Colors.white,
         body: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 4.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 4.0, 0.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -258,7 +255,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                 child: Container(
                   width: double.infinity,
                   height: 420.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Column(
@@ -266,23 +263,23 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                     children: [
                       Container(
                         width: double.infinity,
-                        height: 600.0,
-                        decoration: BoxDecoration(
+                        height: 480.0,
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                         ),
                         child: MasonryGridView.builder(
                           physics: const NeverScrollableScrollPhysics(),
                           gridDelegate:
-                              SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                              const SliverSimpleGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3,
                           ),
                           crossAxisSpacing: 10.0,
                           mainAxisSpacing: 10.0,
-                          itemCount: 11,
+                          itemCount: 10,
                           itemBuilder: (context, index) {
                             return [
                               () => ClipRRect(
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(16.0),
                                       topLeft: Radius.circular(0.0),
@@ -305,7 +302,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                     ),
                                   ),
                               () => ClipRRect(
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(16.0),
                                       topLeft: Radius.circular(0.0),
@@ -319,7 +316,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                     ),
                                   ),
                               () => ClipRRect(
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(16.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(16.0),
@@ -351,7 +348,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                     ),
                                   ),
                               () => ClipRRect(
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(16.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(16.0),
@@ -383,7 +380,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                     ),
                                   ),
                               () => ClipRRect(
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(16.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(16.0),
@@ -393,15 +390,6 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                       'https://aimt.edu.in/wp-content/uploads/2023/04/lab.jpg',
                                       width: 120.0,
                                       height: 190.0,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                              () => ClipRRect(
-                                    borderRadius: BorderRadius.circular(16.0),
-                                    child: Image.network(
-                                      'https://images.collegedunia.com/public/college_data/images/campusimage/16240022141R3A8132.JPG',
-                                      width: 120.0,
-                                      height: 160.0,
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -416,25 +404,25 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
               ),
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 670.0,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Container(
+                        SizedBox(
                           width: double.infinity,
                           height: 270.0,
                           child: Stack(
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 50.0),
                                 child: PageView(
                                   controller: _model.pageViewController ??=
@@ -442,7 +430,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                   scrollDirection: Axis.horizontal,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           48.0, 0.0, 48.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -457,7 +445,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF101213),
+                                                  color: const Color(0xFF101213),
                                                   fontSize: 30.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -465,10 +453,10 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                               'textOnPageLoadAnimation1']!),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 16.0, 0.0, 0.0),
                                             child: Text(
-                                              'Welcome to Ambalika Institute of Management and Technology! Let\'s kickstart your exciting academic journey together. This onboarding process ensures a smooth transition into college life. Ready to shape your future?\n\n',
+                                              'Welcome to Ambalika Institute of Management and Technology! Let\'s kickstart your exciting academic journey together. This onboarding process ensures a smooth transition into college life.',
                                               textAlign: TextAlign.center,
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -476,7 +464,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
@@ -487,7 +475,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           48.0, 0.0, 48.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -502,7 +490,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF101213),
+                                                  color: const Color(0xFF101213),
                                                   fontSize: 36.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -510,7 +498,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                               'textOnPageLoadAnimation3']!),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 16.0, 0.0, 0.0),
                                             child: Text(
                                               'Congrats on choosing Ambalika! This page covers vital info for a seamless transition. Explore academic resources, campus facilities, and set yourself up for success.',
@@ -521,7 +509,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                     fontSize: 16.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
@@ -532,7 +520,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           48.0, 0.0, 48.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -547,7 +535,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF101213),
+                                                  color: const Color(0xFF101213),
                                                   fontSize: 36.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -555,7 +543,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                               'textOnPageLoadAnimation5']!),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 16.0, 0.0, 0.0),
                                             child: Text(
                                               'Time to unleash your potential at Ambalika Institute! This final page sets the stage for your college adventure. We\'re here to support you every step of the way. Your future starts now!',
@@ -566,7 +554,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                     fontSize: 16.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
@@ -580,9 +568,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: const AlignmentDirectional(0.0, 1.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child:
                                       smooth_page_indicator.SmoothPageIndicator(
@@ -594,11 +582,11 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                       await _model.pageViewController!
                                           .animateToPage(
                                         i,
-                                        duration: Duration(milliseconds: 500),
+                                        duration: const Duration(milliseconds: 500),
                                         curve: Curves.ease,
                                       );
                                     },
-                                    effect: smooth_page_indicator
+                                    effect: const smooth_page_indicator
                                         .ExpandingDotsEffect(
                                       expansionFactor: 3.0,
                                       spacing: 8.0,
@@ -616,21 +604,21 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 16.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
                               context.pushNamed('Login');
                             },
-                            text: 'Snrolled Student',
+                            text: 'Enrolled Student',
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 60.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF101213),
+                              color: const Color(0xFF101213),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
@@ -640,17 +628,17 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                     fontWeight: FontWeight.w500,
                                   ),
                               elevation: 4.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(50.0),
-                              hoverColor: Color(0xFF101213),
+                              hoverColor: const Color(0xFF101213),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 16.0, 44.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -660,26 +648,26 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 60.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: Colors.white,
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .override(
                                     fontFamily: 'Urbanist',
-                                    color: Color(0xFF101213),
+                                    color: const Color(0xFF101213),
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(50.0),
-                              hoverColor: Color(0xFFE0E3E7),
+                              hoverColor: const Color(0xFFE0E3E7),
                             ),
                           ),
                         ),

@@ -4,17 +4,15 @@ import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'faculty_model.dart';
 export 'faculty_model.dart';
 
 class FacultyWidget extends StatefulWidget {
-  const FacultyWidget({Key? key}) : super(key: key);
+  const FacultyWidget({super.key});
 
   @override
   _FacultyWidgetState createState() => _FacultyWidgetState();
@@ -68,7 +66,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
           child: wrapWithModel(
             model: _model.drawerModel,
             updateCallback: () => setState(() {}),
-            child: DrawerWidget(),
+            child: const DrawerWidget(),
           ),
         ),
         body: Row(
@@ -77,20 +75,20 @@ class _FacultyWidgetState extends State<FacultyWidget> {
             wrapWithModel(
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
-              child: SideNavWidget(
+              child: const SideNavWidget(
                 selectedNav: 2,
               ),
             ),
             Expanded(
               flex: 8,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: 1170.0,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
                       SingleChildScrollView(
@@ -106,10 +104,10 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                               Container(
                                 width: double.infinity,
                                 height: 24.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 0.0, 4.0),
                               child: Text(
                                 'Members',
@@ -118,7 +116,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 'Below are a list of members of your team.',
@@ -126,7 +124,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 8.0, 16.0, 0.0),
                               child: TextFormField(
                                 controller: _model.textController,
@@ -170,7 +168,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           20.0, 0.0, 0.0, 0.0),
                                   suffixIcon: Icon(
                                     Icons.search_rounded,
@@ -191,10 +189,10 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 8.0, 0.0, 8.0),
                                     child: FlutterFlowChoiceChips(
-                                      options: [
+                                      options: const [
                                         ChipData('All'),
                                         ChipData('Owners'),
                                         ChipData('Editors'),
@@ -263,12 +261,12 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                     ),
                                   ),
                                 ]
-                                    .addToStart(SizedBox(width: 16.0))
-                                    .addToEnd(SizedBox(width: 16.0)),
+                                    .addToStart(const SizedBox(width: 16.0))
+                                    .addToEnd(const SizedBox(width: 16.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: Container(
                                 width: double.infinity,
@@ -278,7 +276,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -289,16 +287,16 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                       Container(
                                         width: 40.0,
                                         height: 100.0,
-                                        decoration: BoxDecoration(),
+                                        decoration: const BoxDecoration(),
                                       ),
                                     Expanded(
                                       flex: 4,
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, 0.0),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Name',
@@ -316,7 +314,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                         flex: 2,
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(-1.0, 0.0),
+                                              const AlignmentDirectional(-1.0, 0.0),
                                           child: Text(
                                             'Last Active',
                                             style: FlutterFlowTheme.of(context)
@@ -333,7 +331,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                         flex: 3,
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(-1.0, 0.0),
+                                              const AlignmentDirectional(-1.0, 0.0),
                                           child: Text(
                                             'Title',
                                             style: FlutterFlowTheme.of(context)
@@ -350,7 +348,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(1.0, 0.0),
+                                                const AlignmentDirectional(1.0, 0.0),
                                             child: Text(
                                               'Status',
                                               style:
@@ -366,7 +364,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                               ),
                             ),
                             ListView(
-                              padding: EdgeInsets.fromLTRB(
+                              padding: const EdgeInsets.fromLTRB(
                                 0,
                                 0,
                                 0,
@@ -386,12 +384,12 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -412,7 +410,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
@@ -429,7 +427,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -445,7 +443,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
@@ -462,7 +460,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -473,7 +471,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
@@ -492,7 +490,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 3,
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Text(
                                                 'Head of Design',
@@ -523,11 +521,11 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
@@ -557,12 +555,12 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -583,7 +581,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
@@ -600,7 +598,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -616,7 +614,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
@@ -633,7 +631,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -644,7 +642,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
@@ -663,7 +661,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 3,
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Text(
                                                 'Head of Design',
@@ -694,11 +692,11 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
@@ -728,12 +726,12 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -754,7 +752,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
@@ -771,7 +769,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -787,7 +785,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
@@ -804,7 +802,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -815,7 +813,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
@@ -834,7 +832,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 3,
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Text(
                                                 'Head of Design',
@@ -865,11 +863,11 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
@@ -899,12 +897,12 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -925,7 +923,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(10.0),
@@ -942,7 +940,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -958,7 +956,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
@@ -975,7 +973,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -986,7 +984,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
@@ -1005,7 +1003,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 3,
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Text(
                                                 'Head of Design',
@@ -1036,11 +1034,11 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
@@ -1070,12 +1068,12 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1096,7 +1094,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
@@ -1113,7 +1111,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -1129,7 +1127,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
@@ -1146,7 +1144,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -1157,7 +1155,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
@@ -1176,7 +1174,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                           Expanded(
                                             flex: 3,
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Text(
                                                 'Head of Design',
@@ -1207,11 +1205,11 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
@@ -1231,15 +1229,15 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 1.0)),
+                              ].divide(const SizedBox(height: 1.0)),
                             ),
-                          ].addToEnd(SizedBox(height: 64.0)),
+                          ].addToEnd(const SizedBox(height: 64.0)),
                         ),
                       ),
                       wrapWithModel(
                         model: _model.navbarModel,
                         updateCallback: () => setState(() {}),
-                        child: NavbarWidget(),
+                        child: const NavbarWidget(),
                       ),
                     ],
                   ),

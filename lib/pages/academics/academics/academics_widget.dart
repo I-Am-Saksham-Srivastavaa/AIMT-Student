@@ -3,17 +3,14 @@ import '/components/navbar_widget.dart';
 import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'academics_model.dart';
 export 'academics_model.dart';
 
 class AcademicsWidget extends StatefulWidget {
-  const AcademicsWidget({Key? key}) : super(key: key);
+  const AcademicsWidget({super.key});
 
   @override
   _AcademicsWidgetState createState() => _AcademicsWidgetState();
@@ -64,7 +61,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
           child: wrapWithModel(
             model: _model.drawerModel,
             updateCallback: () => setState(() {}),
-            child: DrawerWidget(),
+            child: const DrawerWidget(),
           ),
         ),
         body: Row(
@@ -73,20 +70,20 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
             wrapWithModel(
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
-              child: SideNavWidget(
+              child: const SideNavWidget(
                 selectedNav: 4,
               ),
             ),
             Expanded(
               flex: 8,
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: 1170.0,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
                       if (responsiveVisibility(
@@ -98,7 +95,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                         wrapWithModel(
                           model: _model.navbarModel,
                           updateCallback: () => setState(() {}),
-                          child: NavbarWidget(),
+                          child: const NavbarWidget(),
                         ),
                       SingleChildScrollView(
                         child: Column(
@@ -113,10 +110,10 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                               Container(
                                 width: double.infinity,
                                 height: 24.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 0.0, 0.0),
                               child: Text(
                                 'Academics',
@@ -125,7 +122,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 4.0, 0.0, 0.0),
                               child: Text(
                                 'Below is Your Academic Record',
@@ -134,11 +131,11 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: Container(
                                 width: double.infinity,
-                                constraints: BoxConstraints(
+                                constraints: const BoxConstraints(
                                   maxWidth: double.infinity,
                                 ),
                                 decoration: BoxDecoration(
@@ -152,7 +149,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -231,7 +228,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                               ),
                             ),
                             ListView(
-                              padding: EdgeInsets.fromLTRB(
+                              padding: const EdgeInsets.fromLTRB(
                                 0,
                                 12.0,
                                 0,
@@ -242,7 +239,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                               scrollDirection: Axis.vertical,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -254,7 +251,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                     },
                                     child: Container(
                                       width: double.infinity,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 570.0,
                                       ),
                                       decoration: BoxDecoration(
@@ -269,7 +266,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 12.0, 16.0, 12.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -279,7 +276,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                             Expanded(
                                               flex: 4,
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Column(
@@ -296,7 +293,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                               .textScaleFactor,
                                                       text: TextSpan(
                                                         children: [
-                                                          TextSpan(
+                                                          const TextSpan(
                                                             text:
                                                                 'Sessional  I :',
                                                             style: TextStyle(),
@@ -326,7 +323,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                               .textScaleFactor,
                                                       text: TextSpan(
                                                         children: [
-                                                          TextSpan(
+                                                          const TextSpan(
                                                             text: 'From :',
                                                             style: TextStyle(),
                                                           ),
@@ -342,7 +339,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                                       .w300,
                                                             ),
                                                           ),
-                                                          TextSpan(
+                                                          const TextSpan(
                                                             text: 'To:  ',
                                                             style: TextStyle(),
                                                           ),
@@ -403,11 +400,11 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                       ),
                                                       child: Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       7.0,
                                                                       0.0,
@@ -454,11 +451,11 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                       ),
                                                       child: Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       12.0,
                                                                       0.0,
@@ -506,7 +503,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -518,7 +515,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                     },
                                     child: Container(
                                       width: double.infinity,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 570.0,
                                       ),
                                       decoration: BoxDecoration(
@@ -533,7 +530,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 12.0, 16.0, 12.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -543,7 +540,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                             Expanded(
                                               flex: 4,
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Column(
@@ -560,7 +557,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                               .textScaleFactor,
                                                       text: TextSpan(
                                                         children: [
-                                                          TextSpan(
+                                                          const TextSpan(
                                                             text: 'MakeUp  I :',
                                                             style: TextStyle(),
                                                           ),
@@ -589,7 +586,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                               .textScaleFactor,
                                                       text: TextSpan(
                                                         children: [
-                                                          TextSpan(
+                                                          const TextSpan(
                                                             text: 'From :',
                                                             style: TextStyle(),
                                                           ),
@@ -605,7 +602,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                                       .w300,
                                                             ),
                                                           ),
-                                                          TextSpan(
+                                                          const TextSpan(
                                                             text: 'To:  ',
                                                             style: TextStyle(),
                                                           ),
@@ -666,11 +663,11 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                       ),
                                                       child: Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       7.0,
                                                                       0.0,
@@ -717,11 +714,11 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                       ),
                                                       child: Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       12.0,
                                                                       0.0,
@@ -769,11 +766,11 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: Container(
                                     width: double.infinity,
-                                    constraints: BoxConstraints(
+                                    constraints: const BoxConstraints(
                                       maxWidth: 570.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -787,7 +784,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 12.0, 16.0, 12.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -797,7 +794,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                           Expanded(
                                             flex: 4,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Column(
@@ -813,7 +810,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                             .textScaleFactor,
                                                     text: TextSpan(
                                                       children: [
-                                                        TextSpan(
+                                                        const TextSpan(
                                                           text:
                                                               'Sessional  II :',
                                                           style: TextStyle(),
@@ -841,7 +838,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                             .textScaleFactor,
                                                     text: TextSpan(
                                                       children: [
-                                                        TextSpan(
+                                                        const TextSpan(
                                                           text: 'From :',
                                                           style: TextStyle(),
                                                         ),
@@ -856,7 +853,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                                 FontWeight.w300,
                                                           ),
                                                         ),
-                                                        TextSpan(
+                                                        const TextSpan(
                                                           text: 'To:  ',
                                                           style: TextStyle(),
                                                         ),
@@ -917,11 +914,11 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                     ),
                                                     child: Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     7.0,
                                                                     0.0,
@@ -968,11 +965,11 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                                     ),
                                                     child: Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     12.0,
                                                                     0.0,
@@ -1018,9 +1015,9 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 12.0)),
+                              ].divide(const SizedBox(height: 12.0)),
                             ),
-                          ].addToEnd(SizedBox(height: 64.0)),
+                          ].addToEnd(const SizedBox(height: 64.0)),
                         ),
                       ),
                     ],

@@ -1,16 +1,13 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'drawer_model.dart';
 export 'drawer_model.dart';
 
 class DrawerWidget extends StatefulWidget {
-  const DrawerWidget({Key? key}) : super(key: key);
+  const DrawerWidget({super.key});
 
   @override
   _DrawerWidgetState createState() => _DrawerWidgetState();
@@ -51,7 +48,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
         desktop: false,
       ),
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         curve: Curves.easeInOut,
         width: FFAppState().navOpen == true ? 270.0 : 72.0,
         height: double.infinity,
@@ -64,13 +61,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 16.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 16.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -78,7 +75,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       width: 50.0,
                       height: 50.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: Image.asset(
@@ -89,7 +86,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     if (FFAppState().navOpen == true)
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Ambalika Institute of Management and Technology',
@@ -109,7 +106,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                   context.pushNamed(
                     'Profile',
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: TransitionInfo(
+                      kTransitionInfoKey: const TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.fade,
                         duration: Duration(milliseconds: 0),
@@ -118,19 +115,19 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                   );
                 },
                 child: AnimatedContainer(
-                  duration: Duration(milliseconds: 200),
+                  duration: const Duration(milliseconds: 200),
                   curve: Curves.easeInOut,
                   width: double.infinity,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         AnimatedContainer(
-                          duration: Duration(milliseconds: 200),
+                          duration: const Duration(milliseconds: 200),
                           curve: Curves.easeInOut,
                           width: FFAppState().navOpen == true ? 50.0 : 36.0,
                           height: FFAppState().navOpen == true ? 50.0 : 36.0,
@@ -143,7 +140,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                             ),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(2.0),
+                            padding: const EdgeInsets.all(2.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
                               child: Image.network(
@@ -158,7 +155,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                         if (FFAppState().navOpen == true)
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -185,7 +182,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                                                         .primary,
                                               ),
                                         ),
-                                        TextSpan(
+                                        const TextSpan(
                                           text: '2203630100136',
                                           style: TextStyle(),
                                         )
@@ -215,14 +212,14 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               ),
               if (FFAppState().navOpen == true)
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                   child: Text(
                     'Platform Navigation',
                     style: FlutterFlowTheme.of(context).labelMedium,
                   ),
                 ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -232,7 +229,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     context.pushNamed('Dashboard');
                   },
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                     width: double.infinity,
                     height: 44.0,
@@ -242,13 +239,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       shape: BoxShape.rectangle,
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: Icon(
                               Icons.space_dashboard,
@@ -269,7 +266,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -279,7 +276,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     context.pushNamed('Attendance');
                   },
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                     width: double.infinity,
                     height: 44.0,
@@ -289,13 +286,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       shape: BoxShape.rectangle,
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: Icon(
                               Icons.web,
@@ -316,7 +313,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -326,7 +323,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     context.pushNamed(
                       'Academics',
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.fade,
                           duration: Duration(milliseconds: 0),
@@ -335,7 +332,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     );
                   },
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                     width: double.infinity,
                     height: 44.0,
@@ -345,13 +342,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       shape: BoxShape.rectangle,
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: FaIcon(
                               FontAwesomeIcons.award,
@@ -372,7 +369,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -382,7 +379,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     context.pushNamed('Finances');
                   },
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                     width: double.infinity,
                     height: 44.0,
@@ -392,13 +389,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       shape: BoxShape.rectangle,
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: FaIcon(
                               FontAwesomeIcons.creditCard,
@@ -419,7 +416,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -429,7 +426,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     context.pushNamed('Profile');
                   },
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                     width: double.infinity,
                     height: 44.0,
@@ -439,13 +436,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       shape: BoxShape.rectangle,
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: Icon(
                               Icons.apps,
@@ -466,7 +463,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -476,7 +473,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     context.pushNamed(
                       'Faculty',
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.fade,
                           duration: Duration(milliseconds: 0),
@@ -485,7 +482,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     );
                   },
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                     width: double.infinity,
                     height: 44.0,
@@ -495,13 +492,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       shape: BoxShape.rectangle,
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: Icon(
                               Icons.groups,
@@ -522,7 +519,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -532,7 +529,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     context.pushNamed(
                       'Gallery',
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.fade,
                           duration: Duration(milliseconds: 0),
@@ -541,7 +538,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     );
                   },
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                     width: double.infinity,
                     height: 44.0,
@@ -551,13 +548,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       shape: BoxShape.rectangle,
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: Icon(
                               Icons.photo_library_sharp,
@@ -584,16 +581,16 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               ),
               if (FFAppState().navOpen == true)
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                   child: Text(
                     'Platform Settings',
                     style: FlutterFlowTheme.of(context).labelMedium,
                   ),
                 ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                 child: AnimatedContainer(
-                  duration: Duration(milliseconds: 200),
+                  duration: const Duration(milliseconds: 200),
                   curve: Curves.easeInOut,
                   width: double.infinity,
                   height: 44.0,
@@ -603,13 +600,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     shape: BoxShape.rectangle,
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(4.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 8.0, 0.0),
                           child: Icon(
                             Icons.settings_rounded,
@@ -629,9 +626,9 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                 child: AnimatedContainer(
-                  duration: Duration(milliseconds: 200),
+                  duration: const Duration(milliseconds: 200),
                   curve: Curves.easeInOut,
                   width: double.infinity,
                   height: 44.0,
@@ -641,13 +638,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     shape: BoxShape.rectangle,
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(4.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 8.0, 0.0),
                           child: Icon(
                             Icons.report_sharp,

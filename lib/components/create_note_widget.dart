@@ -3,14 +3,12 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_note_model.dart';
 export 'create_note_model.dart';
 
 class CreateNoteWidget extends StatefulWidget {
-  const CreateNoteWidget({Key? key}) : super(key: key);
+  const CreateNoteWidget({super.key});
 
   @override
   _CreateNoteWidgetState createState() => _CreateNoteWidgetState();
@@ -50,7 +48,7 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
     return Material(
       color: Colors.transparent,
       elevation: 5.0,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -63,7 +61,7 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
         height: 370.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(16.0),
@@ -81,7 +79,7 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: Container(
                       width: 50.0,
                       height: 4.0,
@@ -94,21 +92,21 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                 child: Text(
                   'Create Note',
                   style: FlutterFlowTheme.of(context).headlineMedium,
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 0.0),
                 child: Text(
                   'Find members by searching below',
                   style: FlutterFlowTheme.of(context).labelMedium,
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -126,7 +124,7 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                       child: Text(
                         random_data.randomName(true, true),
                         style: FlutterFlowTheme.of(context).titleLarge,
@@ -136,7 +134,7 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                 child: TextFormField(
                   controller: _model.shortBioController,
                   focusNode: _model.shortBioFocusNode,
@@ -173,7 +171,7 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 32.0, 20.0, 12.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 32.0, 20.0, 12.0),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium,
                   textAlign: TextAlign.start,
@@ -190,7 +188,7 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 44.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 44.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         context.pop();
@@ -200,9 +198,9 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
                         width: 270.0,
                         height: 50.0,
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleMedium.override(
@@ -210,7 +208,7 @@ class _CreateNoteWidgetState extends State<CreateNoteWidget> {
                                   color: Colors.white,
                                 ),
                         elevation: 3.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),

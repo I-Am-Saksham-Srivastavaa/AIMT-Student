@@ -4,16 +4,14 @@ import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'profile_model.dart';
 export 'profile_model.dart';
 
 class ProfileWidget extends StatefulWidget {
-  const ProfileWidget({Key? key}) : super(key: key);
+  const ProfileWidget({super.key});
 
   @override
   _ProfileWidgetState createState() => _ProfileWidgetState();
@@ -64,7 +62,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
           child: wrapWithModel(
             model: _model.drawerModel,
             updateCallback: () => setState(() {}),
-            child: DrawerWidget(),
+            child: const DrawerWidget(),
           ),
         ),
         body: Row(
@@ -75,36 +73,36 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             wrapWithModel(
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
-              child: SideNavWidget(
+              child: const SideNavWidget(
                 selectedNav: 0,
               ),
             ),
             Expanded(
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: double.infinity,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
                       SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            Container(
+                            SizedBox(
                               height: 290.0,
                               child: Stack(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 12.0, 24.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(12.0),
                                       child: Image.network(
-                                        'https://source.unsplash.com/random/1280x720?profile&52',
+                                        'https://unblast.com/wp-content/uploads/2020/01/Enigma-Display-Font-1.jpg',
                                         width: double.infinity,
                                         height: 200.0,
                                         fit: BoxFit.cover,
@@ -112,7 +110,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
                                     child: Material(
                                       color: Colors.transparent,
                                       elevation: 0.0,
@@ -131,7 +129,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(4.0),
+                                          padding: const EdgeInsets.all(4.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(50.0),
@@ -150,7 +148,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 16.0, 0.0, 0.0),
                               child: Text(
                                 'Saksham Srivastava',
@@ -173,7 +171,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               .primary,
                                         ),
                                   ),
-                                  TextSpan(
+                                  const TextSpan(
                                     text: '2203630100136',
                                     style: TextStyle(),
                                   )
@@ -188,7 +186,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(16.0),
+                              padding: const EdgeInsets.all(16.0),
                               child: Container(
                                 width: double.infinity,
                                 decoration: BoxDecoration(
@@ -197,7 +195,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       12.0, 16.0, 12.0, 16.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -210,7 +208,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 8.0),
                                               child: Text(
                                                 '2',
@@ -235,7 +233,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 8.0),
                                               child: Text(
                                                 'B.Tech.',
@@ -260,7 +258,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 8.0),
                                               child: Text(
                                                 'Computer Science',
@@ -286,7 +284,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 8.0),
                                               child: Text(
                                                 '3',
@@ -319,7 +317,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 0.0, 0.0),
                                     child: Text(
                                       'Personal Details',
@@ -328,7 +326,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 4.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -337,7 +335,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 12.0),
                                           child: Container(
                                             width: double.infinity,
@@ -355,13 +353,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(12.0),
+                                              padding: const EdgeInsets.all(12.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Column(
@@ -382,7 +380,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       4.0,
@@ -412,7 +410,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 12.0),
                                           child: Text(
                                             'General Details',
@@ -422,7 +420,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -446,7 +444,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -470,7 +468,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -494,7 +492,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -518,7 +516,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -548,7 +546,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -579,7 +577,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -609,7 +607,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -639,7 +637,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -669,7 +667,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -699,7 +697,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 16.0),
                                           child: Divider(
                                             thickness: 2.0,
@@ -709,7 +707,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 12.0),
                                           child: Text(
                                             'Correspondence Detail',
@@ -719,7 +717,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -740,7 +738,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               ),
                                               Flexible(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 0.0, 0.0, 0.0),
                                                   child: Text(
@@ -757,7 +755,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -792,7 +790,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 16.0),
                                           child: Divider(
                                             thickness: 2.0,
@@ -807,7 +805,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -816,7 +814,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                             children: [
                                               Flexible(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 0.0, 0.0, 0.0),
                                                   child: Text(
@@ -835,7 +833,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 24.0, 16.0, 30.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -845,10 +843,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       options: FFButtonOptions(
                                         width: double.infinity,
                                         height: 60.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
@@ -869,13 +867,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 ],
                               ),
                             ),
-                          ].addToEnd(SizedBox(height: 60.0)),
+                          ].addToEnd(const SizedBox(height: 60.0)),
                         ),
                       ),
                       wrapWithModel(
                         model: _model.navbarModel,
                         updateCallback: () => setState(() {}),
-                        child: NavbarWidget(),
+                        child: const NavbarWidget(),
                       ),
                     ],
                   ),

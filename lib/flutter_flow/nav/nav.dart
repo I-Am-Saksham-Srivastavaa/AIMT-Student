@@ -1,17 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 import '/index.dart';
-import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -36,107 +29,107 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => OnboardingWidget(),
+      errorBuilder: (context, state) => const OnboardingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => OnboardingWidget(),
+          builder: (context, _) => const OnboardingWidget(),
         ),
         FFRoute(
           name: 'Gallery',
           path: '/gallery',
-          builder: (context, params) => GalleryWidget(),
+          builder: (context, params) => const GalleryWidget(),
         ),
         FFRoute(
           name: 'Faculty',
           path: '/faculty',
-          builder: (context, params) => FacultyWidget(),
+          builder: (context, params) => const FacultyWidget(),
         ),
         FFRoute(
           name: 'Academics',
           path: '/academics',
-          builder: (context, params) => AcademicsWidget(),
+          builder: (context, params) => const AcademicsWidget(),
         ),
         FFRoute(
           name: 'Settings',
           path: '/settings',
-          builder: (context, params) => SettingsWidget(),
+          builder: (context, params) => const SettingsWidget(),
         ),
         FFRoute(
           name: 'Onboarding',
           path: '/onboarding',
-          builder: (context, params) => OnboardingWidget(),
+          builder: (context, params) => const OnboardingWidget(),
         ),
         FFRoute(
           name: 'CreateAccount',
           path: '/createAccount',
-          builder: (context, params) => CreateAccountWidget(),
+          builder: (context, params) => const CreateAccountWidget(),
         ),
         FFRoute(
           name: 'Login',
           path: '/login',
-          builder: (context, params) => LoginWidget(),
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'ForgotPassword',
           path: '/forgotPassword',
-          builder: (context, params) => ForgotPasswordWidget(),
+          builder: (context, params) => const ForgotPasswordWidget(),
         ),
         FFRoute(
           name: 'main_ProfileCopy',
           path: '/mainProfileCopy',
-          builder: (context, params) => MainProfileCopyWidget(),
+          builder: (context, params) => const MainProfileCopyWidget(),
         ),
         FFRoute(
           name: 'Schedule',
           path: '/schedule',
-          builder: (context, params) => ScheduleWidget(),
+          builder: (context, params) => const ScheduleWidget(),
         ),
         FFRoute(
           name: 'Profile',
           path: '/profile',
-          builder: (context, params) => ProfileWidget(),
+          builder: (context, params) => const ProfileWidget(),
         ),
         FFRoute(
           name: 'Support',
           path: '/support',
-          builder: (context, params) => SupportWidget(),
+          builder: (context, params) => const SupportWidget(),
         ),
         FFRoute(
           name: 'Ticket',
           path: '/ticket',
-          builder: (context, params) => TicketWidget(),
+          builder: (context, params) => const TicketWidget(),
         ),
         FFRoute(
           name: 'Dashboard',
           path: '/dashboard',
-          builder: (context, params) => DashboardWidget(),
+          builder: (context, params) => const DashboardWidget(),
         ),
         FFRoute(
           name: 'Attendance',
           path: '/attendance',
-          builder: (context, params) => AttendanceWidget(),
+          builder: (context, params) => const AttendanceWidget(),
         ),
         FFRoute(
           name: 'Finances',
           path: '/finances',
-          builder: (context, params) => FinancesWidget(),
+          builder: (context, params) => const FinancesWidget(),
         ),
         FFRoute(
           name: 'Notifications',
           path: '/notifications',
-          builder: (context, params) => NotificationsWidget(),
+          builder: (context, params) => const NotificationsWidget(),
         ),
         FFRoute(
           name: 'Semester',
           path: '/semester',
-          builder: (context, params) => SemesterWidget(),
+          builder: (context, params) => const SemesterWidget(),
         ),
         FFRoute(
           name: 'Detail',
           path: '/detail',
-          builder: (context, params) => DetailWidget(),
+          builder: (context, params) => const DetailWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -299,7 +292,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

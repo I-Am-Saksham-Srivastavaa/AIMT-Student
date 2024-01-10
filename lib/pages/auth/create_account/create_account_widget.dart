@@ -2,16 +2,14 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_account_model.dart';
 export 'create_account_model.dart';
 
 class CreateAccountWidget extends StatefulWidget {
-  const CreateAccountWidget({Key? key}) : super(key: key);
+  const CreateAccountWidget({super.key});
 
   @override
   _CreateAccountWidgetState createState() => _CreateAccountWidgetState();
@@ -76,21 +74,21 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                 child: Container(
                   width: 100.0,
                   height: double.infinity,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsets.all(32.0),
+                              padding: const EdgeInsets.all(32.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,13 +99,13 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                         .displaySmall
                                         .override(
                                           fontFamily: 'Plus Jakarta Sans',
-                                          color: Color(0xFF101213),
+                                          color: const Color(0xFF101213),
                                           fontSize: 36.0,
                                           fontWeight: FontWeight.w600,
                                         ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 24.0),
                                     child: Text(
                                       'Let\'s get started by filling out the form below.',
@@ -115,23 +113,23 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: Color(0xFF57636C),
+                                            color: const Color(0xFF57636C),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 16.0),
-                                    child: Container(
+                                    child: SizedBox(
                                       width: 370.0,
                                       child: TextFormField(
                                         controller:
                                             _model.emailAddressController,
                                         focusNode: _model.emailAddressFocusNode,
                                         autofocus: true,
-                                        autofillHints: [AutofillHints.email],
+                                        autofillHints: const [AutofillHints.email],
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelText: 'Email',
@@ -141,12 +139,12 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFF1F4F8),
                                               width: 2.0,
                                             ),
@@ -154,7 +152,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFF4B39EF),
                                               width: 2.0,
                                             ),
@@ -162,7 +160,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           errorBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2.0,
                                             ),
@@ -171,7 +169,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2.0,
                                             ),
@@ -179,13 +177,13 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           filled: true,
-                                          fillColor: Color(0xFFF1F4F8),
+                                          fillColor: const Color(0xFFF1F4F8),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF101213),
+                                              color: const Color(0xFF101213),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -198,15 +196,15 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 16.0),
-                                    child: Container(
+                                    child: SizedBox(
                                       width: 370.0,
                                       child: TextFormField(
                                         controller: _model.passwordController,
                                         focusNode: _model.passwordFocusNode,
                                         autofocus: true,
-                                        autofillHints: [AutofillHints.password],
+                                        autofillHints: const [AutofillHints.password],
                                         obscureText: !_model.passwordVisibility,
                                         decoration: InputDecoration(
                                           labelText: 'Password',
@@ -216,12 +214,12 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFF1F4F8),
                                               width: 2.0,
                                             ),
@@ -229,7 +227,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFF4B39EF),
                                               width: 2.0,
                                             ),
@@ -237,7 +235,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           errorBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2.0,
                                             ),
@@ -246,7 +244,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2.0,
                                             ),
@@ -254,7 +252,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           filled: true,
-                                          fillColor: Color(0xFFF1F4F8),
+                                          fillColor: const Color(0xFFF1F4F8),
                                           suffixIcon: InkWell(
                                             onTap: () => setState(
                                               () => _model.passwordVisibility =
@@ -267,7 +265,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                   ? Icons.visibility_outlined
                                                   : Icons
                                                       .visibility_off_outlined,
-                                              color: Color(0xFF57636C),
+                                              color: const Color(0xFF57636C),
                                               size: 24.0,
                                             ),
                                           ),
@@ -276,7 +274,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF101213),
+                                              color: const Color(0xFF101213),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -287,9 +285,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 16.0),
-                                    child: Container(
+                                    child: SizedBox(
                                       width: 370.0,
                                       child: TextFormField(
                                         controller:
@@ -297,7 +295,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                         focusNode:
                                             _model.passwordConfirmFocusNode,
                                         autofocus: true,
-                                        autofillHints: [AutofillHints.password],
+                                        autofillHints: const [AutofillHints.password],
                                         obscureText:
                                             !_model.passwordConfirmVisibility,
                                         decoration: InputDecoration(
@@ -308,12 +306,12 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFF1F4F8),
                                               width: 2.0,
                                             ),
@@ -321,7 +319,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFF4B39EF),
                                               width: 2.0,
                                             ),
@@ -329,7 +327,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           errorBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2.0,
                                             ),
@@ -338,7 +336,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2.0,
                                             ),
@@ -346,7 +344,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           filled: true,
-                                          fillColor: Color(0xFFF1F4F8),
+                                          fillColor: const Color(0xFFF1F4F8),
                                           suffixIcon: InkWell(
                                             onTap: () => setState(
                                               () => _model
@@ -361,7 +359,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                   ? Icons.visibility_outlined
                                                   : Icons
                                                       .visibility_off_outlined,
-                                              color: Color(0xFF57636C),
+                                              color: const Color(0xFF57636C),
                                               size: 24.0,
                                             ),
                                           ),
@@ -370,7 +368,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF101213),
+                                              color: const Color(0xFF101213),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -382,7 +380,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 16.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -392,12 +390,12 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                       options: FFButtonOptions(
                                         width: 370.0,
                                         height: 44.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF4B39EF),
+                                        color: const Color(0xFF4B39EF),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -407,7 +405,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                               fontWeight: FontWeight.w500,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -419,14 +417,14 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
 
                                   // You will have to add an action on this rich text to go to your login page.
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: RichText(
                                       textScaleFactor: MediaQuery.of(context)
                                           .textScaleFactor,
                                       text: TextSpan(
                                         children: [
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'Already have an account? ',
                                             style: TextStyle(),
                                           ),
@@ -437,7 +435,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF4B39EF),
+                                                  color: const Color(0xFF4B39EF),
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -447,7 +445,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                             .labelLarge
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF57636C),
+                                              color: const Color(0xFF57636C),
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -472,13 +470,13 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                 Expanded(
                   flex: 6,
                   child: Padding(
-                    padding: EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Container(
                       width: 100.0,
                       height: double.infinity,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           fit: BoxFit.cover,
                           image: CachedNetworkImageProvider(
                             'https://aimt.edu.in/wp-content/uploads/2023/04/about.jpg',
