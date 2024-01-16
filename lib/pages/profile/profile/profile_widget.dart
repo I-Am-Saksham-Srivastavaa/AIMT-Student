@@ -81,6 +81,11 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
+                      wrapWithModel(
+                        model: _model.navbarModel,
+                        updateCallback: () => setState(() {}),
+                        child: const NavbarWidget(),
+                      ),
                       SingleChildScrollView(
                         primary: false,
                         child: Column(
@@ -93,35 +98,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  if (responsiveVisibility(
-                                    context: context,
-                                    tablet: false,
-                                    tabletLandscape: false,
-                                    desktop: false,
-                                  ))
-                                    Align(
-                                      alignment: const AlignmentDirectional(0.0, 1.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            12.0, 4.0, 0.0, 0.0),
-                                        child: FlutterFlowIconButton(
-                                          borderColor: Colors.transparent,
-                                          borderRadius: 20.0,
-                                          borderWidth: 1.0,
-                                          buttonSize: 40.0,
-                                          icon: Icon(
-                                            Icons.notes_sharp,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            size: 24.0,
-                                          ),
-                                          onPressed: () async {
-                                            scaffoldKey.currentState!
-                                                .openDrawer();
-                                          },
-                                        ),
-                                      ),
-                                    ),
                                   Expanded(
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -141,6 +117,35 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       ],
                                     ),
                                   ),
+                                  if (responsiveVisibility(
+                                    context: context,
+                                    tablet: false,
+                                    tabletLandscape: false,
+                                    desktop: false,
+                                  ))
+                                    Align(
+                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            12.0, 4.0, 12.0, 0.0),
+                                        child: FlutterFlowIconButton(
+                                          borderColor: Colors.transparent,
+                                          borderRadius: 20.0,
+                                          borderWidth: 1.0,
+                                          buttonSize: 40.0,
+                                          icon: Icon(
+                                            Icons.notes_sharp,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            size: 24.0,
+                                          ),
+                                          onPressed: () async {
+                                            scaffoldKey.currentState!
+                                                .openDrawer();
+                                          },
+                                        ),
+                                      ),
+                                    ),
                                 ],
                               ),
                             ),
@@ -827,11 +832,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                             ),
                           ].addToEnd(const SizedBox(height: 60.0)),
                         ),
-                      ),
-                      wrapWithModel(
-                        model: _model.navbarModel,
-                        updateCallback: () => setState(() {}),
-                        child: const NavbarWidget(),
                       ),
                     ],
                   ),

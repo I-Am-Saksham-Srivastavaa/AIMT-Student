@@ -22,3 +22,8 @@ export '/pages/notifications/notifications_widget.dart'
     show NotificationsWidget;
 export '/pages/academics/semester/semester_widget.dart' show SemesterWidget;
 export '/pages/finances/detail/detail_widget.dart' show DetailWidget;
+export '/pages/grievance/grievance/grievance_widget.dart' show GrievanceWidget;
+export '/pages/grievance/grievance_ticket/grievance_ticket_widget.dart'
+    show GrievanceTicketWidget;
+export '/pages/auth/create_profile/create_profile_widget.dart'
+    show CreateProfileWidget;

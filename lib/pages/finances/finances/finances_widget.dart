@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
@@ -29,11 +28,6 @@ class _FinancesWidgetState extends State<FinancesWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => FinancesModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      scaffoldKey.currentState!.openDrawer();
-    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -95,6 +89,11 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                   decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
+                      wrapWithModel(
+                        model: _model.navbarModel,
+                        updateCallback: () => setState(() {}),
+                        child: const NavbarWidget(),
+                      ),
                       SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -105,34 +104,6 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                if (responsiveVisibility(
-                                  context: context,
-                                  tablet: false,
-                                  tabletLandscape: false,
-                                  desktop: false,
-                                ))
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          12.0, 4.0, 0.0, 0.0),
-                                      child: FlutterFlowIconButton(
-                                        borderColor: Colors.transparent,
-                                        borderRadius: 20.0,
-                                        borderWidth: 1.0,
-                                        buttonSize: 40.0,
-                                        icon: Icon(
-                                          Icons.notes_sharp,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                          size: 24.0,
-                                        ),
-                                        onPressed: () {
-                                          print('IconButton pressed ...');
-                                        },
-                                      ),
-                                    ),
-                                  ),
                                 Expanded(
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -161,6 +132,35 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                     ],
                                   ),
                                 ),
+                                if (responsiveVisibility(
+                                  context: context,
+                                  tablet: false,
+                                  tabletLandscape: false,
+                                  desktop: false,
+                                ))
+                                  Align(
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 4.0, 12.0, 0.0),
+                                      child: FlutterFlowIconButton(
+                                        borderColor: Colors.transparent,
+                                        borderRadius: 20.0,
+                                        borderWidth: 1.0,
+                                        buttonSize: 40.0,
+                                        icon: Icon(
+                                          Icons.notes_sharp,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          size: 24.0,
+                                        ),
+                                        onPressed: () async {
+                                          scaffoldKey.currentState!
+                                              .openDrawer();
+                                        },
+                                      ),
+                                    ),
+                                  ),
                               ],
                             ),
                             if (responsiveVisibility(
@@ -922,11 +922,6 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                             ),
                           ].addToEnd(const SizedBox(height: 64.0)),
                         ),
-                      ),
-                      wrapWithModel(
-                        model: _model.navbarModel,
-                        updateCallback: () => setState(() {}),
-                        child: const NavbarWidget(),
                       ),
                     ],
                   ),

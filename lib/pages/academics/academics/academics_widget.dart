@@ -115,8 +115,38 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                               ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        12.0, 0.0, 0.0, 0.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 16.0, 0.0, 0.0),
+                                          child: Text(
+                                            'Academics',
+                                            style: FlutterFlowTheme.of(context)
+                                                .headlineMedium,
+                                          ),
+                                        ),
+                                        Text(
+                                          'Below is Your Academic Record',
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .labelMedium,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
                                 if (responsiveVisibility(
                                   context: context,
                                   tablet: false,
@@ -127,7 +157,7 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                     alignment: const AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          12.0, 4.0, 0.0, 0.0),
+                                          12.0, 4.0, 12.0, 0.0),
                                       child: FlutterFlowIconButton(
                                         borderRadius: 20.0,
                                         borderWidth: 1.0,
@@ -145,30 +175,6 @@ class _AcademicsWidgetState extends State<AcademicsWidget> {
                                       ),
                                     ),
                                   ),
-                                Expanded(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 16.0, 0.0, 0.0),
-                                        child: Text(
-                                          'Academics',
-                                          style: FlutterFlowTheme.of(context)
-                                              .headlineMedium,
-                                        ),
-                                      ),
-                                      Text(
-                                        'Below is Your Academic Record',
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .labelMedium,
-                                      ),
-                                    ],
-                                  ),
-                                ),
                               ],
                             ),
                             Padding(

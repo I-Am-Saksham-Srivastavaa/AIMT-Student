@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'gallery_model.dart';
@@ -28,11 +27,6 @@ class _GalleryWidgetState extends State<GalleryWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => GalleryModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      scaffoldKey.currentState!.openDrawer();
-    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -86,11 +80,6 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                   decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
-                      wrapWithModel(
-                        model: _model.navbarModel,
-                        updateCallback: () => setState(() {}),
-                        child: const NavbarWidget(),
-                      ),
                       SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -104,52 +93,50 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  if (responsiveVisibility(
-                                    context: context,
-                                    tablet: false,
-                                    tabletLandscape: false,
-                                    desktop: false,
-                                  ))
-                                    Align(
-                                      alignment: const AlignmentDirectional(0.0, 1.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            12.0, 4.0, 0.0, 0.0),
-                                        child: FlutterFlowIconButton(
-                                          borderColor: Colors.transparent,
-                                          borderRadius: 20.0,
-                                          borderWidth: 1.0,
-                                          buttonSize: 40.0,
-                                          icon: Icon(
-                                            Icons.notes_sharp,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            size: 24.0,
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 0.0, 0.0, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Gallery',
+                                            style: FlutterFlowTheme.of(context)
+                                                .headlineMedium,
                                           ),
-                                          onPressed: () {
-                                            print('IconButton pressed ...');
-                                          },
-                                        ),
+                                          Text(
+                                            'Here are the glimpses of us over the years',
+                                            textAlign: TextAlign.start,
+                                            style: FlutterFlowTheme.of(context)
+                                                .labelMedium,
+                                          ),
+                                        ],
                                       ),
                                     ),
-                                  Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Gallery',
-                                          style: FlutterFlowTheme.of(context)
-                                              .headlineMedium,
+                                  ),
+                                  Align(
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          8.0, 0.0, 12.0, 0.0),
+                                      child: FlutterFlowIconButton(
+                                        borderRadius: 20.0,
+                                        borderWidth: 1.0,
+                                        buttonSize: 40.0,
+                                        icon: Icon(
+                                          Icons.notes_outlined,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          size: 24.0,
                                         ),
-                                        Text(
-                                          'Here are the glimpses of us over the years',
-                                          textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.of(context)
-                                              .labelMedium,
-                                        ),
-                                      ],
+                                        onPressed: () async {
+                                          scaffoldKey.currentState!
+                                              .openDrawer();
+                                        },
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -438,11 +425,25 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                       fit: BoxFit.cover,
                                     ),
                                   ),
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.network(
+                                      'https://picsum.photos/seed/293/600',
+                                      width: 300.0,
+                                      height: 200.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
                           ].addToEnd(const SizedBox(height: 64.0)),
                         ),
+                      ),
+                      wrapWithModel(
+                        model: _model.navbarModel,
+                        updateCallback: () => setState(() {}),
+                        child: const NavbarWidget(),
                       ),
                     ],
                   ),

@@ -8,19 +8,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
-import 'support_model.dart';
-export 'support_model.dart';
+import 'grievance_model.dart';
+export 'grievance_model.dart';
 
-class SupportWidget extends StatefulWidget {
-  const SupportWidget({super.key});
+class GrievanceWidget extends StatefulWidget {
+  const GrievanceWidget({super.key});
 
   @override
-  _SupportWidgetState createState() => _SupportWidgetState();
+  _GrievanceWidgetState createState() => _GrievanceWidgetState();
 }
 
-class _SupportWidgetState extends State<SupportWidget>
+class _GrievanceWidgetState extends State<GrievanceWidget>
     with TickerProviderStateMixin {
-  late SupportModel _model;
+  late GrievanceModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -106,7 +106,7 @@ class _SupportWidgetState extends State<SupportWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SupportModel());
+    _model = createModel(context, () => GrievanceModel());
 
     setupAnimations(
       animationsMap.values.where((anim) =>

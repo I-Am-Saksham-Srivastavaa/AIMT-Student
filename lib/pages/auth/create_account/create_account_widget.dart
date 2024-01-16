@@ -384,7 +384,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                         0.0, 0.0, 0.0, 16.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        context.pushNamed('Dashboard');
+                                        context.pushNamed('CreateProfile');
                                       },
                                       text: 'Create Account',
                                       options: FFButtonOptions(

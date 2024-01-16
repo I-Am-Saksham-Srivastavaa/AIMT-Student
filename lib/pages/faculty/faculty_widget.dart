@@ -92,6 +92,11 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                   decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
+                      wrapWithModel(
+                        model: _model.navbarModel,
+                        updateCallback: () => setState(() {}),
+                        child: const NavbarWidget(),
+                      ),
                       SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -104,6 +109,35 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 0.0, 0.0, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 4.0),
+                                            child: Text(
+                                              'Members',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .headlineMedium,
+                                            ),
+                                          ),
+                                          Text(
+                                            'Below are a list of members of your team.',
+                                            style: FlutterFlowTheme.of(context)
+                                                .labelMedium,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
                                   if (responsiveVisibility(
                                     context: context,
                                     tablet: false,
@@ -114,7 +148,7 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                       alignment: const AlignmentDirectional(0.0, 1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            12.0, 4.0, 0.0, 0.0),
+                                            12.0, 4.0, 12.0, 0.0),
                                         child: FlutterFlowIconButton(
                                           borderColor: Colors.transparent,
                                           borderRadius: 20.0,
@@ -133,30 +167,6 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                                         ),
                                       ),
                                     ),
-                                  Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 4.0),
-                                          child: Text(
-                                            'Members',
-                                            style: FlutterFlowTheme.of(context)
-                                                .headlineMedium,
-                                          ),
-                                        ),
-                                        Text(
-                                          'Below are a list of members of your team.',
-                                          style: FlutterFlowTheme.of(context)
-                                              .labelMedium,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
                                 ],
                               ),
                             ),
@@ -852,11 +862,6 @@ class _FacultyWidgetState extends State<FacultyWidget> {
                             ),
                           ].addToEnd(const SizedBox(height: 64.0)),
                         ),
-                      ),
-                      wrapWithModel(
-                        model: _model.navbarModel,
-                        updateCallback: () => setState(() {}),
-                        child: const NavbarWidget(),
                       ),
                     ],
                   ),

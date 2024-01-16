@@ -15,12 +15,13 @@ class GalleryModel extends FlutterFlowModel<GalleryWidget> {
   final unfocusNode = FocusNode();
   // Model for sideNav component.
   late SideNavModel sideNavModel;
-  // Model for Navbar component.
-  late NavbarModel navbarModel;
   // State field(s) for Carousel widget.
   CarouselController? carouselController;
 
   int carouselCurrentIndex = 1;
+
+  // Model for Navbar component.
+  late NavbarModel navbarModel;
 
   /// Initialization and disposal methods.
 

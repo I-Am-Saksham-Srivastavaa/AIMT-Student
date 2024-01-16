@@ -8,19 +8,19 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
-import 'ticket_model.dart';
-export 'ticket_model.dart';
+import 'grievance_ticket_model.dart';
+export 'grievance_ticket_model.dart';
 
-class TicketWidget extends StatefulWidget {
-  const TicketWidget({super.key});
+class GrievanceTicketWidget extends StatefulWidget {
+  const GrievanceTicketWidget({super.key});
 
   @override
-  _TicketWidgetState createState() => _TicketWidgetState();
+  _GrievanceTicketWidgetState createState() => _GrievanceTicketWidgetState();
 }
 
-class _TicketWidgetState extends State<TicketWidget>
+class _GrievanceTicketWidgetState extends State<GrievanceTicketWidget>
     with TickerProviderStateMixin {
-  late TicketModel _model;
+  late GrievanceTicketModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -106,7 +106,7 @@ class _TicketWidgetState extends State<TicketWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => TicketModel());
+    _model = createModel(context, () => GrievanceTicketModel());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {

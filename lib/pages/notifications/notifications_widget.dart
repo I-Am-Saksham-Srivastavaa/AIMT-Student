@@ -78,6 +78,11 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                   decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
+                      wrapWithModel(
+                        model: _model.navbarModel,
+                        updateCallback: () => setState(() {}),
+                        child: const NavbarWidget(),
+                      ),
                       SingleChildScrollView(
                         primary: false,
                         child: Column(
@@ -91,6 +96,29 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 0.0, 0.0, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Notifications',
+                                            style: FlutterFlowTheme.of(context)
+                                                .headlineMedium,
+                                          ),
+                                          Text(
+                                            'Below are your notifications',
+                                            style: FlutterFlowTheme.of(context)
+                                                .labelMedium,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
                                   if (responsiveVisibility(
                                     context: context,
                                     tablet: false,
@@ -101,7 +129,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                       alignment: const AlignmentDirectional(0.0, 1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            12.0, 4.0, 0.0, 0.0),
+                                            12.0, 4.0, 12.0, 0.0),
                                         child: FlutterFlowIconButton(
                                           borderColor: Colors.transparent,
                                           borderRadius: 20.0,
@@ -120,25 +148,6 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         ),
                                       ),
                                     ),
-                                  Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Notifications',
-                                          style: FlutterFlowTheme.of(context)
-                                              .headlineMedium,
-                                        ),
-                                        Text(
-                                          'Below are your notifications',
-                                          style: FlutterFlowTheme.of(context)
-                                              .labelMedium,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
                                 ],
                               ),
                             ),
@@ -642,11 +651,6 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                             ),
                           ].addToEnd(const SizedBox(height: 64.0)),
                         ),
-                      ),
-                      wrapWithModel(
-                        model: _model.navbarModel,
-                        updateCallback: () => setState(() {}),
-                        child: const NavbarWidget(),
                       ),
                     ],
                   ),

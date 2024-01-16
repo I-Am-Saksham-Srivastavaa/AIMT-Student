@@ -16,6 +16,8 @@ class FacultyModel extends FlutterFlowModel<FacultyWidget> {
   final unfocusNode = FocusNode();
   // Model for sideNav component.
   late SideNavModel sideNavModel;
+  // Model for Navbar component.
+  late NavbarModel navbarModel;
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
@@ -23,8 +25,6 @@ class FacultyModel extends FlutterFlowModel<FacultyWidget> {
   // State field(s) for ChoiceChips widget.
   List<String>? choiceChipsValues;
   FormFieldController<List<String>>? choiceChipsValueController;
-  // Model for Navbar component.
-  late NavbarModel navbarModel;
   // Model for Drawer component.
   late DrawerModel drawerModel;
 
@@ -41,10 +41,10 @@ class FacultyModel extends FlutterFlowModel<FacultyWidget> {
   void dispose() {
     unfocusNode.dispose();
     sideNavModel.dispose();
+    navbarModel.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
 
-    navbarModel.dispose();
     drawerModel.dispose();
   }
 
