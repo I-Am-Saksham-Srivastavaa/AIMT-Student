@@ -1,6 +1,6 @@
-import '/components/drawer_widget.dart';
-import '/components/navbar_widget.dart';
-import '/components/side_nav_widget.dart';
+import '/components/drawer/drawer_widget.dart';
+import '/components/navbar/navbar_widget.dart';
+import '/components/side_nav/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -81,7 +81,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
               child: const SideNavWidget(
-                selectedNav: 0,
+                selectedNav: 5,
               ),
             ),
             Expanded(
@@ -103,7 +103,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 0.0, 0.0),
                             child: Text(
-                              'Academics',
+                              'Schedule',
                               style:
                                   FlutterFlowTheme.of(context).headlineMedium,
                             ),
@@ -112,7 +112,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 0.0, 0.0),
                             child: Text(
-                              'Below is Your Academic Record',
+                              'Below is Your Academic Schedule',
                               textAlign: TextAlign.start,
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
@@ -368,7 +368,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                           0.0),
                                                                       child:
                                                                           Text(
-                                                                        'Doctors Check In',
+                                                                        'PUT Examination',
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .headlineSmall
                                                                             .override(
@@ -390,34 +390,6 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
                                                                         children: [
-                                                                          Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                0.0,
-                                                                                8.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Card(
-                                                                              clipBehavior: Clip.antiAliasWithSaveLayer,
-                                                                              color: const Color(0x4DEE8B60),
-                                                                              elevation: 0.0,
-                                                                              shape: RoundedRectangleBorder(
-                                                                                borderRadius: BorderRadius.circular(8.0),
-                                                                              ),
-                                                                              child: Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
-                                                                                child: Text(
-                                                                                  '2:20pm',
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
-                                                                                        color: const Color(0xFFEE8B60),
-                                                                                        fontSize: 14.0,
-                                                                                        fontWeight: FontWeight.normal,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
                                                                           Text(
                                                                             'Wed, 03/08/2022',
                                                                             style: FlutterFlowTheme.of(context).bodySmall.override(
@@ -578,39 +550,6 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
-                                                                        Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              0.0,
-                                                                              8.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Card(
-                                                                            clipBehavior:
-                                                                                Clip.antiAliasWithSaveLayer,
-                                                                            color:
-                                                                                const Color(0x4C4B39EF),
-                                                                            elevation:
-                                                                                0.0,
-                                                                            shape:
-                                                                                RoundedRectangleBorder(
-                                                                              borderRadius: BorderRadius.circular(8.0),
-                                                                            ),
-                                                                            child:
-                                                                                Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
-                                                                              child: Text(
-                                                                                '2:20pm',
-                                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: 'Plus Jakarta Sans',
-                                                                                      color: const Color(0xFF4B39EF),
-                                                                                      fontSize: 14.0,
-                                                                                      fontWeight: FontWeight.normal,
-                                                                                    ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
                                                                         Padding(
                                                                           padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               4.0,
@@ -883,7 +822,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             0.0),
                                                                         child:
                                                                             Text(
-                                                                          'Doctors Check In',
+                                                                          'PUT Examination',
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .headlineSmall
                                                                               .override(
@@ -905,31 +844,8 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
                                                                           children: [
-                                                                            Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
-                                                                              child: Card(
-                                                                                clipBehavior: Clip.antiAliasWithSaveLayer,
-                                                                                color: const Color(0x4DEE8B60),
-                                                                                elevation: 0.0,
-                                                                                shape: RoundedRectangleBorder(
-                                                                                  borderRadius: BorderRadius.circular(8.0),
-                                                                                ),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
-                                                                                  child: Text(
-                                                                                    '2:20pm',
-                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'Plus Jakarta Sans',
-                                                                                          color: const Color(0xFFEE8B60),
-                                                                                          fontSize: 14.0,
-                                                                                          fontWeight: FontWeight.normal,
-                                                                                        ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
                                                                             Text(
-                                                                              'Wed, 03/08/2022',
+                                                                              'Wed, 03/02/2024',
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: const Color(0xFF14181B),
@@ -1082,7 +998,7 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                             0.0),
                                                                         child:
                                                                             Text(
-                                                                          'Check In',
+                                                                          'Sessioonal II',
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .headlineSmall
                                                                               .override(
@@ -1097,34 +1013,6 @@ class _ScheduleWidgetState extends State<ScheduleWidget>
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
                                                                         children: [
-                                                                          Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                0.0,
-                                                                                8.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Card(
-                                                                              clipBehavior: Clip.antiAliasWithSaveLayer,
-                                                                              color: const Color(0x4C4B39EF),
-                                                                              elevation: 0.0,
-                                                                              shape: RoundedRectangleBorder(
-                                                                                borderRadius: BorderRadius.circular(8.0),
-                                                                              ),
-                                                                              child: Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 4.0),
-                                                                                child: Text(
-                                                                                  '2:20pm',
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
-                                                                                        color: const Color(0xFF4B39EF),
-                                                                                        fontSize: 14.0,
-                                                                                        fontWeight: FontWeight.normal,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
                                                                           Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 4.0,

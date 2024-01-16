@@ -1,10 +1,12 @@
-import '/components/drawer_widget.dart';
-import '/components/navbar_widget.dart';
-import '/components/side_nav_widget.dart';
+import '/components/drawer/drawer_widget.dart';
+import '/components/navbar/navbar_widget.dart';
+import '/components/side_nav/side_nav_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
@@ -27,6 +29,11 @@ class _FinancesWidgetState extends State<FinancesWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => FinancesModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      scaffoldKey.currentState!.openDrawer();
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -91,8 +98,71 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                       SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                if (responsiveVisibility(
+                                  context: context,
+                                  tablet: false,
+                                  tabletLandscape: false,
+                                  desktop: false,
+                                ))
+                                  Align(
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 4.0, 0.0, 0.0),
+                                      child: FlutterFlowIconButton(
+                                        borderColor: Colors.transparent,
+                                        borderRadius: 20.0,
+                                        borderWidth: 1.0,
+                                        buttonSize: 40.0,
+                                        icon: Icon(
+                                          Icons.notes_sharp,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          size: 24.0,
+                                        ),
+                                        onPressed: () {
+                                          print('IconButton pressed ...');
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 16.0, 0.0, 0.0),
+                                        child: Text(
+                                          'Financial Record',
+                                          style: FlutterFlowTheme.of(context)
+                                              .headlineMedium,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 4.0, 0.0, 4.0),
+                                        child: Text(
+                                          'Below is your Financial overview.',
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .labelMedium,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                             if (responsiveVisibility(
                               context: context,
                               phone: false,
@@ -103,24 +173,6 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                 height: 24.0,
                                 decoration: const BoxDecoration(),
                               ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 16.0, 0.0, 16.0),
-                              child: Text(
-                                'Financial Record',
-                                style:
-                                    FlutterFlowTheme.of(context).headlineMedium,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 4.0, 0.0, 4.0),
-                              child: Text(
-                                'Below is your Financial overview.',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context).labelMedium,
-                              ),
-                            ),
                             Container(
                               width: double.infinity,
                               constraints: BoxConstraints(
@@ -233,7 +285,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                   onPressed: () {
                                                     print('Button pressed ...');
                                                   },
-                                                  text: 'Transfer Balance',
+                                                  text: 'Pay Dues',
                                                   options: FFButtonOptions(
                                                     height: 36.0,
                                                     padding:
@@ -407,12 +459,13 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                                             children: [
                                                               const TextSpan(
                                                                 text:
-                                                                    'Forecasted income is: ',
+                                                                    'Next Due Date is: ',
                                                                 style:
                                                                     TextStyle(),
                                                               ),
                                                               TextSpan(
-                                                                text: '\$3,502',
+                                                                text:
+                                                                    '01/01/2025',
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
@@ -500,379 +553,7 @@ class _FinancesWidgetState extends State<FinancesWidget> {
                                               ],
                                             ),
                                           ),
-                                          const Divider(
-                                            height: 2.0,
-                                            thickness: 1.0,
-                                            color: Color(0xFFE5E7EB),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 12.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Top Friends',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .labelMedium
-                                                  .override(
-                                                    fontFamily:
-                                                        'Plus Jakarta Sans',
-                                                    color: const Color(0xFF606A85),
-                                                    fontSize: 14.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
                                         ],
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 4.0),
-                                        child: SingleChildScrollView(
-                                          scrollDirection: Axis.horizontal,
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 50.0,
-                                                      height: 50.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            const Color(0x4C39D2C0),
-                                                        shape: BoxShape.circle,
-                                                        border: Border.all(
-                                                          color:
-                                                              const Color(0xFF39D2C0),
-                                                          width: 2.0,
-                                                        ),
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets.all(2.0),
-                                                        child: ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      40.0),
-                                                          child: Image.network(
-                                                            'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
-                                                            width: 60.0,
-                                                            height: 60.0,
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  8.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        'Rudy Fernandez',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Plus Jakarta Sans',
-                                                              color: const Color(
-                                                                  0xFF15161E),
-                                                              fontSize: 14.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                    Text(
-                                                      'Manager',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            color: const Color(
-                                                                0xFF606A85),
-                                                            fontSize: 12.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ].divide(
-                                                      const SizedBox(height: 4.0)),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 50.0,
-                                                      height: 50.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            const Color(0x4C39D2C0),
-                                                        shape: BoxShape.circle,
-                                                        border: Border.all(
-                                                          color:
-                                                              const Color(0xFF39D2C0),
-                                                          width: 2.0,
-                                                        ),
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets.all(2.0),
-                                                        child: ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      40.0),
-                                                          child: Image.network(
-                                                            'https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGUlMjB1c2VyfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60',
-                                                            width: 60.0,
-                                                            height: 60.0,
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  8.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        'Abigail Herrara',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Plus Jakarta Sans',
-                                                              color: const Color(
-                                                                  0xFF15161E),
-                                                              fontSize: 14.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                    Text(
-                                                      'Designer',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            color: const Color(
-                                                                0xFF606A85),
-                                                            fontSize: 12.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ].divide(
-                                                      const SizedBox(height: 4.0)),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 50.0,
-                                                      height: 50.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            const Color(0x4C39D2C0),
-                                                        shape: BoxShape.circle,
-                                                        border: Border.all(
-                                                          color:
-                                                              const Color(0xFF39D2C0),
-                                                          width: 2.0,
-                                                        ),
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets.all(2.0),
-                                                        child: ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      40.0),
-                                                          child: Image.network(
-                                                            'https://images.unsplash.com/photo-1505033575518-a36ea2ef75ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMHVzZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60',
-                                                            width: 60.0,
-                                                            height: 60.0,
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  8.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        'Liz Ambridge',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Plus Jakarta Sans',
-                                                              color: const Color(
-                                                                  0xFF15161E),
-                                                              fontSize: 14.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                    Text(
-                                                      'Manager',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            color: const Color(
-                                                                0xFF606A85),
-                                                            fontSize: 12.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ].divide(
-                                                      const SizedBox(height: 4.0)),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 50.0,
-                                                      height: 50.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            const Color(0x4C39D2C0),
-                                                        shape: BoxShape.circle,
-                                                        border: Border.all(
-                                                          color:
-                                                              const Color(0xFF39D2C0),
-                                                          width: 2.0,
-                                                        ),
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets.all(2.0),
-                                                        child: ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      40.0),
-                                                          child: Image.network(
-                                                            'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw0fHx1c2VyfGVufDB8fHx8MTY5MTY0Mzg1OXww&ixlib=rb-4.0.3&q=80&w=400',
-                                                            width: 60.0,
-                                                            height: 60.0,
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  8.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        'Liz Rogers',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Plus Jakarta Sans',
-                                                              color: const Color(
-                                                                  0xFF15161E),
-                                                              fontSize: 14.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                    Text(
-                                                      'Front End Dev',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            color: const Color(
-                                                                0xFF606A85),
-                                                            fontSize: 12.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ].divide(
-                                                      const SizedBox(height: 4.0)),
-                                                ),
-                                              ),
-                                            ]
-                                                .divide(const SizedBox(width: 12.0))
-                                                .addToStart(
-                                                    const SizedBox(width: 16.0))
-                                                .addToEnd(
-                                                    const SizedBox(width: 16.0)),
-                                          ),
-                                        ),
                                       ),
                                     ),
                                   ],

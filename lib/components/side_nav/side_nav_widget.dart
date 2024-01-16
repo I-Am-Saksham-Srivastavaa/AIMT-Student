@@ -259,6 +259,8 @@ class _SideNavWidgetState extends State<SideNavWidget>
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                       onEnter: ((event) async {
                         setState(() => _model.mouseRegionHovered1 = true);
+
+                        context.pushNamed('Dashboard');
                       }),
                       onExit: ((event) async {
                         setState(() => _model.mouseRegionHovered1 = false);
@@ -323,6 +325,8 @@ class _SideNavWidgetState extends State<SideNavWidget>
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                       onEnter: ((event) async {
                         setState(() => _model.mouseRegionHovered2 = true);
+
+                        context.pushNamed('Attendance');
                       }),
                       onExit: ((event) async {
                         setState(() => _model.mouseRegionHovered2 = false);
@@ -340,7 +344,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               if (_model.mouseRegionHovered2) {
                                 return FlutterFlowTheme.of(context)
                                     .secondaryBackground;
-                              } else if (widget.selectedNav == 1) {
+                              } else if (widget.selectedNav == 2) {
                                 return FlutterFlowTheme.of(context).accent1;
                               } else {
                                 return FlutterFlowTheme.of(context)
@@ -361,7 +365,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                       8.0, 0.0, 8.0, 0.0),
                                   child: Icon(
                                     Icons.web,
-                                    color: _model.selectedNav == 1
+                                    color: _model.selectedNav == 2
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .primaryText,
@@ -387,6 +391,8 @@ class _SideNavWidgetState extends State<SideNavWidget>
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                       onEnter: ((event) async {
                         setState(() => _model.mouseRegionHovered3 = true);
+
+                        context.pushNamed('Academics');
                       }),
                       onExit: ((event) async {
                         setState(() => _model.mouseRegionHovered3 = false);
@@ -421,7 +427,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                 if (_model.mouseRegionHovered3) {
                                   return FlutterFlowTheme.of(context)
                                       .secondaryBackground;
-                                } else if (widget.selectedNav == 4) {
+                                } else if (widget.selectedNav == 3) {
                                   return FlutterFlowTheme.of(context).accent1;
                                 } else {
                                   return FlutterFlowTheme.of(context)
@@ -442,7 +448,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                         8.0, 0.0, 8.0, 0.0),
                                     child: FaIcon(
                                       FontAwesomeIcons.award,
-                                      color: _model.selectedNav == 4
+                                      color: _model.selectedNav == 3
                                           ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context)
                                               .primaryText,
@@ -469,6 +475,8 @@ class _SideNavWidgetState extends State<SideNavWidget>
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                       onEnter: ((event) async {
                         setState(() => _model.mouseRegionHovered4 = true);
+
+                        context.pushNamed('Finances');
                       }),
                       onExit: ((event) async {
                         setState(() => _model.mouseRegionHovered4 = false);
@@ -486,7 +494,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               if (_model.mouseRegionHovered4) {
                                 return FlutterFlowTheme.of(context)
                                     .secondaryBackground;
-                              } else if (widget.selectedNav == 1) {
+                              } else if (widget.selectedNav == 4) {
                                 return FlutterFlowTheme.of(context).accent1;
                               } else {
                                 return FlutterFlowTheme.of(context)
@@ -507,7 +515,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                       8.0, 0.0, 8.0, 0.0),
                                   child: FaIcon(
                                     FontAwesomeIcons.creditCard,
-                                    color: _model.selectedNav == 1
+                                    color: _model.selectedNav == 4
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .primaryText,
@@ -533,6 +541,8 @@ class _SideNavWidgetState extends State<SideNavWidget>
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                       onEnter: ((event) async {
                         setState(() => _model.mouseRegionHovered5 = true);
+
+                        context.pushNamed('Apps');
                       }),
                       onExit: ((event) async {
                         setState(() => _model.mouseRegionHovered5 = false);
@@ -550,7 +560,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               if (_model.mouseRegionHovered5) {
                                 return FlutterFlowTheme.of(context)
                                     .secondaryBackground;
-                              } else if (widget.selectedNav == 1) {
+                              } else if (widget.selectedNav == 5) {
                                 return FlutterFlowTheme.of(context).accent1;
                               } else {
                                 return FlutterFlowTheme.of(context)
@@ -571,7 +581,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                       8.0, 0.0, 8.0, 0.0),
                                   child: Icon(
                                     Icons.apps,
-                                    color: _model.selectedNav == 1
+                                    color: _model.selectedNav == 5
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .primaryText,
@@ -597,6 +607,8 @@ class _SideNavWidgetState extends State<SideNavWidget>
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                       onEnter: ((event) async {
                         setState(() => _model.mouseRegionHovered6 = true);
+
+                        context.pushNamed('Faculty');
                       }),
                       onExit: ((event) async {
                         setState(() => _model.mouseRegionHovered6 = false);
@@ -631,7 +643,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                 if (_model.mouseRegionHovered6) {
                                   return FlutterFlowTheme.of(context)
                                       .secondaryBackground;
-                                } else if (widget.selectedNav == 2) {
+                                } else if (widget.selectedNav == 6) {
                                   return FlutterFlowTheme.of(context).accent1;
                                 } else {
                                   return FlutterFlowTheme.of(context)
@@ -652,7 +664,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                         8.0, 0.0, 8.0, 0.0),
                                     child: Icon(
                                       Icons.groups,
-                                      color: _model.selectedNav == 2
+                                      color: _model.selectedNav == 6
                                           ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context)
                                               .primaryText,
@@ -679,6 +691,8 @@ class _SideNavWidgetState extends State<SideNavWidget>
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                       onEnter: ((event) async {
                         setState(() => _model.mouseRegionHovered7 = true);
+
+                        context.pushNamed('Faculty');
                       }),
                       onExit: ((event) async {
                         setState(() => _model.mouseRegionHovered7 = false);
@@ -713,7 +727,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                 if (_model.mouseRegionHovered7) {
                                   return FlutterFlowTheme.of(context)
                                       .secondaryBackground;
-                                } else if (widget.selectedNav == 3) {
+                                } else if (widget.selectedNav == 7) {
                                   return FlutterFlowTheme.of(context).accent1;
                                 } else {
                                   return FlutterFlowTheme.of(context)
@@ -734,7 +748,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                         8.0, 0.0, 8.0, 0.0),
                                     child: Icon(
                                       Icons.photo_library_outlined,
-                                      color: _model.selectedNav == 3
+                                      color: _model.selectedNav == 7
                                           ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context)
                                               .primaryText,
@@ -745,6 +759,90 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                     Expanded(
                                       child: Text(
                                         'Gallery',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                      ),
+                                    ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    MouseRegion(
+                      opaque: false,
+                      cursor: SystemMouseCursors.click ?? MouseCursor.defer,
+                      onEnter: ((event) async {
+                        setState(() => _model.mouseRegionHovered8 = true);
+
+                        context.pushNamed('Notifications');
+                      }),
+                      onExit: ((event) async {
+                        setState(() => _model.mouseRegionHovered8 = false);
+                      }),
+                      child: Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed(
+                              'Gallery',
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: const TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.fade,
+                                  duration: Duration(milliseconds: 0),
+                                ),
+                              },
+                            );
+                          },
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            curve: Curves.easeInOut,
+                            width: double.infinity,
+                            height: 44.0,
+                            decoration: BoxDecoration(
+                              color: () {
+                                if (_model.mouseRegionHovered8) {
+                                  return FlutterFlowTheme.of(context)
+                                      .secondaryBackground;
+                                } else if (widget.selectedNav == 8) {
+                                  return FlutterFlowTheme.of(context).accent1;
+                                } else {
+                                  return FlutterFlowTheme.of(context)
+                                      .primaryBackground;
+                                }
+                              }(),
+                              borderRadius: BorderRadius.circular(12.0),
+                              shape: BoxShape.rectangle,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        8.0, 0.0, 8.0, 0.0),
+                                    child: Icon(
+                                      Icons.notifications_active,
+                                      color: _model.selectedNav == 8
+                                          ? FlutterFlowTheme.of(context).primary
+                                          : FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                      size: 24.0,
+                                    ),
+                                  ),
+                                  if (FFAppState().navOpen == true)
+                                    Expanded(
+                                      child: Text(
+                                        'Notification',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -769,10 +867,12 @@ class _SideNavWidgetState extends State<SideNavWidget>
                       opaque: false,
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                       onEnter: ((event) async {
-                        setState(() => _model.mouseRegionHovered8 = true);
+                        setState(() => _model.mouseRegionHovered9 = true);
+
+                        context.pushNamed('Settings');
                       }),
                       onExit: ((event) async {
-                        setState(() => _model.mouseRegionHovered8 = false);
+                        setState(() => _model.mouseRegionHovered9 = false);
                       }),
                       child: Padding(
                         padding:
@@ -784,10 +884,10 @@ class _SideNavWidgetState extends State<SideNavWidget>
                           height: 44.0,
                           decoration: BoxDecoration(
                             color: () {
-                              if (_model.mouseRegionHovered8) {
+                              if (_model.mouseRegionHovered9) {
                                 return FlutterFlowTheme.of(context)
                                     .secondaryBackground;
-                              } else if (widget.selectedNav == 5) {
+                              } else if (widget.selectedNav == 9) {
                                 return FlutterFlowTheme.of(context).accent1;
                               } else {
                                 return FlutterFlowTheme.of(context)
@@ -808,7 +908,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                       8.0, 0.0, 8.0, 0.0),
                                   child: Icon(
                                     Icons.settings_rounded,
-                                    color: _model.selectedNav == 5
+                                    color: _model.selectedNav == 9
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .primaryText,
@@ -833,10 +933,10 @@ class _SideNavWidgetState extends State<SideNavWidget>
                       opaque: false,
                       cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                       onEnter: ((event) async {
-                        setState(() => _model.mouseRegionHovered9 = true);
+                        setState(() => _model.mouseRegionHovered10 = true);
                       }),
                       onExit: ((event) async {
-                        setState(() => _model.mouseRegionHovered9 = false);
+                        setState(() => _model.mouseRegionHovered10 = false);
                       }),
                       child: Padding(
                         padding:
@@ -848,10 +948,10 @@ class _SideNavWidgetState extends State<SideNavWidget>
                           height: 44.0,
                           decoration: BoxDecoration(
                             color: () {
-                              if (_model.mouseRegionHovered9) {
+                              if (_model.mouseRegionHovered10) {
                                 return FlutterFlowTheme.of(context)
                                     .secondaryBackground;
-                              } else if (widget.selectedNav == 5) {
+                              } else if (widget.selectedNav == 10) {
                                 return FlutterFlowTheme.of(context).accent1;
                               } else {
                                 return FlutterFlowTheme.of(context)
@@ -872,7 +972,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                       8.0, 0.0, 8.0, 0.0),
                                   child: Icon(
                                     Icons.report_sharp,
-                                    color: _model.selectedNav == 5
+                                    color: _model.selectedNav == 10
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .primaryText,

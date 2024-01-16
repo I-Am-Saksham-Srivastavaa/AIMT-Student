@@ -87,7 +87,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Welcome Back',
+                                    'Forgot Password',
                                     style: FlutterFlowTheme.of(context)
                                         .displaySmall
                                         .override(

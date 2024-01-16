@@ -1,9 +1,9 @@
-import '/components/side_nav_widget.dart';
+import '/components/side_nav/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'main_profile_copy_widget.dart' show MainProfileCopyWidget;
+import 'apps_widget.dart' show AppsWidget;
 import 'package:flutter/material.dart';
 
-class MainProfileCopyModel extends FlutterFlowModel<MainProfileCopyWidget> {
+class AppsModel extends FlutterFlowModel<AppsWidget> {
   ///  Local state fields for this page.
 
   int selectedPage = 2;

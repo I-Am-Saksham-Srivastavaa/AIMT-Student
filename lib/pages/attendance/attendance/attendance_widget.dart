@@ -1,6 +1,7 @@
-import '/components/drawer_widget.dart';
-import '/components/navbar_widget.dart';
-import '/components/side_nav_widget.dart';
+import '/components/drawer/drawer_widget.dart';
+import '/components/navbar/navbar_widget.dart';
+import '/components/side_nav/side_nav_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -71,7 +72,7 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
               child: const SideNavWidget(
-                selectedNav: 4,
+                selectedNav: 2,
               ),
             ),
             Expanded(
@@ -96,6 +97,65 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                if (responsiveVisibility(
+                                  context: context,
+                                  tablet: false,
+                                  tabletLandscape: false,
+                                  desktop: false,
+                                ))
+                                  Align(
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 4.0, 0.0, 0.0),
+                                      child: FlutterFlowIconButton(
+                                        borderColor: Colors.transparent,
+                                        borderRadius: 20.0,
+                                        borderWidth: 1.0,
+                                        buttonSize: 40.0,
+                                        icon: Icon(
+                                          Icons.notes_sharp,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          size: 24.0,
+                                        ),
+                                        onPressed: () async {
+                                          scaffoldKey.currentState!
+                                              .openDrawer();
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 16.0, 0.0, 0.0),
+                                        child: Text(
+                                          'Attendance',
+                                          style: FlutterFlowTheme.of(context)
+                                              .headlineMedium,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Below is your Academic Attendance',
+                                        textAlign: TextAlign.start,
+                                        style: FlutterFlowTheme.of(context)
+                                            .labelMedium,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                             if (responsiveVisibility(
                               context: context,
                               phone: false,
@@ -106,24 +166,6 @@ class _AttendanceWidgetState extends State<AttendanceWidget> {
                                 height: 24.0,
                                 decoration: const BoxDecoration(),
                               ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 16.0, 0.0, 0.0),
-                              child: Text(
-                                'Recent Orders',
-                                style:
-                                    FlutterFlowTheme.of(context).headlineMedium,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 4.0, 0.0, 0.0),
-                              child: Text(
-                                'Below are your most recent orders',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context).labelMedium,
-                              ),
-                            ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),

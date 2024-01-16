@@ -77,9 +77,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ForgotPasswordWidget(),
         ),
         FFRoute(
-          name: 'main_ProfileCopy',
-          path: '/mainProfileCopy',
-          builder: (context, params) => const MainProfileCopyWidget(),
+          name: 'Apps',
+          path: '/apps',
+          builder: (context, params) => const AppsWidget(),
         ),
         FFRoute(
           name: 'Schedule',

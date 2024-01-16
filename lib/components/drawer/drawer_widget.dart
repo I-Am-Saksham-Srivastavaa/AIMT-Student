@@ -574,6 +574,62 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    context.pushNamed(
+                      'Gallery',
+                      extra: <String, dynamic>{
+                        kTransitionInfoKey: const TransitionInfo(
+                          hasTransition: true,
+                          transitionType: PageTransitionType.fade,
+                          duration: Duration(milliseconds: 0),
+                        ),
+                      },
+                    );
+                  },
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                    width: double.infinity,
+                    height: 44.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      borderRadius: BorderRadius.circular(12.0),
+                      shape: BoxShape.rectangle,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                8.0, 0.0, 8.0, 0.0),
+                            child: Icon(
+                              Icons.notifications_active_rounded,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 24.0,
+                            ),
+                          ),
+                          Expanded(
+                            child: Text(
+                              'Notifications',
+                              style: FlutterFlowTheme.of(context).bodyMedium,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               Divider(
                 height: 12.0,
                 thickness: 2.0,

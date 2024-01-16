@@ -1,6 +1,6 @@
-import '/components/drawer_widget.dart';
-import '/components/navbar_widget.dart';
-import '/components/side_nav_widget.dart';
+import '/components/drawer/drawer_widget.dart';
+import '/components/navbar/navbar_widget.dart';
+import '/components/side_nav/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'finances_widget.dart' show FinancesWidget;
 import 'package:flutter/material.dart';

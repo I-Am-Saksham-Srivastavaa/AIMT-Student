@@ -1,5 +1,5 @@
-import '/components/navbar_widget.dart';
-import '/components/side_nav_widget.dart';
+import '/components/navbar/navbar_widget.dart';
+import '/components/side_nav/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -66,7 +66,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
               model: _model.sideNavModel,
               updateCallback: () => setState(() {}),
               child: const SideNavWidget(
-                selectedNav: 0,
+                selectedNav: 8,
               ),
             ),
             Expanded(

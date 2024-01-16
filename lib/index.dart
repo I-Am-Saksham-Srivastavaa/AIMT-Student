@@ -9,8 +9,7 @@ export '/pages/auth/create_account/create_account_widget.dart'
 export '/pages/auth/login/login_widget.dart' show LoginWidget;
 export '/pages/auth/forgot_password/forgot_password_widget.dart'
     show ForgotPasswordWidget;
-export '/pages/main_profile_copy/main_profile_copy_widget.dart'
-    show MainProfileCopyWidget;
+export '/pages/apps/apps_widget.dart' show AppsWidget;
 export '/pages/schedule/schedule_widget.dart' show ScheduleWidget;
 export '/pages/profile/profile/profile_widget.dart' show ProfileWidget;
 export '/pages/settings/support/support_widget.dart' show SupportWidget;

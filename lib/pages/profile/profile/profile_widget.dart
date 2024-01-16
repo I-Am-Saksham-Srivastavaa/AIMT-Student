@@ -1,6 +1,6 @@
-import '/components/drawer_widget.dart';
-import '/components/navbar_widget.dart';
-import '/components/side_nav_widget.dart';
+import '/components/drawer/drawer_widget.dart';
+import '/components/navbar/navbar_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -70,13 +70,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            wrapWithModel(
-              model: _model.sideNavModel,
-              updateCallback: () => setState(() {}),
-              child: const SideNavWidget(
-                selectedNav: 0,
-              ),
-            ),
             Expanded(
               child: Align(
                 alignment: const AlignmentDirectional(0.0, -1.0),
@@ -89,9 +82,68 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   child: Stack(
                     children: [
                       SingleChildScrollView(
+                        primary: false,
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 16.0, 0.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  if (responsiveVisibility(
+                                    context: context,
+                                    tablet: false,
+                                    tabletLandscape: false,
+                                    desktop: false,
+                                  ))
+                                    Align(
+                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            12.0, 4.0, 0.0, 0.0),
+                                        child: FlutterFlowIconButton(
+                                          borderColor: Colors.transparent,
+                                          borderRadius: 20.0,
+                                          borderWidth: 1.0,
+                                          buttonSize: 40.0,
+                                          icon: Icon(
+                                            Icons.notes_sharp,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            size: 24.0,
+                                          ),
+                                          onPressed: () async {
+                                            scaffoldKey.currentState!
+                                                .openDrawer();
+                                          },
+                                        ),
+                                      ),
+                                    ),
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  16.0, 0.0, 0.0, 0.0),
+                                          child: Text(
+                                            'Profile',
+                                            style: FlutterFlowTheme.of(context)
+                                                .headlineMedium,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                             SizedBox(
                               height: 290.0,
                               child: Stack(
@@ -186,7 +238,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(16.0),
+                              padding: const EdgeInsets.all(10.0),
                               child: Container(
                                 width: double.infinity,
                                 decoration: BoxDecoration(
@@ -196,7 +248,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 16.0, 12.0, 16.0),
+                                      0.0, 16.0, 0.0, 16.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -265,7 +317,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                                 textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .titleLarge,
+                                                        .titleLarge
+                                                        .override(
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
+                                                          fontSize: 17.0,
+                                                        ),
                                               ),
                                             ),
                                             Text(
@@ -333,59 +390,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 12.0),
-                                          child: Container(
-                                            width: double.infinity,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              borderRadius:
-                                                  BorderRadius.circular(12.0),
-                                              border: Border.all(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .alternate,
-                                                width: 2.0,
-                                              ),
-                                            ),
-                                            child: Padding(
-                                              padding: const EdgeInsets.all(12.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(12.0, 0.0,
-                                                                0.0, 0.0),
-                                                    child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          'Ambalika Institute of Management and Technology',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyLarge,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
