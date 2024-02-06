@@ -16,7 +16,7 @@ class OnboardingWidget extends StatefulWidget {
   const OnboardingWidget({super.key});
 
   @override
-  _OnboardingWidgetState createState() => _OnboardingWidgetState();
+  State<OnboardingWidget> createState() => _OnboardingWidgetState();
 }
 
 class _OnboardingWidgetState extends State<OnboardingWidget>
@@ -243,178 +243,192 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
           : FocusScope.of(context).unfocus(),
-      child: WillPopScope(
-        onWillPop: () async => false,
-        child: Scaffold(
-          key: scaffoldKey,
-          backgroundColor: Colors.white,
-          body: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 4.0, 0.0),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  ClipRRect(
-                    child: Container(
-                      width: double.infinity,
-                      height: 420.0,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            height: 480.0,
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                            ),
-                            child: MasonryGridView.builder(
-                              physics: const NeverScrollableScrollPhysics(),
-                              gridDelegate:
-                                  const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 3,
-                              ),
-                              crossAxisSpacing: 10.0,
-                              mainAxisSpacing: 10.0,
-                              itemCount: 10,
-                              itemBuilder: (context, index) {
-                                return [
-                                  () => ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                          bottomLeft: Radius.circular(0.0),
-                                          bottomRight: Radius.circular(16.0),
-                                          topLeft: Radius.circular(0.0),
-                                          topRight: Radius.circular(16.0),
-                                        ),
-                                        child: Image.network(
-                                          'https://images.collegedunia.com/public/college_data/images/campusimage/16240022151R3A8408.JPG',
-                                          width: 120.0,
-                                          height: 120.0,
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                  () => ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(16.0),
-                                        child: Image.network(
-                                          'https://images.collegedunia.com/public/college_data/images/campusimage/16240022141R3A8132.JPG',
-                                          width: 120.0,
-                                          height: 160.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                  () => ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                          bottomLeft: Radius.circular(16.0),
-                                          bottomRight: Radius.circular(0.0),
-                                          topLeft: Radius.circular(16.0),
-                                          topRight: Radius.circular(0.0),
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/3a9k2_3.png',
-                                          width: 80.0,
-                                          height: 180.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                  () => ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(16.0),
-                                        child: Image.asset(
-                                          'assets/images/3mjpg_4.jpg',
-                                          width: 120.0,
-                                          height: 160.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                  () => ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(16.0),
-                                        child: Image.asset(
-                                          'assets/images/AIMT.png',
-                                          width: 120.0,
-                                          height: 180.0,
-                                          fit: BoxFit.contain,
-                                        ),
-                                      ),
-                                  () => ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                          bottomLeft: Radius.circular(16.0),
-                                          bottomRight: Radius.circular(0.0),
-                                          topLeft: Radius.circular(16.0),
-                                          topRight: Radius.circular(0.0),
-                                        ),
-                                        child: Image.network(
-                                          'https://aimt.edu.in/wp-content/uploads/2023/04/classes.jpg',
-                                          width: 120.0,
-                                          height: 190.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                  () => ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(16.0),
-                                        child: Image.asset(
-                                          'assets/images/75n71_6.jpg',
-                                          width: 120.0,
-                                          height: 160.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                  () => ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(16.0),
-                                        child: Image.network(
-                                          'https://images.collegedunia.com/public/college_data/images/campusimage/1419847807advisory_board.png',
-                                          width: 120.0,
-                                          height: 180.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                  () => ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                          bottomLeft: Radius.circular(16.0),
-                                          bottomRight: Radius.circular(0.0),
-                                          topLeft: Radius.circular(16.0),
-                                          topRight: Radius.circular(0.0),
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/0zhao_8.jpg',
-                                          width: 120.0,
-                                          height: 190.0,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                  () => Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
-                                        child: Container(
-                                          width: double.infinity,
-                                          constraints: const BoxConstraints(
-                                            maxWidth: 670.0,
-                                          ),
-                                          decoration: const BoxDecoration(
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-                                ][index]();
-                              },
-                            ),
-                          ).animateOnPageLoad(
-                              animationsMap['containerOnPageLoadAnimation']!),
-                        ],
-                      ),
-                    ),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        body: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            ClipRRect(
+              child: Container(
+                width: double.infinity,
+                height: 420.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Container(
+                        width: double.infinity,
+                        height: 600.0,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                        ),
+                        child: MasonryGridView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          gridDelegate:
+                              const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
+                          ),
+                          crossAxisSpacing: 10.0,
+                          mainAxisSpacing: 10.0,
+                          itemCount: 11,
+                          itemBuilder: (context, index) {
+                            return [
+                              () => ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(0.0),
+                                      bottomRight: Radius.circular(16.0),
+                                      topLeft: Radius.circular(0.0),
+                                      topRight: Radius.circular(16.0),
+                                    ),
+                                    child: Image.network(
+                                      '',
+                                      width: 120.0,
+                                      height: 120.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: BorderRadius.circular(16.0),
+                                    child: Image.network(
+                                      '',
+                                      width: 120.0,
+                                      height: 160.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(0.0),
+                                      bottomRight: Radius.circular(16.0),
+                                      topLeft: Radius.circular(0.0),
+                                      topRight: Radius.circular(16.0),
+                                    ),
+                                    child: Image.network(
+                                      'https://picsum.photos/seed/32/600',
+                                      width: 100.0,
+                                      height: 0.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(16.0),
+                                      bottomRight: Radius.circular(0.0),
+                                      topLeft: Radius.circular(16.0),
+                                      topRight: Radius.circular(0.0),
+                                    ),
+                                    child: Image.network(
+                                      '',
+                                      width: 80.0,
+                                      height: 180.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: BorderRadius.circular(16.0),
+                                    child: Image.network(
+                                      '',
+                                      width: 120.0,
+                                      height: 160.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: BorderRadius.circular(16.0),
+                                    child: Image.network(
+                                      '',
+                                      width: 120.0,
+                                      height: 180.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(16.0),
+                                      bottomRight: Radius.circular(0.0),
+                                      topLeft: Radius.circular(16.0),
+                                      topRight: Radius.circular(0.0),
+                                    ),
+                                    child: Image.network(
+                                      'https://images.unsplash.com',
+                                      width: 120.0,
+                                      height: 190.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: BorderRadius.circular(16.0),
+                                    child: Image.network(
+                                      '',
+                                      width: 120.0,
+                                      height: 160.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: BorderRadius.circular(16.0),
+                                    child: Image.network(
+                                      '',
+                                      width: 120.0,
+                                      height: 180.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(16.0),
+                                      bottomRight: Radius.circular(0.0),
+                                      topLeft: Radius.circular(16.0),
+                                      topRight: Radius.circular(0.0),
+                                    ),
+                                    child: Image.network(
+                                      '',
+                                      width: 120.0,
+                                      height: 190.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                              () => ClipRRect(
+                                    borderRadius: BorderRadius.circular(16.0),
+                                    child: Image.network(
+                                      '',
+                                      width: 120.0,
+                                      height: 160.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                            ][index]();
+                          },
+                        ),
+                      ).animateOnPageLoad(
+                          animationsMap['containerOnPageLoadAnimation']!),
+                    ],
                   ),
-                  Column(
+                ),
+              ),
+            ),
+            Expanded(
+              child: Align(
+                alignment: const AlignmentDirectional(0.0, 0.0),
+                child: Container(
+                  width: double.infinity,
+                  constraints: const BoxConstraints(
+                    maxWidth: 670.0,
+                  ),
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                  ),
+                  child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       SizedBox(
                         width: double.infinity,
-                        height: 270.0,
+                        height: 230.0,
                         child: Stack(
                           children: [
                             Padding(
@@ -434,14 +448,12 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          ' Welcome to Ambalika!',
+                                          'AIMT App',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .displaySmall
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF101213),
-                                                fontSize: 30.0,
+                                                fontFamily: 'Outfit',
                                                 fontWeight: FontWeight.bold,
                                               ),
                                         ).animateOnPageLoad(animationsMap[
@@ -451,17 +463,10 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 0.0),
                                           child: Text(
-                                            'Welcome to Ambalika Institute of Management and Technology! Let\'s kickstart your exciting academic journey together. This onboarding process ensures a smooth transition into college life.',
+                                            'One Application for Everyone',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
-                                                .labelLarge
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: const Color(0xFF57636C),
-                                                  fontSize: 14.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                                                .labelLarge,
                                           ).animateOnPageLoad(animationsMap[
                                               'textOnPageLoadAnimation2']!),
                                         ),
@@ -477,14 +482,12 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          'New Student Essentials',
+                                          'All the Features in one App',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .displaySmall
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF101213),
-                                                fontSize: 36.0,
+                                                fontFamily: 'Outfit',
                                                 fontWeight: FontWeight.bold,
                                               ),
                                         ).animateOnPageLoad(animationsMap[
@@ -494,17 +497,10 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 0.0),
                                           child: Text(
-                                            'Congrats on choosing Ambalika! This page covers vital info for a seamless transition. Explore academic resources, campus facilities, and set yourself up for success.',
+                                            'Find everything of your use Here',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
-                                                .labelLarge
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: const Color(0xFF57636C),
-                                                  fontSize: 16.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                                                .labelLarge,
                                           ).animateOnPageLoad(animationsMap[
                                               'textOnPageLoadAnimation4']!),
                                         ),
@@ -520,14 +516,12 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          'Unleash Your Potential',
+                                          'Find Something Missing!',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .displaySmall
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF101213),
-                                                fontSize: 36.0,
+                                                fontFamily: 'Outfit',
                                                 fontWeight: FontWeight.bold,
                                               ),
                                         ).animateOnPageLoad(animationsMap[
@@ -537,17 +531,10 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 0.0),
                                           child: Text(
-                                            'Time to unleash your potential at Ambalika Institute! This final page sets the stage for your college adventure. We\'re here to support you every step of the way. Your future starts now!',
+                                            'Contact Us . We\'ll start working on it.',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
-                                                .labelLarge
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: const Color(0xFF57636C),
-                                                  fontSize: 16.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                                                .labelLarge,
                                           ).animateOnPageLoad(animationsMap[
                                               'textOnPageLoadAnimation6']!),
                                         ),
@@ -577,14 +564,16 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                     );
                                   },
                                   effect:
-                                      const smooth_page_indicator.ExpandingDotsEffect(
+                                      smooth_page_indicator.ExpandingDotsEffect(
                                     expansionFactor: 3.0,
                                     spacing: 8.0,
                                     radius: 16.0,
                                     dotWidth: 8.0,
                                     dotHeight: 8.0,
-                                    dotColor: Color(0xFFE0E3E7),
-                                    activeDotColor: Color(0xFF101213),
+                                    dotColor:
+                                        FlutterFlowTheme.of(context).alternate,
+                                    activeDotColor: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     paintStyle: PaintingStyle.fill,
                                   ),
                                 ),
@@ -596,77 +585,100 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                       Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 0.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed('Login');
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onLongPress: () async {
+                            context.pushNamed('Dashboard');
                           },
-                          text: 'Enrolled Student',
-                          options: FFButtonOptions(
-                            width: double.infinity,
-                            height: 60.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: const Color(0xFF101213),
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: Colors.white,
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 4.0,
-                            borderSide: const BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
+                          child: FFButtonWidget(
+                            onPressed: () async {
+                              context.pushNamed(
+                                'Login',
+                                extra: <String, dynamic>{
+                                  kTransitionInfoKey: const TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType:
+                                        PageTransitionType.leftToRight,
+                                  ),
+                                },
+                              );
+                            },
+                            text: 'Enrolled Student',
+                            options: FFButtonOptions(
+                              width: double.infinity,
+                              height: 60.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                  ),
+                              elevation: 4.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(50.0),
+                              hoverColor:
+                                  FlutterFlowTheme.of(context).primaryText,
                             ),
-                            borderRadius: BorderRadius.circular(50.0),
-                            hoverColor: const Color(0xFF101213),
                           ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 44.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed('CreateAccount');
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onLongPress: () async {
+                            context.pushNamed('Splash');
                           },
-                          text: 'First Time Signup?',
-                          options: FFButtonOptions(
-                            width: double.infinity,
-                            height: 60.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: Colors.white,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleLarge
-                                .override(
-                                  fontFamily: 'Urbanist',
-                                  color: const Color(0xFF101213),
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 0.0,
-                            borderSide: const BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
+                          child: FFButtonWidget(
+                            onPressed: () async {
+                              context.pushNamed('CreateAccount');
+                            },
+                            text: 'First Time Registering',
+                            options: FFButtonOptions(
+                              width: double.infinity,
+                              height: 60.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              textStyle:
+                                  FlutterFlowTheme.of(context).titleLarge,
+                              elevation: 0.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(50.0),
+                              hoverColor:
+                                  FlutterFlowTheme.of(context).alternate,
                             ),
-                            borderRadius: BorderRadius.circular(50.0),
-                            hoverColor: const Color(0xFFE0E3E7),
                           ),
                         ),
                       ),
                     ],
                   ),
-                ],
+                ),
               ),
             ),
-          ),
+          ],
         ),
       ),
     );

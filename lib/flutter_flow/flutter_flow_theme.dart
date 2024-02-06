@@ -55,7 +55,6 @@ abstract class FlutterFlowTheme {
   late Color info;
 
   late Color background;
-  late Color borderIcons;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -146,7 +145,6 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color info = const Color(0xFFFFFFFF);
 
   late Color background = const Color(0xFF1B1D27);
-  late Color borderIcons = const Color(0xFFB5CBC9);
 }
 
 abstract class Typography {
@@ -320,7 +318,6 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color info = const Color(0xFFFFFFFF);
 
   late Color background = const Color(0xFF1B1D27);
-  late Color borderIcons = const Color(0xFFB5CBC9);
 }
 
 extension TextStyleHelper on TextStyle {

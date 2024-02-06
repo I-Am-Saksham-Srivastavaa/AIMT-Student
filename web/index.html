@@ -19,26 +19,26 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="AIMT Student">
+  <meta name="apple-mobile-web-app-title" content="AIMT">
 
   
 
   <meta name="robots" content="noindex" />
 
   <!-- Favicon -->
-  <link rel="icon" href="AIMT.png" sizes="any"/>
+  <link rel="icon" href="AIMT_Logo.png" sizes="any"/>
   
 
   <!-- Open Graph & SEO tags -->
-  <meta property="og:title" content="AIMT Student" />
+  <meta property="og:title" content="AIMT" />
   <meta property="og:description" content="Built with FlutterFlow." />
   <meta property="og:image" content="https://storage.googleapis.com/flutterflow-prod-hosting/og_splash_gradient.png" /> 
-  <meta name="twitter:title" content="AIMT Student" />
+  <meta name="twitter:title" content="AIMT" />
   <meta name="twitter:description" content="Built with FlutterFlow." />
   <meta name="twitter:image" content="https://storage.googleapis.com/flutterflow-prod-hosting/og_splash_gradient.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <title> AIMT Student </title>
+  <title> AIMT </title>
   <meta name="description" content="Built with FlutterFlow." />
     
 
@@ -71,7 +71,7 @@
         },
         onEntrypointLoaded: async function(engineInitializer) {
           // Initialize the Flutter engine
-          let appRunner = await engineInitializer.initializeEngine({});
+          let appRunner = await engineInitializer.initializeEngine({useColorEmoji: true,});
           // Run the app
           await appRunner.runApp();
         }

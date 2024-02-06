@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>AIMT Student</string>
+	<string>AIMT</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -42,23 +42,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 
-
-	<key>NSBluetoothAlwaysUsageDescription</key>
-    <string>Allow AIMT Student to connect to Bluetooth devices? This enables AIMT Student to connect to nearby Bluetooth devices for [specific purpose, e.g., pairing, sharing data, etc.]</string>
-	<key>NSFaceIDUsageDescription</key>
-    <string>Allow AIMT Student to use biometric authentication? This enables the use of your fingerprint or facial recognition for secure and convenient access to [specific app features, e.g., login, verification, etc.]</string>
-	<key>NSCalendarsUsageDescription</key>
-    <string>Grant AIMT Student access to your calendar? This allows AIMT Student to manage events, schedules, and reminders seamlessly within your calendar app for better organization and timely notifications.</string>
 	<key>NSCameraUsageDescription</key>
-    <string>Grant AIMT Student access to the camera? This allows AIMT Student to take photos, record videos, and use augmented reality features for [specific purpose, e.g., capturing moments, scanning documents, etc.]</string>
-	<key>NSContactsUsageDescription</key>
-    <string>Allow AIMT Student to access your contacts? This enables AIMT Student to easily share information and connect with your contacts for [specific purpose, e.g., inviting friends, syncing contacts, etc.], ensuring a smoother user experience.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-    <string>Enable location access for [App Name]? This enables [App Name] to provide location-based services such as [specific service, e.g., finding nearby places, improving accuracy, etc.]</string>
-	<key>PermissionGroupNotification</key>
-    <string>Enable notifications for AIMT Student? You'll receive important updates and alerts regarding [specific app-related notifications, e.g., new messages, reminders, etc.].</string>
+    <string>In order to take a picture or video, this app requires permission to access the camera.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-    <string>Allow AIMT Student to access photos, media, and files on your device? This allows AIMT Student to save and retrieve necessary data for a seamless experience.</string>
+    <string>In order to upload data, this app requires permission to access the photo library.</string>
+
 
 
 	<key>UILaunchStoryboardName</key>

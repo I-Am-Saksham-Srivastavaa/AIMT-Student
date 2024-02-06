@@ -1,29 +1,90 @@
 // Export pages
-export '/pages/gallery/gallery_widget.dart' show GalleryWidget;
-export '/pages/faculty/faculty_widget.dart' show FacultyWidget;
-export '/pages/academics/academics/academics_widget.dart' show AcademicsWidget;
-export '/pages/settings/settings/settings_widget.dart' show SettingsWidget;
+export '/pages/student/pages/resources/resources_widget.dart'
+    show ResourcesWidget;
+export '/pages/faculty/pages/student_list/student_list_widget.dart'
+    show StudentListWidget;
+export '/pages/student/pages/transactions/transactions_widget.dart'
+    show TransactionsWidget;
+export '/pages/student/pages/settings/settings_widget.dart' show SettingsWidget;
+export '/pages/student/pages/dashboard/dashboard_widget.dart'
+    show DashboardWidget;
 export '/pages/auth/onboarding/onboarding_widget.dart' show OnboardingWidget;
 export '/pages/auth/create_account/create_account_widget.dart'
     show CreateAccountWidget;
 export '/pages/auth/login/login_widget.dart' show LoginWidget;
+export '/pages/auth/create_profile_faculty/create_profile_faculty_widget.dart'
+    show CreateProfileFacultyWidget;
 export '/pages/auth/forgot_password/forgot_password_widget.dart'
     show ForgotPasswordWidget;
-export '/pages/apps/apps_widget.dart' show AppsWidget;
-export '/pages/schedule/schedule_widget.dart' show ScheduleWidget;
-export '/pages/profile/profile/profile_widget.dart' show ProfileWidget;
-export '/pages/settings/support/support_widget.dart' show SupportWidget;
-export '/pages/settings/ticket/ticket_widget.dart' show TicketWidget;
-export '/pages/dashboard/dashboard_widget.dart' show DashboardWidget;
-export '/pages/attendance/attendance/attendance_widget.dart'
-    show AttendanceWidget;
-export '/pages/finances/finances/finances_widget.dart' show FinancesWidget;
-export '/pages/notifications/notifications_widget.dart'
-    show NotificationsWidget;
-export '/pages/academics/semester/semester_widget.dart' show SemesterWidget;
-export '/pages/finances/detail/detail_widget.dart' show DetailWidget;
-export '/pages/grievance/grievance/grievance_widget.dart' show GrievanceWidget;
-export '/pages/grievance/grievance_ticket/grievance_ticket_widget.dart'
-    show GrievanceTicketWidget;
+export '/pages/auth/splash/splash_widget.dart' show SplashWidget;
+export '/pages/student/pages/academics/academics_widget.dart'
+    show AcademicsWidget;
 export '/pages/auth/create_profile/create_profile_widget.dart'
     show CreateProfileWidget;
+export '/pages/faculty/pages/dashboard_faculty/dashboard_faculty_widget.dart'
+    show DashboardFacultyWidget;
+export '/pages/hod/pages/dashboard_h_o_d/dashboard_h_o_d_widget.dart'
+    show DashboardHODWidget;
+export '/pages/faculty/pages/settings_faculty/settings_faculty_widget.dart'
+    show SettingsFacultyWidget;
+export '/pages/hod/pages/setting_h_o_d/setting_h_o_d_widget.dart'
+    show SettingHODWidget;
+export '/s_details_faculty/s_details_faculty_widget.dart'
+    show SDetailsFacultyWidget;
+export '/student_profile/student_profile_widget.dart' show StudentProfileWidget;
+export '/pages/student/pages/faculty/faculty_widget.dart' show FacultyWidget;
+export '/pages/faculty/pages/academic_record/academic_record_widget.dart'
+    show AcademicRecordWidget;
+export '/pages/student/pages/attendance_summary/attendance_summary_widget.dart'
+    show AttendanceSummaryWidget;
+export '/pages/student/pages/fee_record/fee_record_widget.dart'
+    show FeeRecordWidget;
+export '/pages/student/pages/app_and_services/app_and_services_widget.dart'
+    show AppAndServicesWidget;
+export '/pages/faculty/pages/resources_faculty/resources_faculty_widget.dart'
+    show ResourcesFacultyWidget;
+export '/pages/hod/pages/resources_h_o_d/resources_h_o_d_widget.dart'
+    show ResourcesHODWidget;
+export '/pages/student/pages/photo_gallery/photo_gallery_widget.dart'
+    show PhotoGalleryWidget;
+export '/support/ticket_list/ticket_list_widget.dart' show TicketListWidget;
+export '/support/submit_ticket/submit_ticket_widget.dart'
+    show SubmitTicketWidget;
+export '/support/ticket_details/ticket_details_widget.dart'
+    show TicketDetailsWidget;
+export '/pages/hod/pages/academic_records/academic_records_widget.dart'
+    show AcademicRecordsWidget;
+export '/pages/faculty/pages/attendance_record/attendance_record_widget.dart'
+    show AttendanceRecordWidget;
+export '/pages/faculty/pages/financial_record/financial_record_widget.dart'
+    show FinancialRecordWidget;
+export '/pages/faculty/pages/gallery/gallery_widget.dart' show GalleryWidget;
+export '/pages/faculty/pages/apps_and_services/apps_and_services_widget.dart'
+    show AppsAndServicesWidget;
+export '/pages/hod/pages/apps_and_service/apps_and_service_widget.dart'
+    show AppsAndServiceWidget;
+export '/pages/hod/pages/attendance_records/attendance_records_widget.dart'
+    show AttendanceRecordsWidget;
+export '/pages/hod/pages/financial_records/financial_records_widget.dart'
+    show FinancialRecordsWidget;
+export '/pages/hod/pages/image_gallery/image_gallery_widget.dart'
+    show ImageGalleryWidget;
+export '/pages/hod/pages/students_list/students_list_widget.dart'
+    show StudentsListWidget;
+export '/pages/hod/pages/faculty_list/faculty_list_widget.dart'
+    show FacultyListWidget;
+export '/grievance/grievance_submit_ticket/grievance_submit_ticket_widget.dart'
+    show GrievanceSubmitTicketWidget;
+export '/grievance/grievance_ticket_details/grievance_ticket_details_widget.dart'
+    show GrievanceTicketDetailsWidget;
+export '/grievance/grievance_ticket_list/grievance_ticket_list_widget.dart'
+    show GrievanceTicketListWidget;
+export '/faculty_detail/faculty_detail_widget.dart' show FacultyDetailWidget;
+export '/pages/student/components/new_page_student/new_page_student_widget.dart'
+    show NewPageStudentWidget;
+export '/pages/faculty/components/new_page_faculty/new_page_faculty_widget.dart'
+    show NewPageFacultyWidget;
+export '/pages/hod/pages/new_page_h_o_d/new_page_h_o_d_widget.dart'
+    show NewPageHODWidget;
+export '/pages/student/pages/transaction_detail/transaction_detail_widget.dart'
+    show TransactionDetailWidget;

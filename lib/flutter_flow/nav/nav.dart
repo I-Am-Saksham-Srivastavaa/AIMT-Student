@@ -82,24 +82,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const OnboardingWidget(),
         ),
         FFRoute(
-          name: 'Gallery',
-          path: '/gallery',
-          builder: (context, params) => const GalleryWidget(),
+          name: 'Resources',
+          path: '/resources',
+          builder: (context, params) => const ResourcesWidget(),
         ),
         FFRoute(
-          name: 'Faculty',
-          path: '/faculty',
-          builder: (context, params) => const FacultyWidget(),
+          name: 'StudentList',
+          path: '/FacultyList',
+          builder: (context, params) => const StudentListWidget(),
         ),
         FFRoute(
-          name: 'Academics',
-          path: '/academics',
-          builder: (context, params) => const AcademicsWidget(),
+          name: 'Transactions',
+          path: '/transactions',
+          builder: (context, params) => const TransactionsWidget(),
         ),
         FFRoute(
           name: 'Settings',
           path: '/settings',
           builder: (context, params) => const SettingsWidget(),
+        ),
+        FFRoute(
+          name: 'Dashboard',
+          path: '/dashboard',
+          builder: (context, params) => const DashboardWidget(),
         ),
         FFRoute(
           name: 'Onboarding',
@@ -117,79 +122,209 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
+          name: 'CreateProfileFaculty',
+          path: '/createProfileFaculty',
+          builder: (context, params) => const CreateProfileFacultyWidget(),
+        ),
+        FFRoute(
           name: 'ForgotPassword',
           path: '/forgotPassword',
           builder: (context, params) => const ForgotPasswordWidget(),
         ),
         FFRoute(
-          name: 'Apps',
-          path: '/apps',
-          builder: (context, params) => const AppsWidget(),
+          name: 'Splash',
+          path: '/splash',
+          builder: (context, params) => const SplashWidget(),
         ),
         FFRoute(
-          name: 'Schedule',
-          path: '/schedule',
-          builder: (context, params) => const ScheduleWidget(),
-        ),
-        FFRoute(
-          name: 'Profile',
-          path: '/profile',
-          builder: (context, params) => const ProfileWidget(),
-        ),
-        FFRoute(
-          name: 'Support',
-          path: '/support',
-          builder: (context, params) => const SupportWidget(),
-        ),
-        FFRoute(
-          name: 'Ticket',
-          path: '/ticket',
-          builder: (context, params) => const TicketWidget(),
-        ),
-        FFRoute(
-          name: 'Dashboard',
-          path: '/dashboard',
-          builder: (context, params) => const DashboardWidget(),
-        ),
-        FFRoute(
-          name: 'Attendance',
-          path: '/attendance',
-          builder: (context, params) => const AttendanceWidget(),
-        ),
-        FFRoute(
-          name: 'Finances',
-          path: '/finances',
-          builder: (context, params) => const FinancesWidget(),
-        ),
-        FFRoute(
-          name: 'Notifications',
-          path: '/notifications',
-          builder: (context, params) => const NotificationsWidget(),
-        ),
-        FFRoute(
-          name: 'Semester',
-          path: '/semester',
-          builder: (context, params) => const SemesterWidget(),
-        ),
-        FFRoute(
-          name: 'Detail',
-          path: '/detail',
-          builder: (context, params) => const DetailWidget(),
-        ),
-        FFRoute(
-          name: 'Grievance',
-          path: '/grievance',
-          builder: (context, params) => const GrievanceWidget(),
-        ),
-        FFRoute(
-          name: 'GrievanceTicket',
-          path: '/grievanceTicket',
-          builder: (context, params) => const GrievanceTicketWidget(),
+          name: 'Academics',
+          path: '/academics',
+          builder: (context, params) => const AcademicsWidget(),
         ),
         FFRoute(
           name: 'CreateProfile',
           path: '/createProfile',
           builder: (context, params) => const CreateProfileWidget(),
+        ),
+        FFRoute(
+          name: 'DashboardFaculty',
+          path: '/dashboardFaculty',
+          builder: (context, params) => const DashboardFacultyWidget(),
+        ),
+        FFRoute(
+          name: 'DashboardHOD',
+          path: '/dashboardHOD',
+          builder: (context, params) => const DashboardHODWidget(),
+        ),
+        FFRoute(
+          name: 'SettingsFaculty',
+          path: '/settingsFaculty',
+          builder: (context, params) => const SettingsFacultyWidget(),
+        ),
+        FFRoute(
+          name: 'SettingHOD',
+          path: '/settingHOD',
+          builder: (context, params) => const SettingHODWidget(),
+        ),
+        FFRoute(
+          name: 'SDetailsFaculty',
+          path: '/sDetailsFaculty',
+          builder: (context, params) => const SDetailsFacultyWidget(),
+        ),
+        FFRoute(
+          name: 'StudentProfile',
+          path: '/studentProfile',
+          builder: (context, params) => const StudentProfileWidget(),
+        ),
+        FFRoute(
+          name: 'Faculty',
+          path: '/Faculty',
+          builder: (context, params) => const FacultyWidget(),
+        ),
+        FFRoute(
+          name: 'AcademicRecord',
+          path: '/academicRecord',
+          builder: (context, params) => const AcademicRecordWidget(),
+        ),
+        FFRoute(
+          name: 'AttendanceSummary',
+          path: '/attendanceSummary',
+          builder: (context, params) => const AttendanceSummaryWidget(),
+        ),
+        FFRoute(
+          name: 'FeeRecord',
+          path: '/feeRecord',
+          builder: (context, params) => const FeeRecordWidget(),
+        ),
+        FFRoute(
+          name: 'AppAndServices',
+          path: '/appAndServices',
+          builder: (context, params) => const AppAndServicesWidget(),
+        ),
+        FFRoute(
+          name: 'ResourcesFaculty',
+          path: '/resourcesFaculty',
+          builder: (context, params) => const ResourcesFacultyWidget(),
+        ),
+        FFRoute(
+          name: 'ResourcesHOD',
+          path: '/resourcesHOD',
+          builder: (context, params) => const ResourcesHODWidget(),
+        ),
+        FFRoute(
+          name: 'PhotoGallery',
+          path: '/photoGallery',
+          builder: (context, params) => const PhotoGalleryWidget(),
+        ),
+        FFRoute(
+          name: 'TicketList',
+          path: '/ticketList',
+          builder: (context, params) => const TicketListWidget(),
+        ),
+        FFRoute(
+          name: 'SubmitTicket',
+          path: '/submitTicket',
+          builder: (context, params) => const SubmitTicketWidget(),
+        ),
+        FFRoute(
+          name: 'TicketDetails',
+          path: '/ticketDetails',
+          builder: (context, params) => const TicketDetailsWidget(),
+        ),
+        FFRoute(
+          name: 'AcademicRecords',
+          path: '/academicRecords',
+          builder: (context, params) => const AcademicRecordsWidget(),
+        ),
+        FFRoute(
+          name: 'AttendanceRecord',
+          path: '/attendanceRecord',
+          builder: (context, params) => const AttendanceRecordWidget(),
+        ),
+        FFRoute(
+          name: 'FinancialRecord',
+          path: '/financialRecord',
+          builder: (context, params) => const FinancialRecordWidget(),
+        ),
+        FFRoute(
+          name: 'Gallery',
+          path: '/gallery',
+          builder: (context, params) => const GalleryWidget(),
+        ),
+        FFRoute(
+          name: 'AppsAndServices',
+          path: '/appsAndServices',
+          builder: (context, params) => const AppsAndServicesWidget(),
+        ),
+        FFRoute(
+          name: 'AppsAndService',
+          path: '/appsAndService',
+          builder: (context, params) => const AppsAndServiceWidget(),
+        ),
+        FFRoute(
+          name: 'AttendanceRecords',
+          path: '/attendanceRecords',
+          builder: (context, params) => const AttendanceRecordsWidget(),
+        ),
+        FFRoute(
+          name: 'FinancialRecords',
+          path: '/financialRecords',
+          builder: (context, params) => const FinancialRecordsWidget(),
+        ),
+        FFRoute(
+          name: 'ImageGallery',
+          path: '/imageGallery',
+          builder: (context, params) => const ImageGalleryWidget(),
+        ),
+        FFRoute(
+          name: 'StudentsList',
+          path: '/StudentList',
+          builder: (context, params) => const StudentsListWidget(),
+        ),
+        FFRoute(
+          name: 'FacultyList',
+          path: '/FacultiesList',
+          builder: (context, params) => const FacultyListWidget(),
+        ),
+        FFRoute(
+          name: 'GrievanceSubmitTicket',
+          path: '/grievanceSubmitTicket',
+          builder: (context, params) => const GrievanceSubmitTicketWidget(),
+        ),
+        FFRoute(
+          name: 'GrievanceTicketDetails',
+          path: '/grievanceTicketDetails',
+          builder: (context, params) => const GrievanceTicketDetailsWidget(),
+        ),
+        FFRoute(
+          name: 'GrievanceTicketList',
+          path: '/grievanceTicketList',
+          builder: (context, params) => const GrievanceTicketListWidget(),
+        ),
+        FFRoute(
+          name: 'FacultyDetail',
+          path: '/facultyDetail',
+          builder: (context, params) => const FacultyDetailWidget(),
+        ),
+        FFRoute(
+          name: 'NewPageStudent',
+          path: '/newPageStudent',
+          builder: (context, params) => const NewPageStudentWidget(),
+        ),
+        FFRoute(
+          name: 'NewPageFaculty',
+          path: '/newPageFaculty',
+          builder: (context, params) => const NewPageFacultyWidget(),
+        ),
+        FFRoute(
+          name: 'NewPageHOD',
+          path: '/newPageHOD',
+          builder: (context, params) => const NewPageHODWidget(),
+        ),
+        FFRoute(
+          name: 'TransactionDetail',
+          path: '/transactionDetail',
+          builder: (context, params) => const TransactionDetailWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
