@@ -4,19 +4,20 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'academic_overview_h_o_d_model.dart';
-export 'academic_overview_h_o_d_model.dart';
+import 'attendance_summary_h_o_d_model.dart';
+export 'attendance_summary_h_o_d_model.dart';
 
-class AcademicOverviewHODWidget extends StatefulWidget {
-  const AcademicOverviewHODWidget({super.key});
+class AttendanceSummaryHODWidget extends StatefulWidget {
+  const AttendanceSummaryHODWidget({super.key});
 
   @override
-  State<AcademicOverviewHODWidget> createState() =>
-      _AcademicOverviewHODWidgetState();
+  State<AttendanceSummaryHODWidget> createState() =>
+      _AttendanceSummaryHODWidgetState();
 }
 
-class _AcademicOverviewHODWidgetState extends State<AcademicOverviewHODWidget> {
-  late AcademicOverviewHODModel _model;
+class _AttendanceSummaryHODWidgetState
+    extends State<AttendanceSummaryHODWidget> {
+  late AttendanceSummaryHODModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -27,7 +28,7 @@ class _AcademicOverviewHODWidgetState extends State<AcademicOverviewHODWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AcademicOverviewHODModel());
+    _model = createModel(context, () => AttendanceSummaryHODModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -77,7 +78,7 @@ class _AcademicOverviewHODWidgetState extends State<AcademicOverviewHODWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 12.0, 0.0),
                           child: Text(
-                            'Academic Overview',
+                            'Attendance Overview',
                             style: FlutterFlowTheme.of(context).headlineMedium,
                           ),
                         ),
@@ -85,7 +86,7 @@ class _AcademicOverviewHODWidgetState extends State<AcademicOverviewHODWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 4.0, 12.0, 0.0),
                           child: Text(
-                            'Below are the your Academic Details',
+                            'Below is the Attendance overview of all the Student',
                             style: FlutterFlowTheme.of(context).labelMedium,
                           ),
                         ),
@@ -193,17 +194,21 @@ class _AcademicOverviewHODWidgetState extends State<AcademicOverviewHODWidget> {
                               style: FlutterFlowTheme.of(context).labelSmall,
                             ),
                           ),
-                        Expanded(
-                          flex: 2,
-                          child: Text(
-                            'Exam',
-                            style: FlutterFlowTheme.of(context).labelSmall,
+                        if (responsiveVisibility(
+                          context: context,
+                          phone: false,
+                        ))
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'Date',
+                              style: FlutterFlowTheme.of(context).labelSmall,
+                            ),
                           ),
-                        ),
                         Expanded(
                           flex: 2,
                           child: Text(
-                            'Percentage',
+                            'Att.Status',
                             style: FlutterFlowTheme.of(context).labelSmall,
                           ),
                         ),
@@ -367,24 +372,34 @@ class _AcademicOverviewHODWidgetState extends State<AcademicOverviewHODWidget> {
                                       FlutterFlowTheme.of(context).titleLarge,
                                 ),
                               ),
+                            if (responsiveVisibility(
+                              context: context,
+                              phone: false,
+                            ))
+                              Expanded(
+                                flex: 2,
+                                child: Text(
+                                  '08/02/2024',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleLarge
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
+                              ),
                             Expanded(
                               flex: 2,
                               child: Text(
-                                'Sessional 2',
+                                'Present',
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Plus Jakarta Sans',
-                                      fontSize: 14.0,
+                                      fontSize: 16.0,
                                       fontWeight: FontWeight.normal,
                                     ),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 2,
-                              child: Text(
-                                '85%',
-                                style: FlutterFlowTheme.of(context).titleLarge,
                               ),
                             ),
                             Expanded(

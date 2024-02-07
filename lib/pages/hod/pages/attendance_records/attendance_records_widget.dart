@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/hod/components/attendance_summary_h_o_d/attendance_summary_h_o_d_widget.dart';
 import '/pages/hod/components/attendance_topbar_h_o_d/attendance_topbar_h_o_d_widget.dart';
 import '/pages/hod/components/side_nav_h_o_d/side_nav_h_o_d_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
@@ -586,6 +587,11 @@ class _AttendanceRecordsWidgetState extends State<AttendanceRecordsWidget>
                           model: _model.attendanceTopbarHODModel,
                           updateCallback: () => setState(() {}),
                           child: const AttendanceTopbarHODWidget(),
+                        ),
+                        wrapWithModel(
+                          model: _model.attendanceSummaryHODModel,
+                          updateCallback: () => setState(() {}),
+                          child: const AttendanceSummaryHODWidget(),
                         ),
                       ].addToEnd(const SizedBox(height: 32.0)),
                     ),

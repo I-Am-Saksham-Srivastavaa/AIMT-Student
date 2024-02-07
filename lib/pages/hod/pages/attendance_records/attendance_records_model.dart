@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/pages/hod/components/attendance_summary_h_o_d/attendance_summary_h_o_d_widget.dart';
 import '/pages/hod/components/attendance_topbar_h_o_d/attendance_topbar_h_o_d_widget.dart';
 import '/pages/hod/components/side_nav_h_o_d/side_nav_h_o_d_widget.dart';
 import 'attendance_records_widget.dart' show AttendanceRecordsWidget;
@@ -12,6 +13,8 @@ class AttendanceRecordsModel extends FlutterFlowModel<AttendanceRecordsWidget> {
   late SideNavHODModel sideNavHODModel;
   // Model for AttendanceTopbarHOD component.
   late AttendanceTopbarHODModel attendanceTopbarHODModel;
+  // Model for AttendanceSummaryHOD component.
+  late AttendanceSummaryHODModel attendanceSummaryHODModel;
 
   /// Initialization and disposal methods.
 
@@ -20,6 +23,8 @@ class AttendanceRecordsModel extends FlutterFlowModel<AttendanceRecordsWidget> {
     sideNavHODModel = createModel(context, () => SideNavHODModel());
     attendanceTopbarHODModel =
         createModel(context, () => AttendanceTopbarHODModel());
+    attendanceSummaryHODModel =
+        createModel(context, () => AttendanceSummaryHODModel());
   }
 
   @override
@@ -27,6 +32,7 @@ class AttendanceRecordsModel extends FlutterFlowModel<AttendanceRecordsWidget> {
     unfocusNode.dispose();
     sideNavHODModel.dispose();
     attendanceTopbarHODModel.dispose();
+    attendanceSummaryHODModel.dispose();
   }
 
   /// Action blocks are added here.

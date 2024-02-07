@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/hod/components/academic_overview_h_o_d/academic_overview_h_o_d_widget.dart';
+import '/pages/hod/components/assignment_overview_h_o_d/assignment_overview_h_o_d_widget.dart';
 import '/pages/hod/components/side_nav_h_o_d/side_nav_h_o_d_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
 import 'package:aligned_tooltip/aligned_tooltip.dart';
@@ -578,6 +580,50 @@ class _AcademicRecordsWidgetState extends State<AcademicRecordsWidget>
                                 ),
                               ),
                             ],
+                          ),
+                        ),
+                        Align(
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          child: Text(
+                            'Academic Record',
+                            style: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .override(
+                                  fontFamily: 'Outfit',
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 12.0),
+                          child: wrapWithModel(
+                            model: _model.academicOverviewHODModel,
+                            updateCallback: () => setState(() {}),
+                            child: const AcademicOverviewHODWidget(),
+                          ),
+                        ),
+                        Align(
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          child: Text(
+                            'Academic Record',
+                            style: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .override(
+                                  fontFamily: 'Outfit',
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 12.0, 0.0, 0.0),
+                          child: wrapWithModel(
+                            model: _model.assignmentOverviewHODModel,
+                            updateCallback: () => setState(() {}),
+                            child: const AssignmentOverviewHODWidget(),
                           ),
                         ),
                       ].addToEnd(const SizedBox(height: 32.0)),
