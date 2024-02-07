@@ -4,7 +4,10 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/hod/components/academic_overview_h_o_d/academic_overview_h_o_d_widget.dart';
+import '/pages/hod/components/attendance_topbar_h_o_d/attendance_topbar_h_o_d_widget.dart';
 import '/pages/hod/components/drawer_h_o_d/drawer_h_o_d_widget.dart';
+import '/pages/hod/components/finance_overview/finance_overview_widget.dart';
 import '/pages/hod/components/side_nav_h_o_d/side_nav_h_o_d_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
 import 'package:aligned_tooltip/aligned_tooltip.dart';
@@ -602,6 +605,21 @@ class _DashboardHODWidgetState extends State<DashboardHODWidget>
                               ),
                             ],
                           ),
+                        ),
+                        wrapWithModel(
+                          model: _model.financeOverviewModel,
+                          updateCallback: () => setState(() {}),
+                          child: const FinanceOverviewWidget(),
+                        ),
+                        wrapWithModel(
+                          model: _model.attendanceTopbarHODModel,
+                          updateCallback: () => setState(() {}),
+                          child: const AttendanceTopbarHODWidget(),
+                        ),
+                        wrapWithModel(
+                          model: _model.academicOverviewHODModel,
+                          updateCallback: () => setState(() {}),
+                          child: const AcademicOverviewHODWidget(),
                         ),
                       ].addToEnd(const SizedBox(height: 32.0)),
                     ),

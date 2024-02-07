@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'attendance_widget.dart' show AttendanceWidget;
+import 'academic_overview_h_o_d_widget.dart' show AcademicOverviewHODWidget;
 import 'package:flutter/material.dart';
 
-class AttendanceModel extends FlutterFlowModel<AttendanceWidget> {
+class AcademicOverviewHODModel
+    extends FlutterFlowModel<AcademicOverviewHODWidget> {
   /// Initialization and disposal methods.
 
   @override

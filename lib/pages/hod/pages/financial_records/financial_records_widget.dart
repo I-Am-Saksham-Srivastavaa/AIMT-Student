@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/hod/components/side_nav_h_o_d/side_nav_h_o_d_widget.dart';
+import '/pages/hod/components/transaction_history_h_o_d/transaction_history_h_o_d_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
 import 'package:aligned_tooltip/aligned_tooltip.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
@@ -579,6 +580,24 @@ class _FinancialRecordsWidgetState extends State<FinancialRecordsWidget>
                               ),
                             ],
                           ),
+                        ),
+                        Align(
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          child: Text(
+                            'Financial Dashboard',
+                            style: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .override(
+                                  fontFamily: 'Outfit',
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.transactionHistoryHODModel,
+                          updateCallback: () => setState(() {}),
+                          child: const TransactionHistoryHODWidget(),
                         ),
                       ].addToEnd(const SizedBox(height: 32.0)),
                     ),

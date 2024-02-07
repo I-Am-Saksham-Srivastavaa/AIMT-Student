@@ -204,202 +204,212 @@ class _TransactionHistoryHODWidgetState
             children: [
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                child: Container(
-                  width: double.infinity,
-                  constraints: const BoxConstraints(
-                    maxWidth: 570.0,
-                  ),
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                    borderRadius: BorderRadius.circular(8.0),
-                    border: Border.all(
-                      color: FlutterFlowTheme.of(context).alternate,
-                      width: 2.0,
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    context.pushNamed('TransactionDetailHOD');
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    constraints: const BoxConstraints(
+                      maxWidth: 570.0,
                     ),
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(
-                          flex: 4,
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 12.0, 0.0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                RichText(
-                                  textScaleFactor:
-                                      MediaQuery.of(context).textScaleFactor,
-                                  text: TextSpan(
-                                    children: [
-                                      const TextSpan(
-                                        text: 'UPI Ref No: ',
-                                        style: TextStyle(),
-                                      ),
-                                      TextSpan(
-                                        text: '429242424',
-                                        style: TextStyle(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          fontWeight: FontWeight.bold,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(
+                        color: FlutterFlowTheme.of(context).alternate,
+                        width: 2.0,
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          16.0, 12.0, 16.0, 12.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 12.0, 0.0),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  RichText(
+                                    textScaleFactor:
+                                        MediaQuery.of(context).textScaleFactor,
+                                    text: TextSpan(
+                                      children: [
+                                        const TextSpan(
+                                          text: 'UPI Ref No: ',
+                                          style: TextStyle(),
                                         ),
-                                      )
-                                    ],
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyLarge,
-                                  ),
-                                ),
-                                RichText(
-                                  textScaleFactor:
-                                      MediaQuery.of(context).textScaleFactor,
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: 'Bank Name: ',
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Plus Jakarta Sans',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 12.0,
-                                            ),
-                                      ),
-                                      TextSpan(
-                                        text: 'Punjab National Bank',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodySmall,
-                                      )
-                                    ],
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyLarge,
-                                  ),
-                                ),
-                                RichText(
-                                  textScaleFactor:
-                                      MediaQuery.of(context).textScaleFactor,
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: 'Acc. No: ',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Plus Jakarta Sans',
-                                              fontSize: 13.0,
-                                            ),
-                                      ),
-                                      TextSpan(
-                                        text: '4611000100053249',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodySmall,
-                                      )
-                                    ],
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyLarge,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        if (responsiveVisibility(
-                          context: context,
-                          phone: false,
-                          tablet: false,
-                          tabletLandscape: false,
-                        ))
-                          Expanded(
-                            flex: 1,
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 4.0, 0.0, 0.0),
-                                  child: Text(
-                                    'Mon. July 3rd',
-                                    style: FlutterFlowTheme.of(context)
-                                        .labelMedium,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        if (responsiveVisibility(
-                          context: context,
-                          phone: false,
-                        ))
-                          Expanded(
-                            flex: 2,
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Saksham Srivastava',
+                                        TextSpan(
+                                          text: '429242424',
+                                          style: TextStyle(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        )
+                                      ],
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge,
                                     ),
-                                    RichText(
-                                      textScaleFactor: MediaQuery.of(context)
-                                          .textScaleFactor,
-                                      text: TextSpan(
-                                        children: [
-                                          const TextSpan(
-                                            text: 'AKTU Roll no: ',
-                                            style: TextStyle(),
-                                          ),
-                                          TextSpan(
-                                            text: '2203630100136',
-                                            style: TextStyle(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          )
-                                        ],
+                                  ),
+                                  RichText(
+                                    textScaleFactor:
+                                        MediaQuery.of(context).textScaleFactor,
+                                    text: TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: 'Bank Name: ',
+                                          style: FlutterFlowTheme.of(context)
+                                              .titleSmall
+                                              .override(
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                                fontSize: 12.0,
+                                              ),
+                                        ),
+                                        TextSpan(
+                                          text: 'Punjab National Bank',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodySmall,
+                                        )
+                                      ],
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyLarge,
+                                    ),
+                                  ),
+                                  RichText(
+                                    textScaleFactor:
+                                        MediaQuery.of(context).textScaleFactor,
+                                    text: TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: 'Acc. No: ',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontSize: 13.0,
+                                              ),
+                                        ),
+                                        TextSpan(
+                                          text: '4611000100053249',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodySmall,
+                                        )
+                                      ],
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyLarge,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          if (responsiveVisibility(
+                            context: context,
+                            phone: false,
+                            tablet: false,
+                            tabletLandscape: false,
+                          ))
+                            Expanded(
+                              flex: 1,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 4.0, 0.0, 0.0),
+                                    child: Text(
+                                      'Mon. July 3rd',
+                                      style: FlutterFlowTheme.of(context)
+                                          .labelMedium,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          if (responsiveVisibility(
+                            context: context,
+                            phone: false,
+                          ))
+                            Expanded(
+                              flex: 2,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Saksham Srivastava',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge,
                                       ),
-                                    ),
-                                  ],
+                                      RichText(
+                                        textScaleFactor: MediaQuery.of(context)
+                                            .textScaleFactor,
+                                        text: TextSpan(
+                                          children: [
+                                            const TextSpan(
+                                              text: 'AKTU Roll no: ',
+                                              style: TextStyle(),
+                                            ),
+                                            TextSpan(
+                                              text: '2203630100136',
+                                              style: TextStyle(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            )
+                                          ],
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyLarge,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          Expanded(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  '₹10000',
+                                  textAlign: TextAlign.end,
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                 ),
                               ],
                             ),
                           ),
-                        Expanded(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                '₹10000',
-                                textAlign: TextAlign.end,
-                                style: FlutterFlowTheme.of(context)
-                                    .headlineSmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),

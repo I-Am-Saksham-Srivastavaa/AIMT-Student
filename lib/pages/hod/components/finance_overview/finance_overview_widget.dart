@@ -94,8 +94,8 @@ class _FinanceOverviewWidgetState extends State<FinanceOverviewWidget> {
                           ].divide(const SizedBox(height: 4.0)),
                         ),
                         FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            context.pushNamed('FinancialRecords');
                           },
                           text: 'View Details',
                           options: FFButtonOptions(

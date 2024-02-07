@@ -452,8 +452,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 return;
                                               }
 
-                                              if (_model.isFacultyValue ==
-                                                  true) {
+                                              if ((_model.isFacultyValue ==
+                                                      true) &&
+                                                  (_model.isHODValue ==
+                                                      false)) {
                                                 context.pushNamedAuth(
                                                     'DashboardFaculty',
                                                     context.mounted);

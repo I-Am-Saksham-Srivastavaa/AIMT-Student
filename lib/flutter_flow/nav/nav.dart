@@ -325,6 +325,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'TransactionDetail',
           path: '/transactionDetail',
           builder: (context, params) => const TransactionDetailWidget(),
+        ),
+        FFRoute(
+          name: 'TransactionDetailHOD',
+          path: '/transactionDetailHOD',
+          builder: (context, params) => const TransactionDetailHODWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

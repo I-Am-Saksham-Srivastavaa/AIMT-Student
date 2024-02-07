@@ -1,22 +1,22 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'assignment_overview_h_o_d_model.dart';
-export 'assignment_overview_h_o_d_model.dart';
+import 'academic_overview_h_o_d_model.dart';
+export 'academic_overview_h_o_d_model.dart';
 
-class AssignmentOverviewHODWidget extends StatefulWidget {
-  const AssignmentOverviewHODWidget({super.key});
+class AcademicOverviewHODWidget extends StatefulWidget {
+  const AcademicOverviewHODWidget({super.key});
 
   @override
-  State<AssignmentOverviewHODWidget> createState() =>
-      _AssignmentOverviewHODWidgetState();
+  State<AcademicOverviewHODWidget> createState() =>
+      _AcademicOverviewHODWidgetState();
 }
 
-class _AssignmentOverviewHODWidgetState
-    extends State<AssignmentOverviewHODWidget> {
-  late AssignmentOverviewHODModel _model;
+class _AcademicOverviewHODWidgetState extends State<AcademicOverviewHODWidget> {
+  late AcademicOverviewHODModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -27,7 +27,7 @@ class _AssignmentOverviewHODWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AssignmentOverviewHODModel());
+    _model = createModel(context, () => AcademicOverviewHODModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -77,7 +77,7 @@ class _AssignmentOverviewHODWidgetState
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 12.0, 0.0),
                           child: Text(
-                            'Assignment Overview',
+                            'Academic Overview',
                             style: FlutterFlowTheme.of(context).headlineMedium,
                           ),
                         ),
@@ -85,7 +85,7 @@ class _AssignmentOverviewHODWidgetState
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 4.0, 12.0, 0.0),
                           child: Text(
-                            'Below are all your Assignmnt',
+                            'Below are the your Academic Details',
                             style: FlutterFlowTheme.of(context).labelMedium,
                           ),
                         ),
@@ -96,12 +96,7 @@ class _AssignmentOverviewHODWidgetState
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'Add New',
-                    icon: Icon(
-                      Icons.add_rounded,
-                      color: FlutterFlowTheme.of(context).info,
-                      size: 15.0,
-                    ),
+                    text: 'View  Details',
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
@@ -147,7 +142,7 @@ class _AssignmentOverviewHODWidgetState
                         Expanded(
                           flex: 4,
                           child: Text(
-                            'Subject',
+                            'Student Name',
                             style: FlutterFlowTheme.of(context).labelSmall,
                           ),
                         ),
@@ -159,7 +154,31 @@ class _AssignmentOverviewHODWidgetState
                           Expanded(
                             flex: 2,
                             child: Text(
-                              'Work Type',
+                              'Year',
+                              style: FlutterFlowTheme.of(context).labelSmall,
+                            ),
+                          ),
+                        if (responsiveVisibility(
+                          context: context,
+                          phone: false,
+                          tablet: false,
+                        ))
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'Branch',
+                              style: FlutterFlowTheme.of(context).labelSmall,
+                            ),
+                          ),
+                        if (responsiveVisibility(
+                          context: context,
+                          phone: false,
+                          tablet: false,
+                        ))
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'Section',
                               style: FlutterFlowTheme.of(context).labelSmall,
                             ),
                           ),
@@ -170,21 +189,28 @@ class _AssignmentOverviewHODWidgetState
                           Expanded(
                             flex: 2,
                             child: Text(
-                              'Due Date',
+                              'Batch',
                               style: FlutterFlowTheme.of(context).labelSmall,
                             ),
                           ),
                         Expanded(
                           flex: 2,
                           child: Text(
-                            'Status',
+                            'Exam',
+                            style: FlutterFlowTheme.of(context).labelSmall,
+                          ),
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Text(
+                            'Percentage',
                             style: FlutterFlowTheme.of(context).labelSmall,
                           ),
                         ),
                         Expanded(
                           flex: 1,
                           child: Text(
-                            'Marks',
+                            'Action',
                             textAlign: TextAlign.end,
                             style: FlutterFlowTheme.of(context).labelSmall,
                           ),
@@ -215,8 +241,8 @@ class _AssignmentOverviewHODWidgetState
                         ],
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -240,7 +266,7 @@ class _AssignmentOverviewHODWidgetState
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'Shivam Dixit',
+                                              'Saksham Srivastava',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -248,24 +274,38 @@ class _AssignmentOverviewHODWidgetState
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         fontWeight:
-                                                            FontWeight.bold,
+                                                            FontWeight.w500,
                                                       ),
                                             ),
-                                            Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 4.0, 0.0, 0.0),
-                                              child: Text(
-                                                'Python Programming',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
+                                            RichText(
+                                              textScaleFactor:
+                                                  MediaQuery.of(context)
+                                                      .textScaleFactor,
+                                              text: TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: 'Roll No: ',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
                                                         .override(
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primary,
+                                                          fontWeight:
+                                                              FontWeight.bold,
                                                         ),
+                                                  ),
+                                                  const TextSpan(
+                                                    text: '2203630100136',
+                                                    style: TextStyle(),
+                                                  )
+                                                ],
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium,
                                               ),
                                             ),
                                           ],
@@ -284,139 +324,11 @@ class _AssignmentOverviewHODWidgetState
                               Expanded(
                                 flex: 2,
                                 child: Text(
-                                  'Assignment',
+                                  '2',
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                               ),
-                            if (responsiveVisibility(
-                              context: context,
-                              phone: false,
-                            ))
-                              Expanded(
-                                flex: 2,
-                                child: Text(
-                                  '01/02/2024',
-                                  style:
-                                      FlutterFlowTheme.of(context).titleLarge,
-                                ),
-                              ),
-                            Expanded(
-                              flex: 2,
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    flex: 2,
-                                    child: Text(
-                                      'Graded',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Expanded(
-                                    flex: 2,
-                                    child: Text(
-                                      '5/5',
-                                      textAlign: TextAlign.end,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
-                    child: Container(
-                      width: 100.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 0.0,
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            offset: const Offset(0.0, 1.0),
-                          )
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              flex: 4,
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 8.0, 12.0, 8.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            4.0, 0.0, 0.0, 0.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'Shivam Dixit',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 4.0, 0.0, 0.0),
-                                              child: Text(
-                                                'Python Programming',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primary,
-                                                        ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
                             if (responsiveVisibility(
                               context: context,
                               phone: false,
@@ -425,7 +337,20 @@ class _AssignmentOverviewHODWidgetState
                               Expanded(
                                 flex: 2,
                                 child: Text(
-                                  'Project',
+                                  'CSE',
+                                  style:
+                                      FlutterFlowTheme.of(context).bodyMedium,
+                                ),
+                              ),
+                            if (responsiveVisibility(
+                              context: context,
+                              phone: false,
+                              tablet: false,
+                            ))
+                              Expanded(
+                                flex: 2,
+                                child: Text(
+                                  'B',
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
                                 ),
@@ -437,25 +362,33 @@ class _AssignmentOverviewHODWidgetState
                               Expanded(
                                 flex: 2,
                                 child: Text(
-                                  '01/02/2024',
+                                  '2',
                                   style:
                                       FlutterFlowTheme.of(context).titleLarge,
                                 ),
                               ),
+                            if (responsiveVisibility(
+                              context: context,
+                              phone: false,
+                            ))
+                              Expanded(
+                                flex: 2,
+                                child: Text(
+                                  'Sessional 2',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleLarge
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
+                              ),
                             Expanded(
                               flex: 2,
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    flex: 2,
-                                    child: Text(
-                                      'Graded',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
-                                  ),
-                                ],
+                              child: Text(
+                                '85%',
+                                style: FlutterFlowTheme.of(context).titleLarge,
                               ),
                             ),
                             Expanded(
@@ -464,14 +397,20 @@ class _AssignmentOverviewHODWidgetState
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Expanded(
-                                    flex: 2,
-                                    child: Text(
-                                      '4/5',
-                                      textAlign: TextAlign.end,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                  FlutterFlowIconButton(
+                                    borderColor: Colors.transparent,
+                                    borderRadius: 30.0,
+                                    borderWidth: 1.0,
+                                    buttonSize: 44.0,
+                                    icon: Icon(
+                                      Icons.more_vert,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 20.0,
                                     ),
+                                    onPressed: () {
+                                      print('IconButton pressed ...');
+                                    },
                                   ),
                                 ],
                               ),

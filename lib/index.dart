@@ -88,3 +88,5 @@ export '/pages/hod/pages/new_page_h_o_d/new_page_h_o_d_widget.dart'
     show NewPageHODWidget;
 export '/pages/student/pages/transaction_detail/transaction_detail_widget.dart'
     show TransactionDetailWidget;
+export '/pages/hod/pages/transaction_detail_h_o_d/transaction_detail_h_o_d_widget.dart'
+    show TransactionDetailHODWidget;

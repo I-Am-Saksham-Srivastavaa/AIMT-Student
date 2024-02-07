@@ -71,8 +71,8 @@ class _StudentListComponentWidgetState
                         padding: const EdgeInsets.all(2.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(40.0),
-                          child: Image.network(
-                            'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+                          child: Image.asset(
+                            'assets/images/SakshamSrivastavaPhotograph.jpg',
                             width: 60.0,
                             height: 60.0,
                             fit: BoxFit.cover,
@@ -84,7 +84,7 @@ class _StudentListComponentWidgetState
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                       child: Text(
-                        'Rudy Fernandez',
+                        'Saksham Srivastava',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
                               fontWeight: FontWeight.bold,
@@ -92,148 +92,7 @@ class _StudentListComponentWidgetState
                       ),
                     ),
                     Text(
-                      'Manager',
-                      style: FlutterFlowTheme.of(context).labelSmall,
-                    ),
-                  ].divide(const SizedBox(height: 4.0)),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      width: 50.0,
-                      height: 50.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).accent2,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: FlutterFlowTheme.of(context).secondary,
-                          width: 2.0,
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(40.0),
-                          child: Image.network(
-                            'https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGUlMjB1c2VyfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60',
-                            width: 60.0,
-                            height: 60.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
-                      child: Text(
-                        'Abigail Herrara',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ),
-                    Text(
-                      'Designer',
-                      style: FlutterFlowTheme.of(context).labelSmall,
-                    ),
-                  ].divide(const SizedBox(height: 4.0)),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      width: 50.0,
-                      height: 50.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).accent2,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: FlutterFlowTheme.of(context).secondary,
-                          width: 2.0,
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(40.0),
-                          child: Image.network(
-                            'https://images.unsplash.com/photo-1505033575518-a36ea2ef75ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMHVzZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60',
-                            width: 60.0,
-                            height: 60.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
-                      child: Text(
-                        'Liz Ambridge',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ),
-                    Text(
-                      'Manager',
-                      style: FlutterFlowTheme.of(context).labelSmall,
-                    ),
-                  ].divide(const SizedBox(height: 4.0)),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      width: 50.0,
-                      height: 50.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).accent2,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: FlutterFlowTheme.of(context).secondary,
-                          width: 2.0,
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(40.0),
-                          child: Image.network(
-                            'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw0fHx1c2VyfGVufDB8fHx8MTY5MTY0Mzg1OXww&ixlib=rb-4.0.3&q=80&w=400',
-                            width: 60.0,
-                            height: 60.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
-                      child: Text(
-                        'Liz Rogers',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ),
-                    Text(
-                      'Front End Dev',
+                      'Section B',
                       style: FlutterFlowTheme.of(context).labelSmall,
                     ),
                   ].divide(const SizedBox(height: 4.0)),

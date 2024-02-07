@@ -9,7 +9,6 @@ import '/pages/faculty/components/drawer_faculty/drawer_faculty_widget.dart';
 import '/pages/faculty/components/side_nav_faculty/side_nav_faculty_widget.dart';
 import '/pages/hod/components/finance_overview/finance_overview_widget.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
-import '/pages/student/components/attendance/attendance_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
 import 'package:aligned_tooltip/aligned_tooltip.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
@@ -604,14 +603,6 @@ class _DashboardFacultyWidgetState extends State<DashboardFacultyWidget>
                                 ),
                               ),
                             ],
-                          ),
-                        ),
-                        Align(
-                          alignment: const AlignmentDirectional(-1.0, 0.0),
-                          child: wrapWithModel(
-                            model: _model.attendanceModel,
-                            updateCallback: () => setState(() {}),
-                            child: const AttendanceWidget(),
                           ),
                         ),
                         wrapWithModel(
