@@ -1,3 +1,4 @@
+import '/components/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
 import '/pages/student/components/transaction_history/transaction_history_widget.dart';
@@ -12,6 +13,8 @@ class FeeRecordModel extends FlutterFlowModel<FeeRecordWidget> {
   late SideNavModel sideNavModel;
   // Model for TransactionHistory component.
   late TransactionHistoryModel transactionHistoryModel;
+  // Model for NavBar component.
+  late NavBarModel navBarModel;
 
   /// Initialization and disposal methods.
 
@@ -20,6 +23,7 @@ class FeeRecordModel extends FlutterFlowModel<FeeRecordWidget> {
     sideNavModel = createModel(context, () => SideNavModel());
     transactionHistoryModel =
         createModel(context, () => TransactionHistoryModel());
+    navBarModel = createModel(context, () => NavBarModel());
   }
 
   @override
@@ -27,6 +31,7 @@ class FeeRecordModel extends FlutterFlowModel<FeeRecordWidget> {
     unfocusNode.dispose();
     sideNavModel.dispose();
     transactionHistoryModel.dispose();
+    navBarModel.dispose();
   }
 
   /// Action blocks are added here.

@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'login_model.dart';
 export 'login_model.dart';
@@ -353,83 +352,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 16.0),
-                                          child: SwitchListTile.adaptive(
-                                            value: _model.isFacultyValue ??=
-                                                false,
-                                            onChanged: (newValue) async {
-                                              setState(() => _model
-                                                  .isFacultyValue = newValue);
-                                            },
-                                            title: Text(
-                                              'Faculty',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
-                                            tileColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .secondaryBackground,
-                                            activeColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primary,
-                                            activeTrackColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .accent1,
-                                            dense: false,
-                                            controlAffinity:
-                                                ListTileControlAffinity
-                                                    .trailing,
-                                          ),
-                                        ),
-                                        if (_model.isFacultyValue == true)
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 16.0),
-                                            child: SwitchListTile.adaptive(
-                                              value: _model.isHODValue ??=
-                                                  false,
-                                              onChanged: (newValue) async {
-                                                setState(() => _model
-                                                    .isHODValue = newValue);
-                                              },
-                                              title: Text(
-                                                'HOD',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleLarge
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                              ),
-                                              tileColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              activeColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              activeTrackColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .accent1,
-                                              dense: false,
-                                              controlAffinity:
-                                                  ListTileControlAffinity
-                                                      .trailing,
-                                            ),
-                                          ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 16.0),
                                           child: FFButtonWidget(
                                             onPressed: () async {
                                               if (_model.formKey.currentState ==
@@ -452,25 +374,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 return;
                                               }
 
-                                              if ((_model.isFacultyValue ==
-                                                      true) &&
-                                                  (_model.isHODValue ==
-                                                      false)) {
-                                                context.pushNamedAuth(
-                                                    'DashboardFaculty',
-                                                    context.mounted);
-                                              } else if ((_model
-                                                          .isFacultyValue ==
-                                                      true) &&
-                                                  (_model.isHODValue == true)) {
-                                                context.pushNamedAuth(
-                                                    'DashboardHOD',
-                                                    context.mounted);
-                                              } else {
-                                                context.pushNamedAuth(
-                                                    'Dashboard',
-                                                    context.mounted);
-                                              }
+                                              context.pushNamedAuth(
+                                                  'Dashboard', context.mounted);
                                             },
                                             text: 'Sign In',
                                             options: FFButtonOptions(
@@ -567,11 +472,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             onPressed: () {
                                               print('Button pressed ...');
                                             },
-                                            text: 'Continue with Google',
-                                            icon: const FaIcon(
-                                              FontAwesomeIcons.google,
-                                              size: 20.0,
-                                            ),
+                                            text: 'Sign in As HOD',
                                             options: FFButtonOptions(
                                               width: double.infinity,
                                               height: 44.0,
@@ -616,11 +517,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             onPressed: () {
                                               print('Button pressed ...');
                                             },
-                                            text: 'Continue with Apple',
-                                            icon: const FaIcon(
-                                              FontAwesomeIcons.apple,
-                                              size: 20.0,
-                                            ),
+                                            text: 'Sign In As Faculty',
                                             options: FFButtonOptions(
                                               width: double.infinity,
                                               height: 44.0,

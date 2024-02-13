@@ -1,3 +1,4 @@
+import '/components/nav_bar_widget.dart';
 import '/components/tables/tables_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
@@ -16,6 +17,8 @@ class FacultyModel extends FlutterFlowModel<FacultyWidget> {
   late SideNavModel sideNavModel;
   // Model for Tables component.
   late TablesModel tablesModel;
+  // Model for NavBar component.
+  late NavBarModel navBarModel;
 
   /// Initialization and disposal methods.
 
@@ -23,6 +26,7 @@ class FacultyModel extends FlutterFlowModel<FacultyWidget> {
   void initState(BuildContext context) {
     sideNavModel = createModel(context, () => SideNavModel());
     tablesModel = createModel(context, () => TablesModel());
+    navBarModel = createModel(context, () => NavBarModel());
   }
 
   @override
@@ -30,6 +34,7 @@ class FacultyModel extends FlutterFlowModel<FacultyWidget> {
     unfocusNode.dispose();
     sideNavModel.dispose();
     tablesModel.dispose();
+    navBarModel.dispose();
   }
 
   /// Action blocks are added here.

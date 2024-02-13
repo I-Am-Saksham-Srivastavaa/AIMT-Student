@@ -172,7 +172,7 @@ class _DropDownHODWidgetState extends State<DropDownHODWidget>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Saksham Srivastava',
+                                  'Er, Vipin Rawat',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -186,7 +186,7 @@ class _DropDownHODWidgetState extends State<DropDownHODWidget>
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                        text: 'AKTU Roll No: ',
+                                        text: 'Title: ',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -198,7 +198,34 @@ class _DropDownHODWidgetState extends State<DropDownHODWidget>
                                             ),
                                       ),
                                       const TextSpan(
-                                        text: '2203630100136',
+                                        text: 'Asst. HOD',
+                                        style: TextStyle(),
+                                      )
+                                    ],
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyMedium,
+                                  ),
+                                ),
+                                RichText(
+                                  textScaleFactor:
+                                      MediaQuery.of(context).textScaleFactor,
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: 'Dept: ',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                      ),
+                                      const TextSpan(
+                                        text:
+                                            'Dept. pf Computer Science and Engineering',
                                         style: TextStyle(),
                                       )
                                     ],

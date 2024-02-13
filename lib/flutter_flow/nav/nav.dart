@@ -302,11 +302,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const GrievanceTicketListWidget(),
         ),
         FFRoute(
-          name: 'FacultyDetail',
-          path: '/facultyDetail',
-          builder: (context, params) => const FacultyDetailWidget(),
-        ),
-        FFRoute(
           name: 'NewPageStudent',
           path: '/newPageStudent',
           builder: (context, params) => const NewPageStudentWidget(),
@@ -330,6 +325,41 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'TransactionDetailHOD',
           path: '/transactionDetailHOD',
           builder: (context, params) => const TransactionDetailHODWidget(),
+        ),
+        FFRoute(
+          name: 'LoginFaculty',
+          path: '/loginFaculty',
+          builder: (context, params) => const LoginFacultyWidget(),
+        ),
+        FFRoute(
+          name: 'LoginHOD',
+          path: '/loginHOD',
+          builder: (context, params) => const LoginHODWidget(),
+        ),
+        FFRoute(
+          name: 'AboutApp',
+          path: '/aboutApp',
+          builder: (context, params) => const AboutAppWidget(),
+        ),
+        FFRoute(
+          name: 'AboutDeveloper',
+          path: '/aboutDeveloper',
+          builder: (context, params) => const AboutDeveloperWidget(),
+        ),
+        FFRoute(
+          name: 'TermsAndConditions',
+          path: '/termsAndConditions',
+          builder: (context, params) => const TermsAndConditionsWidget(),
+        ),
+        FFRoute(
+          name: 'profile',
+          path: '/profile',
+          builder: (context, params) => const ProfileWidget(),
+        ),
+        FFRoute(
+          name: 'FacultyDetails',
+          path: '/facultyDetails',
+          builder: (context, params) => const FacultyDetailsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

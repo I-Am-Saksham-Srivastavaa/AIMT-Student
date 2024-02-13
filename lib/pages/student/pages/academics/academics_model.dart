@@ -1,3 +1,4 @@
+import '/components/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/academic_overview/academic_overview_widget.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
@@ -15,6 +16,8 @@ class AcademicsModel extends FlutterFlowModel<AcademicsWidget> {
   late AcademicOverviewModel academicOverviewModel;
   // Model for AssignmentOverview component.
   late AssignmentOverviewModel assignmentOverviewModel;
+  // Model for NavBar component.
+  late NavBarModel navBarModel;
 
   /// Initialization and disposal methods.
 
@@ -24,6 +27,7 @@ class AcademicsModel extends FlutterFlowModel<AcademicsWidget> {
     academicOverviewModel = createModel(context, () => AcademicOverviewModel());
     assignmentOverviewModel =
         createModel(context, () => AssignmentOverviewModel());
+    navBarModel = createModel(context, () => NavBarModel());
   }
 
   @override
@@ -32,6 +36,7 @@ class AcademicsModel extends FlutterFlowModel<AcademicsWidget> {
     sideNavModel.dispose();
     academicOverviewModel.dispose();
     assignmentOverviewModel.dispose();
+    navBarModel.dispose();
   }
 
   /// Action blocks are added here.

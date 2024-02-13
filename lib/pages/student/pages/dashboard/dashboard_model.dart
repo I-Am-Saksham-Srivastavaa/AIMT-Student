@@ -1,5 +1,6 @@
 import '/components/event_overview/event_overview_widget.dart';
 import '/components/financial_overview_widget.dart';
+import '/components/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
 import '/pages/student/components/attendance_topbar/attendance_topbar_widget.dart';
@@ -22,6 +23,8 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
   late AssignmentOverviewModel assignmentOverviewModel;
   // Model for EventOverview component.
   late EventOverviewModel eventOverviewModel;
+  // Model for NavBar component.
+  late NavBarModel navBarModel;
   // Model for Drawer component.
   late DrawerModel drawerModel;
 
@@ -36,6 +39,7 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
     assignmentOverviewModel =
         createModel(context, () => AssignmentOverviewModel());
     eventOverviewModel = createModel(context, () => EventOverviewModel());
+    navBarModel = createModel(context, () => NavBarModel());
     drawerModel = createModel(context, () => DrawerModel());
   }
 
@@ -47,6 +51,7 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
     financialOverviewModel.dispose();
     assignmentOverviewModel.dispose();
     eventOverviewModel.dispose();
+    navBarModel.dispose();
     drawerModel.dispose();
   }
 

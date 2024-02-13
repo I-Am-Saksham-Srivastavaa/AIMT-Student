@@ -139,8 +139,12 @@ class _ScheduleComponentWidgetState extends State<ScheduleComponentWidget>
                                   ),
                               dateStyle:
                                   FlutterFlowTheme.of(context).bodyMedium,
-                              selectedDateStyle:
-                                  FlutterFlowTheme.of(context).titleSmall,
+                              selectedDateStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontSize: 16.0,
+                                  ),
                               inactiveDateStyle:
                                   FlutterFlowTheme.of(context).labelMedium,
                               locale: FFLocalizations.of(context).languageCode,

@@ -39,11 +39,6 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
     return null;
   }
 
-  // State field(s) for isFaculty widget.
-  bool? isFacultyValue;
-  // State field(s) for isHOD widget.
-  bool? isHODValue;
-
   /// Initialization and disposal methods.
 
   @override

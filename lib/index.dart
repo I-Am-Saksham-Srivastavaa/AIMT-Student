@@ -79,10 +79,9 @@ export '/grievance/grievance_ticket_details/grievance_ticket_details_widget.dart
     show GrievanceTicketDetailsWidget;
 export '/grievance/grievance_ticket_list/grievance_ticket_list_widget.dart'
     show GrievanceTicketListWidget;
-export '/faculty_detail/faculty_detail_widget.dart' show FacultyDetailWidget;
-export '/pages/student/components/new_page_student/new_page_student_widget.dart'
+export '/pages/student/pages/new_page_student/new_page_student_widget.dart'
     show NewPageStudentWidget;
-export '/pages/faculty/components/new_page_faculty/new_page_faculty_widget.dart'
+export '/pages/faculty/pages/new_page_faculty/new_page_faculty_widget.dart'
     show NewPageFacultyWidget;
 export '/pages/hod/pages/new_page_h_o_d/new_page_h_o_d_widget.dart'
     show NewPageHODWidget;
@@ -90,3 +89,14 @@ export '/pages/student/pages/transaction_detail/transaction_detail_widget.dart'
     show TransactionDetailWidget;
 export '/pages/hod/pages/transaction_detail_h_o_d/transaction_detail_h_o_d_widget.dart'
     show TransactionDetailHODWidget;
+export '/pages/auth/login_faculty/login_faculty_widget.dart'
+    show LoginFacultyWidget;
+export '/pages/auth/login_h_o_d/login_h_o_d_widget.dart' show LoginHODWidget;
+export '/pages/about_section/about_app/about_app_widget.dart'
+    show AboutAppWidget;
+export '/pages/about_section/about_developer/about_developer_widget.dart'
+    show AboutDeveloperWidget;
+export '/pages/about_section/terms_and_conditions/terms_and_conditions_widget.dart'
+    show TermsAndConditionsWidget;
+export '/profile/profile_widget.dart' show ProfileWidget;
+export '/faculty_details/faculty_details_widget.dart' show FacultyDetailsWidget;

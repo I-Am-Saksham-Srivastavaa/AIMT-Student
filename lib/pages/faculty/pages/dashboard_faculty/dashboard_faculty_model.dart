@@ -1,6 +1,5 @@
 import '/components/event_overview/event_overview_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/pages/faculty/components/drawer_faculty/drawer_faculty_widget.dart';
 import '/pages/faculty/components/side_nav_faculty/side_nav_faculty_widget.dart';
 import '/pages/hod/components/finance_overview/finance_overview_widget.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
@@ -19,8 +18,6 @@ class DashboardFacultyModel extends FlutterFlowModel<DashboardFacultyWidget> {
   late AssignmentOverviewModel assignmentOverviewModel;
   // Model for EventOverview component.
   late EventOverviewModel eventOverviewModel;
-  // Model for DrawerFaculty component.
-  late DrawerFacultyModel drawerFacultyModel;
 
   /// Initialization and disposal methods.
 
@@ -31,7 +28,6 @@ class DashboardFacultyModel extends FlutterFlowModel<DashboardFacultyWidget> {
     assignmentOverviewModel =
         createModel(context, () => AssignmentOverviewModel());
     eventOverviewModel = createModel(context, () => EventOverviewModel());
-    drawerFacultyModel = createModel(context, () => DrawerFacultyModel());
   }
 
   @override
@@ -41,7 +37,6 @@ class DashboardFacultyModel extends FlutterFlowModel<DashboardFacultyWidget> {
     financeOverviewModel.dispose();
     assignmentOverviewModel.dispose();
     eventOverviewModel.dispose();
-    drawerFacultyModel.dispose();
   }
 
   /// Action blocks are added here.

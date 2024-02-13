@@ -1,11 +1,12 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'faculty_detail_widget.dart' show FacultyDetailWidget;
+import 'about_developer_widget.dart' show AboutDeveloperWidget;
 import 'package:flutter/material.dart';
 
-class FacultyDetailModel extends FlutterFlowModel<FacultyDetailWidget> {
+class AboutDeveloperModel extends FlutterFlowModel<AboutDeveloperWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  DateTime? datePicked;
 
   /// Initialization and disposal methods.
 
