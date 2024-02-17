@@ -561,7 +561,7 @@ class _DropDownHODWidgetState extends State<DropDownHODWidget>
                           await authManager.signOut();
                           GoRouter.of(context).clearRedirectLocation();
 
-                          context.goNamedAuth('Onboarding', context.mounted);
+                          context.goNamedAuth('Splash', context.mounted);
                         },
                         child: AnimatedContainer(
                           duration: const Duration(milliseconds: 150),

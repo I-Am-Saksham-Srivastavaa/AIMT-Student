@@ -1,6 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/support/user_list_small/user_list_small_widget.dart';
+import '/pages/support/user_list_small/user_list_small_widget.dart';
 import 'grievance_submit_ticket_widget.dart' show GrievanceSubmitTicketWidget;
 import 'package:flutter/material.dart';
 
@@ -18,8 +18,11 @@ class GrievanceSubmitTicketModel
   TextEditingController? textController2;
   String? Function(BuildContext, String?)? textController2Validator;
   // State field(s) for ChoiceChips widget.
-  String? choiceChipsValue;
   FormFieldController<List<String>>? choiceChipsValueController;
+  String? get choiceChipsValue =>
+      choiceChipsValueController?.value?.firstOrNull;
+  set choiceChipsValue(String? val) =>
+      choiceChipsValueController?.value = val != null ? [val] : [];
   // Model for user_ListSmall component.
   late UserListSmallModel userListSmallModel;
 

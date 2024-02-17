@@ -139,7 +139,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                           shape: BoxShape.circle,
                         ),
                         child: Image.network(
-                          _model.uploadedFileUrl,
+                          '',
                           fit: BoxFit.fitWidth,
                         ),
                       ),

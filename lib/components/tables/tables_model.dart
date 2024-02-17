@@ -11,8 +11,10 @@ class TablesModel extends FlutterFlowModel<TablesWidget> {
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
   // State field(s) for ChoiceChips widget.
-  List<String>? choiceChipsValues;
   FormFieldController<List<String>>? choiceChipsValueController;
+  List<String>? get choiceChipsValues => choiceChipsValueController?.value;
+  set choiceChipsValues(List<String>? val) =>
+      choiceChipsValueController?.value = val;
 
   /// Initialization and disposal methods.
 

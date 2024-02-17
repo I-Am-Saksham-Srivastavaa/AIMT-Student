@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -86,11 +87,11 @@ class _SplashWidgetState extends State<SplashWidget> {
                                         0.0, 0.0, 0.0, 12.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(12.0),
-                                      child: Image.network(
-                                        '',
+                                      child: Image.asset(
+                                        'assets/images/classes.jpg',
                                         width: double.infinity,
                                         height: 300.0,
-                                        fit: BoxFit.cover,
+                                        fit: BoxFit.fill,
                                       ),
                                     ),
                                   ),
@@ -130,11 +131,16 @@ class _SplashWidgetState extends State<SplashWidget> {
                                         0.0, 0.0, 0.0, 12.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(12.0),
-                                      child: Image.network(
-                                        '',
+                                      child: CachedNetworkImage(
+                                        fadeInDuration:
+                                            const Duration(milliseconds: 500),
+                                        fadeOutDuration:
+                                            const Duration(milliseconds: 500),
+                                        imageUrl:
+                                            'https://www.collegebatch.com/static/clg-gallery/ambalika-institute-of-management-technology-lucknow-238327.jpg',
                                         width: double.infinity,
                                         height: 300.0,
-                                        fit: BoxFit.cover,
+                                        fit: BoxFit.fill,
                                       ),
                                     ),
                                   ),
@@ -175,7 +181,7 @@ class _SplashWidgetState extends State<SplashWidget> {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(12.0),
                                       child: Image.network(
-                                        '',
+                                        'https://images.collegedunia.com/public/college_data/images/campusimage/16240022151R3A8408.JPG',
                                         width: double.infinity,
                                         height: 300.0,
                                         fit: BoxFit.cover,
@@ -257,8 +263,8 @@ class _SplashWidgetState extends State<SplashWidget> {
                 clipBehavior: Clip.none,
                 children: [
                   FFButtonWidget(
-                    onPressed: () {
-                      print('Button pressed ...');
+                    onPressed: () async {
+                      context.pushNamed('Login');
                     },
                     text: 'Login',
                     options: FFButtonOptions(
@@ -283,8 +289,8 @@ class _SplashWidgetState extends State<SplashWidget> {
                     ),
                   ),
                   FFButtonWidget(
-                    onPressed: () {
-                      print('Button pressed ...');
+                    onPressed: () async {
+                      context.pushNamed('CreateAccount');
                     },
                     text: 'Register',
                     options: FFButtonOptions(

@@ -1,10 +1,10 @@
-import '/components/nav_bar_widget.dart';
 import '/components/notification/notification_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
 import 'package:aligned_tooltip/aligned_tooltip.dart';
@@ -709,7 +709,7 @@ class _ResourcesWidgetState extends State<ResourcesWidget>
                                                                   12.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Create tables and ui elements that work below.',
+                                                        'Resource material Uploaded by Faculty',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1120,17 +1120,23 @@ class _ResourcesWidgetState extends State<ResourcesWidget>
                                 ),
                               ),
                             ),
-                          ],
+                          ].addToEnd(const SizedBox(height: 84.0)),
                         ),
                       ),
-                      Align(
-                        alignment: const AlignmentDirectional(0.0, 1.0),
-                        child: wrapWithModel(
-                          model: _model.navBarModel,
-                          updateCallback: () => setState(() {}),
-                          child: const NavBarWidget(),
+                      if (responsiveVisibility(
+                        context: context,
+                        tablet: false,
+                        tabletLandscape: false,
+                        desktop: false,
+                      ))
+                        Align(
+                          alignment: const AlignmentDirectional(0.0, 1.0),
+                          child: wrapWithModel(
+                            model: _model.navBarModel,
+                            updateCallback: () => setState(() {}),
+                            child: const NavBarWidget(),
+                          ),
                         ),
-                      ),
                     ],
                   ),
                 ),

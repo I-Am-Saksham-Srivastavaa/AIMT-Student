@@ -982,8 +982,7 @@ class _SettingsFacultyWidgetState extends State<SettingsFacultyWidget> {
                                 await authManager.signOut();
                                 GoRouter.of(context).clearRedirectLocation();
 
-                                context.goNamedAuth(
-                                    'Onboarding', context.mounted);
+                                context.goNamedAuth('Splash', context.mounted);
                               },
                               text: 'Log Out',
                               options: FFButtonOptions(

@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'new_page_student_widget.dart' show NewPageStudentWidget;
+import '/pages/student/components/side_nav/side_nav_widget.dart';
+import 'support_widget.dart' show SupportWidget;
 import 'package:flutter/material.dart';
 
-class NewPageStudentModel extends FlutterFlowModel<NewPageStudentWidget> {
+class SupportModel extends FlutterFlowModel<SupportWidget> {
   ///  Local state fields for this page.
 
   int selectedPage = 1;
@@ -10,15 +11,20 @@ class NewPageStudentModel extends FlutterFlowModel<NewPageStudentWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // Model for sideNav component.
+  late SideNavModel sideNavModel;
 
   /// Initialization and disposal methods.
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    sideNavModel = createModel(context, () => SideNavModel());
+  }
 
   @override
   void dispose() {
     unfocusNode.dispose();
+    sideNavModel.dispose();
   }
 
   /// Action blocks are added here.

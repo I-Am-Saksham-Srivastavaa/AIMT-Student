@@ -1,6 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/support/user_list_small/user_list_small_widget.dart';
+import '/pages/support/user_list_small/user_list_small_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'user_list_model.dart';

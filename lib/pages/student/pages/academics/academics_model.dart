@@ -1,7 +1,7 @@
-import '/components/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/academic_overview/academic_overview_widget.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
+import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
 import 'academics_widget.dart' show AcademicsWidget;
 import 'package:flutter/material.dart';

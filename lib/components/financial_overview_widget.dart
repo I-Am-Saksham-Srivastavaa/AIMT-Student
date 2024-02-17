@@ -143,82 +143,78 @@ class _FinancialOverviewWidgetState extends State<FinancialOverviewWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Expanded(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Monthly Goal',
+                          Column(
+                            mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Monthly Goal',
+                                style: FlutterFlowTheme.of(context).labelMedium,
+                              ),
+                              RichText(
+                                textScaleFactor:
+                                    MediaQuery.of(context).textScaleFactor,
+                                text: TextSpan(
+                                  children: [
+                                    const TextSpan(
+                                      text: '₹230000 /',
+                                      style: TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: '₹430000',
+                                      style: FlutterFlowTheme.of(context)
+                                          .labelLarge,
+                                    )
+                                  ],
                                   style:
-                                      FlutterFlowTheme.of(context).labelMedium,
+                                      FlutterFlowTheme.of(context).displaySmall,
                                 ),
-                                RichText(
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 8.0, 8.0, 0.0),
+                                child: LinearPercentIndicator(
+                                  percent: 0.62,
+                                  width: MediaQuery.sizeOf(context).width * 0.9,
+                                  lineHeight: 12.0,
+                                  animation: true,
+                                  animateFromLastPercent: true,
+                                  progressColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  barRadius: const Radius.circular(16.0),
+                                  padding: EdgeInsets.zero,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 8.0, 0.0, 0.0),
+                                child: RichText(
                                   textScaleFactor:
                                       MediaQuery.of(context).textScaleFactor,
                                   text: TextSpan(
                                     children: [
                                       const TextSpan(
-                                        text: '₹230000 /',
+                                        text: 'Due Date is: ',
                                         style: TextStyle(),
                                       ),
                                       TextSpan(
-                                        text: '₹430000',
+                                        text: '31/12/2024',
                                         style: FlutterFlowTheme.of(context)
-                                            .labelLarge,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                       )
                                     ],
                                     style: FlutterFlowTheme.of(context)
-                                        .displaySmall,
+                                        .labelMedium,
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 8.0, 0.0, 0.0),
-                                  child: LinearPercentIndicator(
-                                    percent: 0.62,
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 0.9,
-                                    lineHeight: 12.0,
-                                    animation: true,
-                                    animateFromLastPercent: true,
-                                    progressColor:
-                                        FlutterFlowTheme.of(context).primary,
-                                    backgroundColor:
-                                        FlutterFlowTheme.of(context).accent1,
-                                    barRadius: const Radius.circular(16.0),
-                                    padding: EdgeInsets.zero,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 8.0, 0.0, 0.0),
-                                  child: RichText(
-                                    textScaleFactor:
-                                        MediaQuery.of(context).textScaleFactor,
-                                    text: TextSpan(
-                                      children: [
-                                        const TextSpan(
-                                          text: 'Due Date is: ',
-                                          style: TextStyle(),
-                                        ),
-                                        TextSpan(
-                                          text: '31/12/2024',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        )
-                                      ],
-                                      style: FlutterFlowTheme.of(context)
-                                          .labelMedium,
-                                    ),
-                                  ),
-                                ),
-                              ].divide(const SizedBox(height: 4.0)),
-                            ),
+                              ),
+                            ].divide(const SizedBox(height: 4.0)),
                           ),
                         ],
                       ),

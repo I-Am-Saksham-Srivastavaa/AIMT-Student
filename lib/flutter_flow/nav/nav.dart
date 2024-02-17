@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -72,14 +71,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const DashboardWidget() : const OnboardingWidget(),
+          appStateNotifier.loggedIn ? const DashboardWidget() : const SplashWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? const DashboardWidget()
-              : const OnboardingWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? const DashboardWidget() : const SplashWidget(),
         ),
         FFRoute(
           name: 'Resources',
@@ -105,11 +103,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Dashboard',
           path: '/dashboard',
           builder: (context, params) => const DashboardWidget(),
-        ),
-        FFRoute(
-          name: 'Onboarding',
-          path: '/onboarding',
-          builder: (context, params) => const OnboardingWidget(),
         ),
         FFRoute(
           name: 'CreateAccount',
@@ -302,9 +295,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const GrievanceTicketListWidget(),
         ),
         FFRoute(
-          name: 'NewPageStudent',
-          path: '/newPageStudent',
-          builder: (context, params) => const NewPageStudentWidget(),
+          name: 'SupportFaculty',
+          path: '/supportFaculty',
+          builder: (context, params) => const SupportFacultyWidget(),
         ),
         FFRoute(
           name: 'NewPageFaculty',
@@ -360,8 +353,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'FacultyDetails',
           path: '/facultyDetails',
           builder: (context, params) => const FacultyDetailsWidget(),
+        ),
+        FFRoute(
+          name: 'BookEvent',
+          path: '/bookEvent',
+          builder: (context, params) => const BookEventWidget(),
+        ),
+        FFRoute(
+          name: 'Support',
+          path: '/support',
+          builder: (context, params) => const SupportWidget(),
+        ),
+        FFRoute(
+          name: 'SupportHOD',
+          path: '/supportHOD',
+          builder: (context, params) => const SupportHODWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {
@@ -528,7 +537,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/onboarding';
+            return '/splash';
           }
           return null;
         },
@@ -541,17 +550,15 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
+              ? isWeb
+                  ? Container()
+                  : Container(
+                      color: Colors.transparent,
+                      child: Image.asset(
+                        'assets/images/Social_Share_Image.png',
+                        fit: BoxFit.scaleDown,
                       ),
-                    ),
-                  ),
-                )
+                    )
               : page;
 
           final transitionInfo = state.transitionInfo;

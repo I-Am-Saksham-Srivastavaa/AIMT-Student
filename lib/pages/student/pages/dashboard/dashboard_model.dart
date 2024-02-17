@@ -1,10 +1,11 @@
 import '/components/event_overview/event_overview_widget.dart';
 import '/components/financial_overview_widget.dart';
-import '/components/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
+import '/pages/student/components/attendance_overview/attendance_overview_widget.dart';
 import '/pages/student/components/attendance_topbar/attendance_topbar_widget.dart';
 import '/pages/student/components/drawer/drawer_widget.dart';
+import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
 import 'dashboard_widget.dart' show DashboardWidget;
 import 'package:flutter/material.dart';
@@ -17,6 +18,8 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
   late SideNavModel sideNavModel;
   // Model for AttendanceTopbar component.
   late AttendanceTopbarModel attendanceTopbarModel;
+  // Model for AttendanceOverview component.
+  late AttendanceOverviewModel attendanceOverviewModel;
   // Model for FinancialOverview component.
   late FinancialOverviewModel financialOverviewModel;
   // Model for AssignmentOverview component.
@@ -34,6 +37,8 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
   void initState(BuildContext context) {
     sideNavModel = createModel(context, () => SideNavModel());
     attendanceTopbarModel = createModel(context, () => AttendanceTopbarModel());
+    attendanceOverviewModel =
+        createModel(context, () => AttendanceOverviewModel());
     financialOverviewModel =
         createModel(context, () => FinancialOverviewModel());
     assignmentOverviewModel =
@@ -48,6 +53,7 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
     unfocusNode.dispose();
     sideNavModel.dispose();
     attendanceTopbarModel.dispose();
+    attendanceOverviewModel.dispose();
     financialOverviewModel.dispose();
     assignmentOverviewModel.dispose();
     eventOverviewModel.dispose();

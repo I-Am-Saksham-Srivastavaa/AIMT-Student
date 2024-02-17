@@ -932,8 +932,7 @@ class _SettingHODWidgetState extends State<SettingHODWidget> {
                                 await authManager.signOut();
                                 GoRouter.of(context).clearRedirectLocation();
 
-                                context.goNamedAuth(
-                                    'Onboarding', context.mounted);
+                                context.goNamedAuth('Splash', context.mounted);
                               },
                               text: 'Log Out',
                               options: FFButtonOptions(

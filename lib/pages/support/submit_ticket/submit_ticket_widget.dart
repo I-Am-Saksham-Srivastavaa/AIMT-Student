@@ -4,8 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/support/user_list/user_list_widget.dart';
-import '/support/user_list_small/user_list_small_widget.dart';
+import '/pages/support/user_list/user_list_widget.dart';
+import '/pages/support/user_list_small/user_list_small_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -630,8 +630,8 @@ class _SubmitTicketWidgetState extends State<SubmitTicketWidget>
                                     ChipData('Medium'),
                                     ChipData('Low')
                                   ],
-                                  onChanged: (val) => setState(() =>
-                                      _model.choiceChipsValue = val?.first),
+                                  onChanged: (val) => setState(() => _model
+                                      .choiceChipsValue = val?.firstOrNull),
                                   selectedChipStyle: ChipStyle(
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).accent1,

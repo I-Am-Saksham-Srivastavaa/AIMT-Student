@@ -73,8 +73,8 @@ class _ActivityComponentWidgetState extends State<ActivityComponentWidget> {
                       ChipData('In Progress'),
                       ChipData('Completed')
                     ],
-                    onChanged: (val) =>
-                        setState(() => _model.choiceChipsValue = val?.first),
+                    onChanged: (val) => setState(
+                        () => _model.choiceChipsValue = val?.firstOrNull),
                     selectedChipStyle: ChipStyle(
                       backgroundColor: FlutterFlowTheme.of(context).primary,
                       textStyle:

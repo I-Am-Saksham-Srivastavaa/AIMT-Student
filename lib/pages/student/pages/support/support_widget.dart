@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/student/components/side_nav/side_nav_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
 import 'package:aligned_tooltip/aligned_tooltip.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
@@ -12,19 +13,19 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'new_page_student_model.dart';
-export 'new_page_student_model.dart';
+import 'support_model.dart';
+export 'support_model.dart';
 
-class NewPageStudentWidget extends StatefulWidget {
-  const NewPageStudentWidget({super.key});
+class SupportWidget extends StatefulWidget {
+  const SupportWidget({super.key});
 
   @override
-  State<NewPageStudentWidget> createState() => _NewPageStudentWidgetState();
+  State<SupportWidget> createState() => _SupportWidgetState();
 }
 
-class _NewPageStudentWidgetState extends State<NewPageStudentWidget>
+class _SupportWidgetState extends State<SupportWidget>
     with TickerProviderStateMixin {
-  late NewPageStudentModel _model;
+  late SupportModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -47,7 +48,7 @@ class _NewPageStudentWidgetState extends State<NewPageStudentWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => NewPageStudentModel());
+    _model = createModel(context, () => SupportModel());
 
     setupAnimations(
       animationsMap.values.where((anim) =>
@@ -89,6 +90,13 @@ class _NewPageStudentWidgetState extends State<NewPageStudentWidget>
         body: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
+            wrapWithModel(
+              model: _model.sideNavModel,
+              updateCallback: () => setState(() {}),
+              child: const SideNavWidget(
+                selectedNav: 11,
+              ),
+            ),
             Expanded(
               flex: 8,
               child: Align(
@@ -123,7 +131,7 @@ class _NewPageStudentWidgetState extends State<NewPageStudentWidget>
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              '',
+                                              'Support',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium,
@@ -132,7 +140,7 @@ class _NewPageStudentWidgetState extends State<NewPageStudentWidget>
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 4.0, 0.0, 0.0),
                                               child: Text(
-                                                '',
+                                                'Below are the Support Sevices',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,

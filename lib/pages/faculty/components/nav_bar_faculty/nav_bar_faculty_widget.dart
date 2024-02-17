@@ -3,18 +3,18 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'nav_bar_model.dart';
-export 'nav_bar_model.dart';
+import 'nav_bar_faculty_model.dart';
+export 'nav_bar_faculty_model.dart';
 
-class NavBarWidget extends StatefulWidget {
-  const NavBarWidget({super.key});
+class NavBarFacultyWidget extends StatefulWidget {
+  const NavBarFacultyWidget({super.key});
 
   @override
-  State<NavBarWidget> createState() => _NavBarWidgetState();
+  State<NavBarFacultyWidget> createState() => _NavBarFacultyWidgetState();
 }
 
-class _NavBarWidgetState extends State<NavBarWidget> {
-  late NavBarModel _model;
+class _NavBarFacultyWidgetState extends State<NavBarFacultyWidget> {
+  late NavBarFacultyModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -25,7 +25,7 @@ class _NavBarWidgetState extends State<NavBarWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => NavBarModel());
+    _model = createModel(context, () => NavBarFacultyModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -99,7 +99,7 @@ class _NavBarWidgetState extends State<NavBarWidget> {
                 borderWidth: 1.0,
                 buttonSize: 50.0,
                 icon: const Icon(
-                  Icons.home_rounded,
+                  Icons.space_dashboard_sharp,
                   color: Color(0xFF9299A1),
                   size: 30.0,
                 ),

@@ -1,4 +1,3 @@
-import '/components/nav_bar_widget.dart';
 import '/components/notification/notification_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -7,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/student/components/academic_overview/academic_overview_widget.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
+import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
 import 'package:aligned_tooltip/aligned_tooltip.dart';
@@ -1240,10 +1240,16 @@ class _AcademicsWidgetState extends State<AcademicsWidget>
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 8.0, 12.0),
-                                  child: ListView(
-                                    padding: EdgeInsets.zero,
-                                    shrinkWrap: true,
-                                    scrollDirection: Axis.vertical,
+                                  child: Wrap(
+                                    spacing: 0.0,
+                                    runSpacing: 0.0,
+                                    alignment: WrapAlignment.start,
+                                    crossAxisAlignment:
+                                        WrapCrossAlignment.start,
+                                    direction: Axis.horizontal,
+                                    runAlignment: WrapAlignment.start,
+                                    verticalDirection: VerticalDirection.down,
+                                    clipBehavior: Clip.none,
                                     children: [
                                       Container(
                                         width: double.infinity,
@@ -1471,18 +1477,24 @@ class _AcademicsWidgetState extends State<AcademicsWidget>
                               updateCallback: () => setState(() {}),
                               child: const AssignmentOverviewWidget(),
                             ),
-                          ].addToEnd(const SizedBox(height: 40.0)),
+                          ].addToEnd(const SizedBox(height: 80.0)),
                         ),
                       ),
                     ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 1.0),
-                      child: wrapWithModel(
-                        model: _model.navBarModel,
-                        updateCallback: () => setState(() {}),
-                        child: const NavBarWidget(),
+                    if (responsiveVisibility(
+                      context: context,
+                      tablet: false,
+                      tabletLandscape: false,
+                      desktop: false,
+                    ))
+                      Align(
+                        alignment: const AlignmentDirectional(0.0, 1.0),
+                        child: wrapWithModel(
+                          model: _model.navBarModel,
+                          updateCallback: () => setState(() {}),
+                          child: const NavBarWidget(),
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ),

@@ -1,5 +1,5 @@
-import '/components/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
 import 'app_and_services_widget.dart' show AppAndServicesWidget;
 import 'package:flutter/material.dart';

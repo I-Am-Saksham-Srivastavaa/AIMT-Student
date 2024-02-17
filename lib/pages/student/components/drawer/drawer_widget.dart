@@ -1,8 +1,6 @@
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 import 'drawer_model.dart';
 export 'drawer_model.dart';
@@ -19,25 +17,8 @@ class DrawerWidget extends StatefulWidget {
   State<DrawerWidget> createState() => _DrawerWidgetState();
 }
 
-class _DrawerWidgetState extends State<DrawerWidget>
-    with TickerProviderStateMixin {
+class _DrawerWidgetState extends State<DrawerWidget> {
   late DrawerModel _model;
-
-  final animationsMap = {
-    'iconOnActionTriggerAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onActionTrigger,
-      applyInitialState: true,
-      effects: [
-        RotateEffect(
-          curve: Curves.bounceOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 0.5,
-        ),
-      ],
-    ),
-  };
 
   @override
   void setState(VoidCallback callback) {
@@ -49,13 +30,6 @@ class _DrawerWidgetState extends State<DrawerWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => DrawerModel());
-
-    setupAnimations(
-      animationsMap.values.where((anim) =>
-          anim.trigger == AnimationTrigger.onActionTrigger ||
-          !anim.applyInitialState),
-      this,
-    );
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -97,44 +71,6 @@ class _DrawerWidgetState extends State<DrawerWidget>
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding:
-                      const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Container(
-                        width: 50.0,
-                        height: 50.0,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                        ),
-                        child: Image.asset(
-                          'assets/images/AIMT_Logo.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      if (FFAppState().navOpen == true)
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              'Ambalika Institute of Management  and Technology',
-                              style: FlutterFlowTheme.of(context)
-                                  .headlineMedium
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                            ),
-                          ),
-                        ),
-                    ],
-                  ),
-                ),
                 AnimatedContainer(
                   duration: const Duration(milliseconds: 200),
                   curve: Curves.easeInOut,
@@ -1248,67 +1184,6 @@ class _DrawerWidgetState extends State<DrawerWidget>
                             ),
                           ),
                         ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 8.0, 0.0),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
-                                if (FFAppState().navOpen == true) {
-                                  // closeNav
-                                  setState(() {
-                                    FFAppState().navOpen = false;
-                                  });
-                                  if (animationsMap[
-                                          'iconOnActionTriggerAnimation'] !=
-                                      null) {
-                                    animationsMap[
-                                            'iconOnActionTriggerAnimation']!
-                                        .controller
-                                        .forward(from: 0.0);
-                                  }
-                                } else {
-                                  // openNav
-                                  setState(() {
-                                    FFAppState().navOpen = true;
-                                  });
-                                  if (animationsMap[
-                                          'iconOnActionTriggerAnimation'] !=
-                                      null) {
-                                    animationsMap[
-                                            'iconOnActionTriggerAnimation']!
-                                        .controller
-                                        .reverse();
-                                  }
-                                }
-                              },
-                              child: Icon(
-                                Icons.menu_open_rounded,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 24.0,
-                              ),
-                            ).animateOnActionTrigger(
-                              animationsMap['iconOnActionTriggerAnimation']!,
-                            ),
-                          ),
-                          if (FFAppState().navOpen == true)
-                            Expanded(
-                              child: Container(
-                                width: 100.0,
-                                height: 16.0,
-                                decoration: const BoxDecoration(),
-                              ),
-                            ),
-                        ],
-                      ),
                     ],
                   ),
                 ),

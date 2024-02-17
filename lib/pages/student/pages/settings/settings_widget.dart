@@ -1,8 +1,8 @@
 import '/auth/supabase_auth/auth_util.dart';
-import '/components/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -737,7 +737,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                         .clearRedirectLocation();
 
                                     context.goNamedAuth(
-                                        'Onboarding', context.mounted);
+                                        'Splash', context.mounted);
                                   },
                                   text: 'Log Out',
                                   options: FFButtonOptions(
@@ -981,17 +981,23 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                 ),
                               ),
                             ),
-                          ].addToEnd(const SizedBox(height: 32.0)),
+                          ].addToEnd(const SizedBox(height: 84.0)),
                         ),
                       ),
-                      Align(
-                        alignment: const AlignmentDirectional(0.0, 1.0),
-                        child: wrapWithModel(
-                          model: _model.navBarModel,
-                          updateCallback: () => setState(() {}),
-                          child: const NavBarWidget(),
+                      if (responsiveVisibility(
+                        context: context,
+                        tablet: false,
+                        tabletLandscape: false,
+                        desktop: false,
+                      ))
+                        Align(
+                          alignment: const AlignmentDirectional(0.0, 1.0),
+                          child: wrapWithModel(
+                            model: _model.navBarModel,
+                            updateCallback: () => setState(() {}),
+                            child: const NavBarWidget(),
+                          ),
                         ),
-                      ),
                     ],
                   ),
                 ),

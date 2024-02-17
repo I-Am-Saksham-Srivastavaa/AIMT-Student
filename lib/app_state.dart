@@ -46,6 +46,12 @@ class FFAppState extends ChangeNotifier {
   set isFaculty(bool value) {
     _isFaculty = value;
   }
+
+  bool _isOptionsExpanded = false;
+  bool get isOptionsExpanded => _isOptionsExpanded;
+  set isOptionsExpanded(bool value) {
+    _isOptionsExpanded = value;
+  }
 }
 
 void _safeInit(Function() initializeField) {

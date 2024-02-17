@@ -8,7 +8,6 @@ export '/pages/student/pages/transactions/transactions_widget.dart'
 export '/pages/student/pages/settings/settings_widget.dart' show SettingsWidget;
 export '/pages/student/pages/dashboard/dashboard_widget.dart'
     show DashboardWidget;
-export '/pages/auth/onboarding/onboarding_widget.dart' show OnboardingWidget;
 export '/pages/auth/create_account/create_account_widget.dart'
     show CreateAccountWidget;
 export '/pages/auth/login/login_widget.dart' show LoginWidget;
@@ -47,10 +46,11 @@ export '/pages/hod/pages/resources_h_o_d/resources_h_o_d_widget.dart'
     show ResourcesHODWidget;
 export '/pages/student/pages/photo_gallery/photo_gallery_widget.dart'
     show PhotoGalleryWidget;
-export '/support/ticket_list/ticket_list_widget.dart' show TicketListWidget;
-export '/support/submit_ticket/submit_ticket_widget.dart'
+export '/pages/support/ticket_list/ticket_list_widget.dart'
+    show TicketListWidget;
+export '/pages/support/submit_ticket/submit_ticket_widget.dart'
     show SubmitTicketWidget;
-export '/support/ticket_details/ticket_details_widget.dart'
+export '/pages/support/ticket_details/ticket_details_widget.dart'
     show TicketDetailsWidget;
 export '/pages/hod/pages/academic_records/academic_records_widget.dart'
     show AcademicRecordsWidget;
@@ -79,8 +79,8 @@ export '/grievance/grievance_ticket_details/grievance_ticket_details_widget.dart
     show GrievanceTicketDetailsWidget;
 export '/grievance/grievance_ticket_list/grievance_ticket_list_widget.dart'
     show GrievanceTicketListWidget;
-export '/pages/student/pages/new_page_student/new_page_student_widget.dart'
-    show NewPageStudentWidget;
+export '/pages/faculty/pages/support_faculty/support_faculty_widget.dart'
+    show SupportFacultyWidget;
 export '/pages/faculty/pages/new_page_faculty/new_page_faculty_widget.dart'
     show NewPageFacultyWidget;
 export '/pages/hod/pages/new_page_h_o_d/new_page_h_o_d_widget.dart'
@@ -100,3 +100,7 @@ export '/pages/about_section/terms_and_conditions/terms_and_conditions_widget.da
     show TermsAndConditionsWidget;
 export '/profile/profile_widget.dart' show ProfileWidget;
 export '/faculty_details/faculty_details_widget.dart' show FacultyDetailsWidget;
+export '/book_event/book_event_widget.dart' show BookEventWidget;
+export '/pages/student/pages/support/support_widget.dart' show SupportWidget;
+export '/pages/faculty/pages/support_h_o_d/support_h_o_d_widget.dart'
+    show SupportHODWidget;
