@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/academic_overview/academic_overview_widget.dart';
+import '/pages/student/components/academic_summary/academic_summary_widget.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
 import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
@@ -12,6 +13,8 @@ class AcademicsModel extends FlutterFlowModel<AcademicsWidget> {
   final unfocusNode = FocusNode();
   // Model for sideNav component.
   late SideNavModel sideNavModel;
+  // Model for AcademicSummary component.
+  late AcademicSummaryModel academicSummaryModel;
   // Model for AcademicOverview component.
   late AcademicOverviewModel academicOverviewModel;
   // Model for AssignmentOverview component.
@@ -24,6 +27,7 @@ class AcademicsModel extends FlutterFlowModel<AcademicsWidget> {
   @override
   void initState(BuildContext context) {
     sideNavModel = createModel(context, () => SideNavModel());
+    academicSummaryModel = createModel(context, () => AcademicSummaryModel());
     academicOverviewModel = createModel(context, () => AcademicOverviewModel());
     assignmentOverviewModel =
         createModel(context, () => AssignmentOverviewModel());
@@ -34,6 +38,7 @@ class AcademicsModel extends FlutterFlowModel<AcademicsWidget> {
   void dispose() {
     unfocusNode.dispose();
     sideNavModel.dispose();
+    academicSummaryModel.dispose();
     academicOverviewModel.dispose();
     assignmentOverviewModel.dispose();
     navBarModel.dispose();

@@ -88,24 +88,24 @@ class _AppAndServicesWidgetState extends State<AppAndServicesWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        body: Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: Stack(
           children: [
-            wrapWithModel(
-              model: _model.sideNavModel,
-              updateCallback: () => setState(() {}),
-              child: const SideNavWidget(
-                selectedNav: 5,
-              ),
-            ),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: const BoxDecoration(),
-                child: Stack(
-                  children: [
-                    Padding(
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                wrapWithModel(
+                  model: _model.sideNavModel,
+                  updateCallback: () => setState(() {}),
+                  child: const SideNavWidget(
+                    selectedNav: 5,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    width: double.infinity,
+                    decoration: const BoxDecoration(),
+                    child: Padding(
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: SingleChildScrollView(
@@ -620,28 +620,34 @@ class _AppAndServicesWidgetState extends State<AppAndServicesWidget>
                                 ],
                               ),
                             ),
+                            const SingleChildScrollView(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [],
+                              ),
+                            ),
                           ].addToEnd(const SizedBox(height: 32.0)),
                         ),
                       ),
                     ),
-                    if (responsiveVisibility(
-                      context: context,
-                      tablet: false,
-                      tabletLandscape: false,
-                      desktop: false,
-                    ))
-                      Align(
-                        alignment: const AlignmentDirectional(0.0, 1.0),
-                        child: wrapWithModel(
-                          model: _model.navBarModel,
-                          updateCallback: () => setState(() {}),
-                          child: const NavBarWidget(),
-                        ),
-                      ),
-                  ],
+                  ),
+                ),
+              ],
+            ),
+            if (responsiveVisibility(
+              context: context,
+              tablet: false,
+              tabletLandscape: false,
+              desktop: false,
+            ))
+              Align(
+                alignment: const AlignmentDirectional(0.0, 1.0),
+                child: wrapWithModel(
+                  model: _model.navBarModel,
+                  updateCallback: () => setState(() {}),
+                  child: const NavBarWidget(),
                 ),
               ),
-            ),
           ],
         ),
       ),

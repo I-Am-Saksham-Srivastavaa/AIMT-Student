@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/pages/hod/components/nav_bar_h_o_d/nav_bar_h_o_d_widget.dart';
 import '/pages/hod/components/side_nav_h_o_d/side_nav_h_o_d_widget.dart';
 import 'faculty_list_widget.dart' show FacultyListWidget;
 import 'package:flutter/material.dart';
@@ -23,12 +24,15 @@ class FacultyListModel extends FlutterFlowModel<FacultyListWidget> {
   List<String>? get choiceChipsValues => choiceChipsValueController?.value;
   set choiceChipsValues(List<String>? val) =>
       choiceChipsValueController?.value = val;
+  // Model for NavBarHOD component.
+  late NavBarHODModel navBarHODModel;
 
   /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
     sideNavHODModel = createModel(context, () => SideNavHODModel());
+    navBarHODModel = createModel(context, () => NavBarHODModel());
   }
 
   @override
@@ -37,6 +41,8 @@ class FacultyListModel extends FlutterFlowModel<FacultyListWidget> {
     sideNavHODModel.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
+
+    navBarHODModel.dispose();
   }
 
   /// Action blocks are added here.

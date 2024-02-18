@@ -612,7 +612,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                         ),
                                         Padding(
-                                          padding: const EdgeInsets.all(24.0),
+                                          padding: const EdgeInsets.all(8.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -770,12 +770,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   ),
                                                 ),
                                               ),
-                                            ]
-                                                .divide(const SizedBox(width: 24.0))
-                                                .addToStart(
-                                                    const SizedBox(width: 24.0))
-                                                .addToEnd(
-                                                    const SizedBox(width: 24.0)),
+                                            ].divide(const SizedBox(width: 8.0)),
                                           ),
                                         ),
                                       ],

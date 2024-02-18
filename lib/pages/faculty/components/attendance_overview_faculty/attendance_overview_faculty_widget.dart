@@ -43,12 +43,12 @@ class _AttendanceOverviewFacultyWidgetState
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
-    return Column(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Column(
+    return Padding(
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+      child: Container(
+        decoration: const BoxDecoration(),
+        child: Column(
           mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Align(
               alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -239,7 +239,7 @@ class _AttendanceOverviewFacultyWidgetState
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Total Days Present',
+                                        'Total Student Present Today',
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                       ),
@@ -251,7 +251,7 @@ class _AttendanceOverviewFacultyWidgetState
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 4.0, 0.0),
                                             child: Text(
-                                              '175',
+                                              '250',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .displaySmall,
@@ -308,7 +308,7 @@ class _AttendanceOverviewFacultyWidgetState
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Total Leaves Taken',
+                                        'Total Student Absent Today',
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                       ),
@@ -320,145 +320,7 @@ class _AttendanceOverviewFacultyWidgetState
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 4.0, 0.0),
                                             child: Text(
-                                              '15',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .displaySmall,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 12.0, 0.0, 12.0),
-                        child: Container(
-                          height: 120.0,
-                          constraints: const BoxConstraints(
-                            maxWidth: 270.0,
-                          ),
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(
-                              color: FlutterFlowTheme.of(context).alternate,
-                              width: 1.0,
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 16.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 16.0, 0.0),
-                                  child: Icon(
-                                    Icons.trending_up_rounded,
-                                    color:
-                                        FlutterFlowTheme.of(context).secondary,
-                                    size: 32.0,
-                                  ),
-                                ),
-                                Flexible(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Attendance This Month',
-                                        style: FlutterFlowTheme.of(context)
-                                            .labelMedium,
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 4.0, 4.0, 0.0),
-                                            child: Text(
-                                              '75%',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .displaySmall,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 12.0, 0.0, 12.0),
-                        child: Container(
-                          height: 120.0,
-                          constraints: const BoxConstraints(
-                            maxWidth: 270.0,
-                          ),
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(
-                              color: FlutterFlowTheme.of(context).alternate,
-                              width: 1.0,
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 16.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 16.0, 0.0),
-                                  child: Icon(
-                                    Icons.trending_up_rounded,
-                                    color:
-                                        FlutterFlowTheme.of(context).secondary,
-                                    size: 32.0,
-                                  ),
-                                ),
-                                Flexible(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Leaves Taken This Month',
-                                        style: FlutterFlowTheme.of(context)
-                                            .labelMedium,
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 4.0, 4.0, 0.0),
-                                            child: Text(
-                                              '15',
+                                              '20',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .displaySmall,
@@ -482,45 +344,51 @@ class _AttendanceOverviewFacultyWidgetState
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
-              child: Text(
-                'Present Student',
-                style: FlutterFlowTheme.of(context).labelMedium,
-              ),
-            ),
-            Align(
-              alignment: const AlignmentDirectional(-1.0, 0.0),
-              child: wrapWithModel(
-                model: _model.studentListComponentModel1,
-                updateCallback: () => setState(() {}),
-                child: const StudentListComponentWidget(),
-              ),
-            ),
-            Divider(
-              height: 2.0,
-              thickness: 1.0,
-              color: FlutterFlowTheme.of(context).alternate,
-            ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
-              child: Text(
-                'Absent Student',
-                textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).labelMedium,
-              ),
-            ),
-            Align(
-              alignment: const AlignmentDirectional(-1.0, 0.0),
-              child: wrapWithModel(
-                model: _model.studentListComponentModel2,
-                updateCallback: () => setState(() {}),
-                child: const StudentListComponentWidget(),
-              ),
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                  child: Text(
+                    'Present Students',
+                    style: FlutterFlowTheme.of(context).labelMedium,
+                  ),
+                ),
+                Align(
+                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                  child: wrapWithModel(
+                    model: _model.studentListComponentModel1,
+                    updateCallback: () => setState(() {}),
+                    child: const StudentListComponentWidget(),
+                  ),
+                ),
+                Divider(
+                  height: 2.0,
+                  thickness: 1.0,
+                  color: FlutterFlowTheme.of(context).alternate,
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                  child: Text(
+                    'Absent Students',
+                    textAlign: TextAlign.start,
+                    style: FlutterFlowTheme.of(context).labelMedium,
+                  ),
+                ),
+                Align(
+                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                  child: wrapWithModel(
+                    model: _model.studentListComponentModel2,
+                    updateCallback: () => setState(() {}),
+                    child: const StudentListComponentWidget(),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
-      ],
+      ),
     );
   }
 }

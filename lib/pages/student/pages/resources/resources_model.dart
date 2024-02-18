@@ -1,3 +1,4 @@
+import '/components/resource_component/resource_component_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
@@ -14,6 +15,8 @@ class ResourcesModel extends FlutterFlowModel<ResourcesWidget> {
   final unfocusNode = FocusNode();
   // Model for sideNav component.
   late SideNavModel sideNavModel;
+  // Model for ResourceComponent component.
+  late ResourceComponentModel resourceComponentModel;
   // Model for NavBar component.
   late NavBarModel navBarModel;
 
@@ -22,6 +25,8 @@ class ResourcesModel extends FlutterFlowModel<ResourcesWidget> {
   @override
   void initState(BuildContext context) {
     sideNavModel = createModel(context, () => SideNavModel());
+    resourceComponentModel =
+        createModel(context, () => ResourceComponentModel());
     navBarModel = createModel(context, () => NavBarModel());
   }
 
@@ -29,6 +34,7 @@ class ResourcesModel extends FlutterFlowModel<ResourcesWidget> {
   void dispose() {
     unfocusNode.dispose();
     sideNavModel.dispose();
+    resourceComponentModel.dispose();
     navBarModel.dispose();
   }
 

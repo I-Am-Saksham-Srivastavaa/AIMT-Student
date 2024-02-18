@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/hod/components/academic_overview_h_o_d/academic_overview_h_o_d_widget.dart';
 import '/pages/hod/components/assignment_overview_h_o_d/assignment_overview_h_o_d_widget.dart';
+import '/pages/hod/components/nav_bar_h_o_d/nav_bar_h_o_d_widget.dart';
 import '/pages/hod/components/side_nav_h_o_d/side_nav_h_o_d_widget.dart';
 import 'academic_records_widget.dart' show AcademicRecordsWidget;
 import 'package:flutter/material.dart';
@@ -15,6 +16,8 @@ class AcademicRecordsModel extends FlutterFlowModel<AcademicRecordsWidget> {
   late AcademicOverviewHODModel academicOverviewHODModel;
   // Model for AssignmentOverviewHOD component.
   late AssignmentOverviewHODModel assignmentOverviewHODModel;
+  // Model for NavBarHOD component.
+  late NavBarHODModel navBarHODModel;
 
   /// Initialization and disposal methods.
 
@@ -25,6 +28,7 @@ class AcademicRecordsModel extends FlutterFlowModel<AcademicRecordsWidget> {
         createModel(context, () => AcademicOverviewHODModel());
     assignmentOverviewHODModel =
         createModel(context, () => AssignmentOverviewHODModel());
+    navBarHODModel = createModel(context, () => NavBarHODModel());
   }
 
   @override
@@ -33,6 +37,7 @@ class AcademicRecordsModel extends FlutterFlowModel<AcademicRecordsWidget> {
     sideNavHODModel.dispose();
     academicOverviewHODModel.dispose();
     assignmentOverviewHODModel.dispose();
+    navBarHODModel.dispose();
   }
 
   /// Action blocks are added here.

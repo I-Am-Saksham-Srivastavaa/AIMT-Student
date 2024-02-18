@@ -262,30 +262,43 @@ class _SplashWidgetState extends State<SplashWidget> {
                 verticalDirection: VerticalDirection.down,
                 clipBehavior: Clip.none,
                 children: [
-                  FFButtonWidget(
-                    onPressed: () async {
-                      context.pushNamed('Login');
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onDoubleTap: () async {
+                      context.pushNamed('LoginHOD');
                     },
-                    text: 'Login',
-                    options: FFButtonOptions(
-                      width: 150.0,
-                      height: 50.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
-                      textStyle:
-                          FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Plus Jakarta Sans',
-                                color: FlutterFlowTheme.of(context).primaryText,
-                              ),
-                      elevation: 2.0,
-                      borderSide: const BorderSide(
-                        color: Colors.transparent,
-                        width: 1.0,
+                    onLongPress: () async {
+                      context.pushNamed('LoginFaculty');
+                    },
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed('Login');
+                      },
+                      text: 'Login',
+                      options: FFButtonOptions(
+                        width: 150.0,
+                        height: 50.0,
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        iconPadding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleSmall
+                            .override(
+                              fontFamily: 'Plus Jakarta Sans',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                            ),
+                        elevation: 2.0,
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(50.0),
                       ),
-                      borderRadius: BorderRadius.circular(50.0),
                     ),
                   ),
                   FFButtonWidget(

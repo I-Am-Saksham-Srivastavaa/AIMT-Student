@@ -1,4 +1,3 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -214,14 +213,6 @@ class _AcademicOverviewHODWidgetState extends State<AcademicOverviewHODWidget> {
                               style: FlutterFlowTheme.of(context).labelSmall,
                             ),
                           ),
-                          Expanded(
-                            flex: 1,
-                            child: Text(
-                              'Action',
-                              textAlign: TextAlign.end,
-                              style: FlutterFlowTheme.of(context).labelSmall,
-                            ),
-                          ),
                         ],
                       ),
                     ),
@@ -398,30 +389,6 @@ class _AcademicOverviewHODWidgetState extends State<AcademicOverviewHODWidget> {
                                   '85%',
                                   style:
                                       FlutterFlowTheme.of(context).titleLarge,
-                                ),
-                              ),
-                              Expanded(
-                                flex: 1,
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    FlutterFlowIconButton(
-                                      borderColor: Colors.transparent,
-                                      borderRadius: 30.0,
-                                      borderWidth: 1.0,
-                                      buttonSize: 44.0,
-                                      icon: Icon(
-                                        Icons.more_vert,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        size: 20.0,
-                                      ),
-                                      onPressed: () {
-                                        print('IconButton pressed ...');
-                                      },
-                                    ),
-                                  ],
                                 ),
                               ),
                             ],

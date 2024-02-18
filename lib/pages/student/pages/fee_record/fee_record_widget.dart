@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
-import '/pages/student/components/transaction_history/transaction_history_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
 import 'package:aligned_tooltip/aligned_tooltip.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
@@ -89,24 +88,24 @@ class _FeeRecordWidgetState extends State<FeeRecordWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        body: Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: Stack(
           children: [
-            wrapWithModel(
-              model: _model.sideNavModel,
-              updateCallback: () => setState(() {}),
-              child: const SideNavWidget(
-                selectedNav: 4,
-              ),
-            ),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: const BoxDecoration(),
-                child: Stack(
-                  children: [
-                    Padding(
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                wrapWithModel(
+                  model: _model.sideNavModel,
+                  updateCallback: () => setState(() {}),
+                  child: const SideNavWidget(
+                    selectedNav: 4,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    width: double.infinity,
+                    decoration: const BoxDecoration(),
+                    child: Padding(
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: SingleChildScrollView(
@@ -621,33 +620,34 @@ class _FeeRecordWidgetState extends State<FeeRecordWidget>
                                 ],
                               ),
                             ),
-                            wrapWithModel(
-                              model: _model.transactionHistoryModel,
-                              updateCallback: () => setState(() {}),
-                              child: const TransactionHistoryWidget(),
+                            const SingleChildScrollView(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [],
+                              ),
                             ),
                           ].addToEnd(const SizedBox(height: 32.0)),
                         ),
                       ),
                     ),
-                    if (responsiveVisibility(
-                      context: context,
-                      tablet: false,
-                      tabletLandscape: false,
-                      desktop: false,
-                    ))
-                      Align(
-                        alignment: const AlignmentDirectional(0.0, 1.0),
-                        child: wrapWithModel(
-                          model: _model.navBarModel,
-                          updateCallback: () => setState(() {}),
-                          child: const NavBarWidget(),
-                        ),
-                      ),
-                  ],
+                  ),
+                ),
+              ],
+            ),
+            if (responsiveVisibility(
+              context: context,
+              tablet: false,
+              tabletLandscape: false,
+              desktop: false,
+            ))
+              Align(
+                alignment: const AlignmentDirectional(0.0, 1.0),
+                child: wrapWithModel(
+                  model: _model.navBarModel,
+                  updateCallback: () => setState(() {}),
+                  child: const NavBarWidget(),
                 ),
               ),
-            ),
           ],
         ),
       ),

@@ -1,4 +1,3 @@
-import '/components/faculty_list_compenent/faculty_list_compenent_widget.dart';
 import '/components/student_list_component/student_list_component_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'attendance_overview_h_o_d_widget.dart' show AttendanceOverviewHODWidget;
@@ -8,25 +7,25 @@ class AttendanceOverviewHODModel
     extends FlutterFlowModel<AttendanceOverviewHODWidget> {
   ///  State fields for stateful widgets in this component.
 
-  // Model for FacultyListCompenent component.
-  late FacultyListCompenentModel facultyListCompenentModel;
   // Model for StudentListComponent component.
-  late StudentListComponentModel studentListComponentModel;
+  late StudentListComponentModel studentListComponentModel1;
+  // Model for StudentListComponent component.
+  late StudentListComponentModel studentListComponentModel2;
 
   /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
-    facultyListCompenentModel =
-        createModel(context, () => FacultyListCompenentModel());
-    studentListComponentModel =
+    studentListComponentModel1 =
+        createModel(context, () => StudentListComponentModel());
+    studentListComponentModel2 =
         createModel(context, () => StudentListComponentModel());
   }
 
   @override
   void dispose() {
-    facultyListCompenentModel.dispose();
-    studentListComponentModel.dispose();
+    studentListComponentModel1.dispose();
+    studentListComponentModel2.dispose();
   }
 
   /// Action blocks are added here.

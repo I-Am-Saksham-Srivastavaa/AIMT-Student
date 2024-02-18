@@ -1,10 +1,9 @@
 import '/components/event_overview/event_overview_widget.dart';
-import '/components/financial_overview_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
 import '/pages/student/components/attendance_overview/attendance_overview_widget.dart';
 import '/pages/student/components/attendance_topbar/attendance_topbar_widget.dart';
-import '/pages/student/components/drawer/drawer_widget.dart';
+import '/pages/student/components/financial_overview/financial_overview_widget.dart';
 import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
 import 'dashboard_widget.dart' show DashboardWidget;
@@ -28,8 +27,6 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
   late EventOverviewModel eventOverviewModel;
   // Model for NavBar component.
   late NavBarModel navBarModel;
-  // Model for Drawer component.
-  late DrawerModel drawerModel;
 
   /// Initialization and disposal methods.
 
@@ -45,7 +42,6 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
         createModel(context, () => AssignmentOverviewModel());
     eventOverviewModel = createModel(context, () => EventOverviewModel());
     navBarModel = createModel(context, () => NavBarModel());
-    drawerModel = createModel(context, () => DrawerModel());
   }
 
   @override
@@ -58,7 +54,6 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
     assignmentOverviewModel.dispose();
     eventOverviewModel.dispose();
     navBarModel.dispose();
-    drawerModel.dispose();
   }
 
   /// Action blocks are added here.

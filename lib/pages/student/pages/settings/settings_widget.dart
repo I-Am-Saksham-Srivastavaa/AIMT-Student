@@ -57,25 +57,25 @@ class _SettingsWidgetState extends State<SettingsWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        body: Row(
-          mainAxisSize: MainAxisSize.max,
+        body: Stack(
           children: [
-            wrapWithModel(
-              model: _model.sideNavModel,
-              updateCallback: () => setState(() {}),
-              child: const SideNavWidget(
-                selectedNav: 9,
-              ),
-            ),
-            Expanded(
-              child: Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
-                child: Container(
-                  width: double.infinity,
-                  decoration: const BoxDecoration(),
-                  child: Stack(
-                    children: [
-                      SingleChildScrollView(
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                wrapWithModel(
+                  model: _model.sideNavModel,
+                  updateCallback: () => setState(() {}),
+                  child: const SideNavWidget(
+                    selectedNav: 9,
+                  ),
+                ),
+                Expanded(
+                  child: Align(
+                    alignment: const AlignmentDirectional(0.0, -1.0),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: const BoxDecoration(),
+                      child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -984,25 +984,22 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                           ].addToEnd(const SizedBox(height: 84.0)),
                         ),
                       ),
-                      if (responsiveVisibility(
-                        context: context,
-                        tablet: false,
-                        tabletLandscape: false,
-                        desktop: false,
-                      ))
-                        Align(
-                          alignment: const AlignmentDirectional(0.0, 1.0),
-                          child: wrapWithModel(
-                            model: _model.navBarModel,
-                            updateCallback: () => setState(() {}),
-                            child: const NavBarWidget(),
-                          ),
-                        ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+              ],
             ),
+            if (responsiveVisibility(
+              context: context,
+              tablet: false,
+              tabletLandscape: false,
+              desktop: false,
+            ))
+              wrapWithModel(
+                model: _model.navBarModel,
+                updateCallback: () => setState(() {}),
+                child: const NavBarWidget(),
+              ),
           ],
         ),
       ),

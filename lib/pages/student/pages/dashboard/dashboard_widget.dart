@@ -1,6 +1,6 @@
 import '/components/event_overview/event_overview_widget.dart';
-import '/components/financial_overview_widget.dart';
 import '/components/notification/notification_widget.dart';
+import '/components/time_table_dialog/time_table_dialog_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -9,7 +9,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/student/components/assignment_overview/assignment_overview_widget.dart';
 import '/pages/student/components/attendance_overview/attendance_overview_widget.dart';
 import '/pages/student/components/attendance_topbar/attendance_topbar_widget.dart';
-import '/pages/student/components/drawer/drawer_widget.dart';
+import '/pages/student/components/financial_overview/financial_overview_widget.dart';
 import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
 import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
@@ -96,56 +96,24 @@ class _DashboardWidgetState extends State<DashboardWidget>
         child: Scaffold(
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-          floatingActionButton: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 80.0),
-            child: FloatingActionButton(
-              onPressed: () {
-                print('FloatingActionButton pressed ...');
-              },
-              backgroundColor: FlutterFlowTheme.of(context).primary,
-              elevation: 8.0,
-              child: Icon(
-                Icons.add,
-                color: FlutterFlowTheme.of(context).info,
-                size: 24.0,
-              ),
-            ),
-          ),
-          drawer: Drawer(
-            elevation: 16.0,
-            child: Visibility(
-              visible: responsiveVisibility(
-                context: context,
-                tabletLandscape: false,
-                desktop: false,
-              ),
-              child: wrapWithModel(
-                model: _model.drawerModel,
-                updateCallback: () => setState(() {}),
-                child: const DrawerWidget(
-                  selectedNav: 1,
-                ),
-              ),
-            ),
-          ),
-          body: Row(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          body: Stack(
             children: [
-              wrapWithModel(
-                model: _model.sideNavModel,
-                updateCallback: () => setState(() {}),
-                child: const SideNavWidget(
-                  selectedNav: 1,
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  width: double.infinity,
-                  decoration: const BoxDecoration(),
-                  child: Stack(
-                    children: [
-                      Padding(
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  wrapWithModel(
+                    model: _model.sideNavModel,
+                    updateCallback: () => setState(() {}),
+                    child: const SideNavWidget(
+                      selectedNav: 1,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      decoration: const BoxDecoration(),
+                      child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                         child: SingleChildScrollView(
@@ -350,34 +318,69 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                       phone: false,
                                       tablet: false,
                                     ))
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 16.0, 0.0),
-                                        child: FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
-                                          },
-                                          text: 'MySchedule',
-                                          options: FFButtonOptions(
-                                            height: 40.0,
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
-                                            iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyLarge,
-                                            elevation: 0.0,
-                                            borderSide: const BorderSide(
-                                              color: Colors.transparent,
-                                              width: 1.0,
+                                      Builder(
+                                        builder: (context) => Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 16.0, 0.0),
+                                          child: FFButtonWidget(
+                                            onPressed: () async {
+                                              await showDialog(
+                                                context: context,
+                                                builder: (dialogContext) {
+                                                  return Dialog(
+                                                    elevation: 0,
+                                                    insetPadding:
+                                                        EdgeInsets.zero,
+                                                    backgroundColor:
+                                                        Colors.transparent,
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                                0.0, 0.0)
+                                                            .resolve(
+                                                                Directionality.of(
+                                                                    context)),
+                                                    child: GestureDetector(
+                                                      onTap: () => _model
+                                                              .unfocusNode
+                                                              .canRequestFocus
+                                                          ? FocusScope.of(
+                                                                  context)
+                                                              .requestFocus(_model
+                                                                  .unfocusNode)
+                                                          : FocusScope.of(
+                                                                  context)
+                                                              .unfocus(),
+                                                      child:
+                                                          const TimeTableDialogWidget(),
+                                                    ),
+                                                  );
+                                                },
+                                              ).then(
+                                                  (value) => setState(() {}));
+                                            },
+                                            text: 'MySchedule',
+                                            options: FFButtonOptions(
+                                              height: 40.0,
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      16.0, 0.0, 16.0, 0.0),
+                                              iconPadding: const EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBackground,
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge,
+                                              elevation: 0.0,
+                                              borderSide: const BorderSide(
+                                                color: Colors.transparent,
+                                                width: 1.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(50.0),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(50.0),
                                           ),
                                         ),
                                       ),
@@ -684,64 +687,64 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                   ],
                                 ),
                               ),
-                              ListView(
-                                padding: EdgeInsets.zero,
-                                shrinkWrap: true,
-                                scrollDirection: Axis.vertical,
-                                children: [
-                                  wrapWithModel(
-                                    model: _model.attendanceTopbarModel,
-                                    updateCallback: () => setState(() {}),
-                                    child: const AttendanceTopbarWidget(),
-                                  ),
-                                  wrapWithModel(
-                                    model: _model.attendanceOverviewModel,
-                                    updateCallback: () => setState(() {}),
-                                    child: const AttendanceOverviewWidget(),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        8.0, 8.0, 8.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.financialOverviewModel,
+                              SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    wrapWithModel(
+                                      model: _model.attendanceTopbarModel,
                                       updateCallback: () => setState(() {}),
-                                      child: const FinancialOverviewWidget(),
+                                      child: const AttendanceTopbarWidget(),
                                     ),
-                                  ),
-                                  wrapWithModel(
-                                    model: _model.assignmentOverviewModel,
-                                    updateCallback: () => setState(() {}),
-                                    child: const AssignmentOverviewWidget(),
-                                  ),
-                                  wrapWithModel(
-                                    model: _model.eventOverviewModel,
-                                    updateCallback: () => setState(() {}),
-                                    child: const EventOverviewWidget(),
-                                  ),
-                                ],
+                                    wrapWithModel(
+                                      model: _model.attendanceOverviewModel,
+                                      updateCallback: () => setState(() {}),
+                                      child: const AttendanceOverviewWidget(),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          8.0, 8.0, 8.0, 0.0),
+                                      child: wrapWithModel(
+                                        model: _model.financialOverviewModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: const FinancialOverviewWidget(),
+                                      ),
+                                    ),
+                                    wrapWithModel(
+                                      model: _model.assignmentOverviewModel,
+                                      updateCallback: () => setState(() {}),
+                                      child: const AssignmentOverviewWidget(),
+                                    ),
+                                    wrapWithModel(
+                                      model: _model.eventOverviewModel,
+                                      updateCallback: () => setState(() {}),
+                                      child: const EventOverviewWidget(),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ].addToEnd(const SizedBox(height: 84.0)),
                           ),
                         ),
                       ),
-                      if (responsiveVisibility(
-                        context: context,
-                        tablet: false,
-                        tabletLandscape: false,
-                        desktop: false,
-                      ))
-                        Align(
-                          alignment: const AlignmentDirectional(0.0, 1.0),
-                          child: wrapWithModel(
-                            model: _model.navBarModel,
-                            updateCallback: () => setState(() {}),
-                            child: const NavBarWidget(),
-                          ),
-                        ),
-                    ],
+                    ),
+                  ),
+                ],
+              ),
+              if (responsiveVisibility(
+                context: context,
+                tablet: false,
+                tabletLandscape: false,
+                desktop: false,
+              ))
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 1.0),
+                  child: wrapWithModel(
+                    model: _model.navBarModel,
+                    updateCallback: () => setState(() {}),
+                    child: const NavBarWidget(),
                   ),
                 ),
-              ),
             ],
           ),
         ),

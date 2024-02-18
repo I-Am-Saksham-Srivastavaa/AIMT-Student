@@ -4,7 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pages/student/components/user_drop_down/user_drop_down_widget.dart';
+import '/pages/hod/components/drop_down_h_o_d/drop_down_h_o_d_widget.dart';
 import 'package:aligned_tooltip/aligned_tooltip.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
@@ -525,7 +525,7 @@ class _NewPageHODWidgetState extends State<NewPageHODWidget>
                                                           _model.unfocusNode)
                                                   : FocusScope.of(context)
                                                       .unfocus(),
-                                              child: const UserDropDownWidget(),
+                                              child: const DropDownHODWidget(),
                                             ),
                                           );
                                         },

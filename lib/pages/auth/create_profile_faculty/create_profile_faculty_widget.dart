@@ -372,7 +372,7 @@ class _CreateProfileFacultyWidgetState
                       if (_model.switchListTileValue == true) {
                         context.pushNamed('DashboardHOD');
                       } else {
-                        context.pushNamed('DashboardFaculty');
+                        context.pushNamed('DailyAttendance');
                       }
                     },
                     text: 'Save',

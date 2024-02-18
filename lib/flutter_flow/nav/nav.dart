@@ -86,22 +86,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'StudentList',
-          path: '/FacultyList',
+          path: '/studentList',
+          requireAuth: true,
           builder: (context, params) => const StudentListWidget(),
-        ),
-        FFRoute(
-          name: 'Transactions',
-          path: '/transactions',
-          builder: (context, params) => const TransactionsWidget(),
         ),
         FFRoute(
           name: 'Settings',
           path: '/settings',
+          requireAuth: true,
           builder: (context, params) => const SettingsWidget(),
         ),
         FFRoute(
           name: 'Dashboard',
           path: '/dashboard',
+          requireAuth: true,
           builder: (context, params) => const DashboardWidget(),
         ),
         FFRoute(
@@ -117,11 +115,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'CreateProfileFaculty',
           path: '/createProfileFaculty',
+          requireAuth: true,
           builder: (context, params) => const CreateProfileFacultyWidget(),
         ),
         FFRoute(
           name: 'ForgotPassword',
           path: '/forgotPassword',
+          requireAuth: true,
           builder: (context, params) => const ForgotPasswordWidget(),
         ),
         FFRoute(
@@ -132,66 +132,79 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Academics',
           path: '/academics',
+          requireAuth: true,
           builder: (context, params) => const AcademicsWidget(),
         ),
         FFRoute(
           name: 'CreateProfile',
           path: '/createProfile',
+          requireAuth: true,
           builder: (context, params) => const CreateProfileWidget(),
         ),
         FFRoute(
-          name: 'DashboardFaculty',
-          path: '/dashboardFaculty',
-          builder: (context, params) => const DashboardFacultyWidget(),
+          name: 'DailyAttendance',
+          path: '/dailyAttendance',
+          requireAuth: true,
+          builder: (context, params) => const DailyAttendanceWidget(),
         ),
         FFRoute(
           name: 'DashboardHOD',
           path: '/dashboardHOD',
+          requireAuth: true,
           builder: (context, params) => const DashboardHODWidget(),
         ),
         FFRoute(
           name: 'SettingsFaculty',
           path: '/settingsFaculty',
+          requireAuth: true,
           builder: (context, params) => const SettingsFacultyWidget(),
         ),
         FFRoute(
           name: 'SettingHOD',
           path: '/settingHOD',
+          requireAuth: true,
           builder: (context, params) => const SettingHODWidget(),
         ),
         FFRoute(
-          name: 'SDetailsFaculty',
-          path: '/sDetailsFaculty',
-          builder: (context, params) => const SDetailsFacultyWidget(),
+          name: 'StudentDetails',
+          path: '/studentDetails',
+          requireAuth: true,
+          builder: (context, params) => const StudentDetailsWidget(),
         ),
         FFRoute(
-          name: 'StudentProfile',
-          path: '/studentProfile',
-          builder: (context, params) => const StudentProfileWidget(),
+          name: 'Profile',
+          path: '/profile',
+          requireAuth: true,
+          builder: (context, params) => const ProfileWidget(),
         ),
         FFRoute(
           name: 'Faculty',
           path: '/Faculty',
+          requireAuth: true,
           builder: (context, params) => const FacultyWidget(),
         ),
         FFRoute(
           name: 'AcademicRecord',
           path: '/academicRecord',
+          requireAuth: true,
           builder: (context, params) => const AcademicRecordWidget(),
         ),
         FFRoute(
           name: 'AttendanceSummary',
           path: '/attendanceSummary',
+          requireAuth: true,
           builder: (context, params) => const AttendanceSummaryWidget(),
         ),
         FFRoute(
           name: 'FeeRecord',
           path: '/feeRecord',
+          requireAuth: true,
           builder: (context, params) => const FeeRecordWidget(),
         ),
         FFRoute(
           name: 'AppAndServices',
           path: '/appAndServices',
+          requireAuth: true,
           builder: (context, params) => const AppAndServicesWidget(),
         ),
         FFRoute(
@@ -207,117 +220,86 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'PhotoGallery',
           path: '/photoGallery',
+          requireAuth: true,
           builder: (context, params) => const PhotoGalleryWidget(),
-        ),
-        FFRoute(
-          name: 'TicketList',
-          path: '/ticketList',
-          builder: (context, params) => const TicketListWidget(),
-        ),
-        FFRoute(
-          name: 'SubmitTicket',
-          path: '/submitTicket',
-          builder: (context, params) => const SubmitTicketWidget(),
-        ),
-        FFRoute(
-          name: 'TicketDetails',
-          path: '/ticketDetails',
-          builder: (context, params) => const TicketDetailsWidget(),
         ),
         FFRoute(
           name: 'AcademicRecords',
           path: '/academicRecords',
+          requireAuth: true,
           builder: (context, params) => const AcademicRecordsWidget(),
         ),
         FFRoute(
           name: 'AttendanceRecord',
           path: '/attendanceRecord',
+          requireAuth: true,
           builder: (context, params) => const AttendanceRecordWidget(),
         ),
         FFRoute(
           name: 'FinancialRecord',
           path: '/financialRecord',
+          requireAuth: true,
           builder: (context, params) => const FinancialRecordWidget(),
         ),
         FFRoute(
           name: 'Gallery',
           path: '/gallery',
+          requireAuth: true,
           builder: (context, params) => const GalleryWidget(),
         ),
         FFRoute(
           name: 'AppsAndServices',
           path: '/appsAndServices',
+          requireAuth: true,
           builder: (context, params) => const AppsAndServicesWidget(),
         ),
         FFRoute(
           name: 'AppsAndService',
           path: '/appsAndService',
+          requireAuth: true,
           builder: (context, params) => const AppsAndServiceWidget(),
         ),
         FFRoute(
           name: 'AttendanceRecords',
           path: '/attendanceRecords',
+          requireAuth: true,
           builder: (context, params) => const AttendanceRecordsWidget(),
         ),
         FFRoute(
           name: 'FinancialRecords',
           path: '/financialRecords',
+          requireAuth: true,
           builder: (context, params) => const FinancialRecordsWidget(),
         ),
         FFRoute(
           name: 'ImageGallery',
           path: '/imageGallery',
+          requireAuth: true,
           builder: (context, params) => const ImageGalleryWidget(),
         ),
         FFRoute(
           name: 'StudentsList',
-          path: '/StudentList',
+          path: '/StudentsList',
+          requireAuth: true,
           builder: (context, params) => const StudentsListWidget(),
         ),
         FFRoute(
           name: 'FacultyList',
           path: '/FacultiesList',
+          requireAuth: true,
           builder: (context, params) => const FacultyListWidget(),
-        ),
-        FFRoute(
-          name: 'GrievanceSubmitTicket',
-          path: '/grievanceSubmitTicket',
-          builder: (context, params) => const GrievanceSubmitTicketWidget(),
-        ),
-        FFRoute(
-          name: 'GrievanceTicketDetails',
-          path: '/grievanceTicketDetails',
-          builder: (context, params) => const GrievanceTicketDetailsWidget(),
-        ),
-        FFRoute(
-          name: 'GrievanceTicketList',
-          path: '/grievanceTicketList',
-          builder: (context, params) => const GrievanceTicketListWidget(),
         ),
         FFRoute(
           name: 'SupportFaculty',
           path: '/supportFaculty',
+          requireAuth: true,
           builder: (context, params) => const SupportFacultyWidget(),
-        ),
-        FFRoute(
-          name: 'NewPageFaculty',
-          path: '/newPageFaculty',
-          builder: (context, params) => const NewPageFacultyWidget(),
         ),
         FFRoute(
           name: 'NewPageHOD',
           path: '/newPageHOD',
+          requireAuth: true,
           builder: (context, params) => const NewPageHODWidget(),
-        ),
-        FFRoute(
-          name: 'TransactionDetail',
-          path: '/transactionDetail',
-          builder: (context, params) => const TransactionDetailWidget(),
-        ),
-        FFRoute(
-          name: 'TransactionDetailHOD',
-          path: '/transactionDetailHOD',
-          builder: (context, params) => const TransactionDetailHODWidget(),
         ),
         FFRoute(
           name: 'LoginFaculty',
@@ -332,42 +314,74 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'AboutApp',
           path: '/aboutApp',
+          requireAuth: true,
           builder: (context, params) => const AboutAppWidget(),
         ),
         FFRoute(
           name: 'AboutDeveloper',
           path: '/aboutDeveloper',
+          requireAuth: true,
           builder: (context, params) => const AboutDeveloperWidget(),
         ),
         FFRoute(
           name: 'TermsAndConditions',
           path: '/termsAndConditions',
+          requireAuth: true,
           builder: (context, params) => const TermsAndConditionsWidget(),
-        ),
-        FFRoute(
-          name: 'profile',
-          path: '/profile',
-          builder: (context, params) => const ProfileWidget(),
-        ),
-        FFRoute(
-          name: 'FacultyDetails',
-          path: '/facultyDetails',
-          builder: (context, params) => const FacultyDetailsWidget(),
-        ),
-        FFRoute(
-          name: 'BookEvent',
-          path: '/bookEvent',
-          builder: (context, params) => const BookEventWidget(),
         ),
         FFRoute(
           name: 'Support',
           path: '/support',
+          requireAuth: true,
           builder: (context, params) => const SupportWidget(),
         ),
         FFRoute(
           name: 'SupportHOD',
           path: '/supportHOD',
+          requireAuth: true,
           builder: (context, params) => const SupportHODWidget(),
+        ),
+        FFRoute(
+          name: 'Grievances',
+          path: '/grievances',
+          requireAuth: true,
+          builder: (context, params) => const GrievancesWidget(),
+        ),
+        FFRoute(
+          name: 'GrievancesFaculty',
+          path: '/grievancesFaculty',
+          requireAuth: true,
+          builder: (context, params) => const GrievancesFacultyWidget(),
+        ),
+        FFRoute(
+          name: 'GrievancesHOD',
+          path: '/grievancesHOD',
+          requireAuth: true,
+          builder: (context, params) => const GrievancesHODWidget(),
+        ),
+        FFRoute(
+          name: 'FacultyDetails',
+          path: '/facultyDetails',
+          requireAuth: true,
+          builder: (context, params) => const FacultyDetailsWidget(),
+        ),
+        FFRoute(
+          name: 'FacultyProfile',
+          path: '/facultyProfile',
+          requireAuth: true,
+          builder: (context, params) => const FacultyProfileWidget(),
+        ),
+        FFRoute(
+          name: 'ProfileHOD',
+          path: '/profileHOD',
+          requireAuth: true,
+          builder: (context, params) => const ProfileHODWidget(),
+        ),
+        FFRoute(
+          name: 'DashboardFaculty',
+          path: '/dashboardFaculty',
+          requireAuth: true,
+          builder: (context, params) => const DashboardFacultyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -553,7 +567,7 @@ class FFRoute {
               ? isWeb
                   ? Container()
                   : Container(
-                      color: Colors.transparent,
+                      color: Colors.white,
                       child: Image.asset(
                         'assets/images/Social_Share_Image.png',
                         fit: BoxFit.scaleDown,

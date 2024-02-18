@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/student/components/nav_bar/nav_bar_widget.dart';
 import '/pages/student/components/side_nav/side_nav_widget.dart';
-import '/pages/student/components/transaction_history/transaction_history_widget.dart';
 import 'fee_record_widget.dart' show FeeRecordWidget;
 import 'package:flutter/material.dart';
 
@@ -11,8 +10,6 @@ class FeeRecordModel extends FlutterFlowModel<FeeRecordWidget> {
   final unfocusNode = FocusNode();
   // Model for sideNav component.
   late SideNavModel sideNavModel;
-  // Model for TransactionHistory component.
-  late TransactionHistoryModel transactionHistoryModel;
   // Model for NavBar component.
   late NavBarModel navBarModel;
 
@@ -21,8 +18,6 @@ class FeeRecordModel extends FlutterFlowModel<FeeRecordWidget> {
   @override
   void initState(BuildContext context) {
     sideNavModel = createModel(context, () => SideNavModel());
-    transactionHistoryModel =
-        createModel(context, () => TransactionHistoryModel());
     navBarModel = createModel(context, () => NavBarModel());
   }
 
@@ -30,7 +25,6 @@ class FeeRecordModel extends FlutterFlowModel<FeeRecordWidget> {
   void dispose() {
     unfocusNode.dispose();
     sideNavModel.dispose();
-    transactionHistoryModel.dispose();
     navBarModel.dispose();
   }
 

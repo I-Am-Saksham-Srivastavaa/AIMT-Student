@@ -431,7 +431,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               context.pushNamed(
-                                'Transactions',
+                                'FeeRecord',
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
@@ -514,7 +514,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               context.pushNamed(
-                                'Transactions',
+                                'AppAndServices',
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
@@ -597,7 +597,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               context.pushNamed(
-                                'Transactions',
+                                'Faculty',
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
@@ -680,7 +680,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               context.pushNamed(
-                                'Transactions',
+                                'PhotoGallery',
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
@@ -763,7 +763,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               context.pushNamed(
-                                'Transactions',
+                                'Resources',
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,

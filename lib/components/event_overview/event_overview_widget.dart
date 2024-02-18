@@ -147,7 +147,7 @@ class _EventOverviewWidgetState extends State<EventOverviewWidget>
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 12.0, 0.0),
                             child: Text(
-                              'Events',
+                              'Event',
                               style:
                                   FlutterFlowTheme.of(context).headlineMedium,
                             ),
